@@ -54,6 +54,10 @@ padding: 3% 3% 2% 2%;
   border-radius: 15px;
 }
 
+.imgcont li{
+    list-style-type: none;
+}
+
 .imgcont button{
   border: 0px;
   background: transparent;
