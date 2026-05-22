@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+    <html lang="es">
+        <head>
+            <link rel="icon" type="image/x-icon" href="logo.png">
+<style>
+    .titl{
+        color: #dee7e7;
+    }
+
+    .liel{
+        position: relative;
+        margin-top: 10px;
+    }
+    body{
+        font-family: gen;
+    }
+</style>
+
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>STARFILMS</title>
+            <link rel="stylesheet" href="style.css">
+        </head>
+        <body>
+            <header>
+                <div class="menu">
+                    <nav>
+                        <ul>
+                            <li><img id="logo" src="logo.png" alt="logo"></li>
+                            <li><h1 class="titl">Starfilms</h1></li>
+                            <li class="liel"><a href="#">Inicio</a></li>
+                            <li class="liel"><a href="#">Cartelera</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <div id="preview">
+                <div id="carousel">
+            <ul id="carouselList">
+  <li data-accname="1" style="background-image: url(previews/minecraft.gif); background-repeat: no-repeat; background-size: cover; background-position: center;">
+    <img src="cartel/minecraft.jpg">
+    <h2>A minecraft<br> movie<br></h2>
+    <br>
+  </li>
+  <li data-accname="2" style="background-image: url(previews/mario.gif); background-repeat: no-repeat; background-size: cover; background-position: center;">
+    <img src="cartel/mario.jpg">
+    <h2>The super Mario<br>galaxy movie</h2>
+    <br>
+  </li>
+  <li data-accname="3" style="background-image: url(previews/pixels.gif); background-repeat: no-repeat; background-size: cover; background-position: center;">
+<img src="cartel/pixels.jpg">
+    <h2>Pixels</h2>
+    <br>
+  </li>
+  <li data-accname="4" style="background-image: url(previews/MIB.gif); background-repeat: no-repeat; background-size: cover; background-position: center;">
+<img src="cartel/MIB.jpg">
+    <h2>Men in black</h2>
+    <br>
+  </li>
+</ul>
+                </div>
+<div id="mypopover" popover="manual" style="border: 0px;"></div>
+
+            </div>
+<main>
+<div><h3>Destacadas</h3></div>
+<div class="imgcont">
+<button popovertarget="mypopover" onclick="updateSidebar('mario')"><img src="cartel/mario.jpg"></button>
+<button popovertarget="mypopover" onclick="updateSidebar('minecraft')"><img src="cartel/minecraft.jpg"></button>
+<button popovertarget="mypopover" onclick="updateSidebar('pixels')"><img src="cartel/pixels.jpg"></button>
+<button popovertarget="mypopover" onclick="updateSidebar('mib')"><img src="cartel/MIB.jpg"></button>
+</div>
+<br><hr><br>
+
+<div><h3>Todas las peliculas</h3></div>
+<div class="imgcont">
+  <button popovertarget="mypopover" onclick="updateSidebar('mario')"><img src="cartel/mario.jpg"></button>
+  <button popovertarget="mypopover" onclick="updateSidebar('mario')"><img src="cartel/mario.jpg"></button>
+  <button popovertarget="mypopover" onclick="updateSidebar('mario')"><img src="cartel/mario.jpg"></button>
+  <button popovertarget="mypopover" onclick="updateSidebar('mario')"><img src="cartel/mario.jpg"></button>
+</div>
+<br><br>
+</main>
+
+      <footer>
+                <br>
+                Texto de prueba
+            </footer>
+
+<!-- side bar -->
+            <section id="mySidebar" class="sidebar">
+              <br>
+<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&larr;</a>
+<br>
+
+<iframe id="sideImg" title="Video" src="supercoolinvitationohyeah.mp4"></iframe>
+<h1 id="sideTitle">Titulo</h1>
+<br>
+<hr>
+<div id="infotg"><p>Info pelicula</p><button type="button" id="infotggbtn" onclick="textshow()">⌄</button></div>
+<div id="infodiv"></div>
+<hr>
+<p>Grupo</p>
+  </section>
+
+ <script>
+    const popover = document.getElementById("mypopover");
+
+popover.addEventListener("toggle", (event) => {
+  if (event.newState === "open") {
+    document.getElementById("mySidebar").style.width = "45rem";
+  }
+  else {
+    document.getElementById("mySidebar").style.width = "0";
+  }
+});
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+
+/*sidebar dinámica*/
+
+const movieData = {
+  'mario': { title: 'The super Mario galaxy movie', img: 'https://www.youtube.com/embed/ipzEY7c7it8'},
+  'minecraft': { title: 'A minecraft movie', img: 'https://www.youtube.com/embed/wJO_vIDZn-I'},
+  'pixels': { title: 'Pixels', img: 'https://www.youtube.com/embed/XAHprLW48no'},
+  'mib': { title: 'Men in black', img: 'https://www.youtube.com/embed/UxUTTrU6PA4'}
+};
+
+function updateSidebar(movieKey) {
+  const data = movieData[movieKey];
+  document.getElementById("sideTitle").innerText = data.title;
+  document.getElementById("sideImg").src = data.img;
+  document.getElementById("infodiv").innerHTML = "";
+  document.getElementById("infotggbtn").innerHTML= "⌄";
+}
+
+function textshow() {
+  var desc = 'Default';
+    if (document.getElementById("sideTitle").innerText === "The super Mario galaxy movie"){
+      desc = 'una descripcion de mario';
+    }
+    else if (document.getElementById("sideTitle").innerText === "A minecraft movie"){
+      desc = 'una descripcion de Minecraft';
+    }
+    else if (document.getElementById("sideTitle").innerText === "Pixels"){
+      desc = 'una descripcion de Pixeles';
+    }
+    else if (document.getElementById("sideTitle").innerText === "Men in black"){
+      desc = 'una descripcion de Men in Black';
+    }
+  var x = document.getElementById("infodiv");
+  if (x.innerHTML === "") {
+    x.innerHTML = desc;
+    document.getElementById("infotggbtn").innerHTML= "⌃";
+    document.getElementById("infotggbtn").style.transform= "translate(0px, 20px)";
+  } else {
+    x.innerHTML = "";
+     document.getElementById("infotggbtn").innerHTML= "⌄";
+     document.getElementById("infotggbtn").style.transform= "translate(0px, 0px)";
+  }
+}
+
+/* desplazamiento automático */
+
+const carousel = document.getElementById("carouselList");
+let isAutoScrolling = true;
+let isLooping = false;
+
+function autoScroll() {
+  if (!isAutoScrolling) return;
+  
+  if (carousel.scrollLeft + carousel.offsetWidth >= carousel.scrollWidth - 10) {
+    carousel.scrollTo({ left: 0, behavior: 'smooth' });
+  } else {
+    carousel.scrollBy({ left: carousel.offsetWidth, behavior: 'smooth' });
+  }
+}
+
+let scrollInterval = setInterval(autoScroll, 3000);
+
+function resetTimer() {
+  clearInterval(scrollInterval);
+  scrollInterval = setInterval(autoScroll, 3000);
+}
+
+carousel.addEventListener('mouseenter', () => isAutoScrolling = false);
+carousel.addEventListener('mouseleave', () => isAutoScrolling = true);
+
+carousel.addEventListener('scroll', () => {
+  if (isLooping) return;
+  resetTimer();
+  if (carousel.scrollLeft + carousel.offsetWidth >= carousel.scrollWidth - 10) {
+    isLooping = true;
+    setTimeout(() => {
+      carousel.scrollTo({ left: 0, behavior: 'smooth' });
+      setTimeout(() => { isLooping = false; }, 600);
+    }, 300);
+  }
+});
+
+</script>
+        </body>
+</html>
