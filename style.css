@@ -43,6 +43,7 @@ padding: 3% 3% 2% 2%;
       scrollbar-width: none;
   scroll-behavior: smooth;
     overflow-x: scroll;
+    gap: 4vw;
 }
 
 .imgcont img{
@@ -233,7 +234,7 @@ height: 35rem;
 @media (min-width: 601px) {
 #carousel img{
     margin-left: 2vw;
-    width: 30%;
+    width: 20%;
 }
     #carousel h2{
   color: #dee7e7;  
