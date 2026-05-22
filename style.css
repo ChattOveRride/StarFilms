@@ -31,6 +31,11 @@ flex-direction: column;
 padding: 3% 3% 2% 2%;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
 .imgcont{
   display: flex;
   gap: 2%;
