@@ -7,6 +7,7 @@
 - Agregar pagina de informacion de la empresa
 - Agregar pagina de cartelera
 - Agregar informacion de grupos
+- DANIEL AGREGA LOS CIRCULOS DEVUELTA
 
 ## Extra
 - Cambiar la fuente
