@@ -12,4 +12,7 @@
 - Cambiar la fuente
 - Cambiar design y colores
 - Optimizar para celular
-- Small tweaks: delays en side bar, ajustar secc de previews 
+- Small tweaks: delays en side bar, ajustar secc de previews (quitar redondeo, ajustar size de la imagen)
+- Agregar seccion "grupo" a peliculas destacadas, ademas de imagenes del grupo
+
+*Opcional: Boton "ver pelicula"*
