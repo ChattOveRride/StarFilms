@@ -140,6 +140,9 @@ nav ul li a{
   border-radius: 15px;
   padding: 20px;
   flex: 0 0 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 #carousel li:nth-child(even) {
@@ -205,10 +208,6 @@ nav ul li a{
 #carousel li::scroll-marker:target-current {
   background-color: rgb(255, 255, 255);
 }
-#carousel img{
-    margin-left: 3rem;
-    width: 20%;
-}
 
 #carousel li{
     display: flex;
@@ -227,6 +226,22 @@ nav ul li a{
   font-size: 3rem;
   margin-top: 5rem;
   margin-left: 5rem;
+}
+
+        /*celular*/
+
+@media (max-width: 600px) {
+#carousel img{
+    margin-left: 3rem;
+    width: 20%;
+}
+}
+        /*pc*/
+@media (min-width: 601px) {
+#carousel img{
+    margin-left: 3rem;
+    width: 5%;
+}
 }
 
 /*side menu*/
