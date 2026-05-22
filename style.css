@@ -32,10 +32,11 @@ padding: 3% 3% 2% 2%;
 }
 
 .imgcont{
-  display: flex;
+    display: flex;
     flex-flow: row wrap;
-  gap: 2%;
+    gap: 2%;
     justify-content: space-around;
+    width: 100%;
 }
 
 .imgcont ul{
