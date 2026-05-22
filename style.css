@@ -56,6 +56,7 @@ padding: 3% 3% 2% 2%;
 
 .imgcont li{
     list-style-type: none;
+    transform: scale(1.03);
 }
 
 .imgcont button{
