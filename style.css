@@ -149,7 +149,7 @@ height: auto;
         /*contenedor / lista */
 #carousel ul {
   width: 100%;
-  height: auto;
+  height: 40%;
   padding: 0;
   display: flex;
   gap: 0;
