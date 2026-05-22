@@ -112,7 +112,7 @@ nav ul li a{
 /*Carousel*/
 #carousel {
   box-sizing: border-box;
-  height: 100%;
+  height: auto;
 }
 
 #carousel body {
@@ -208,8 +208,34 @@ nav ul li a{
     display: flex;
     justify-content: center;
 }
+        /*celular*/
 
-#carousel h2{
+@media (max-width: 600px) {
+#carousel img{
+    margin-left: 3rem;
+    width: 20%;
+}
+    #carousel h2{
+  color: #dee7e7;  
+  font-size: 4vw;
+  margin-top: 2vw;
+  margin-left: 2vw;
+}
+
+#carousel p{
+  color: #dee7e7;  
+  font-size: 2vw;
+  margin-top: 3vw;
+  margin-left: 3vw;
+}
+}
+        /*pc*/
+@media (min-width: 601px) {
+#carousel img{
+    margin-left: 5vw;
+    width: 5%;
+}
+    #carousel h2{
   color: #dee7e7;  
   font-size: 6vw;
   margin-top: 5vw;
@@ -221,21 +247,6 @@ nav ul li a{
   font-size: 3vw;
   margin-top: 5vw;
   margin-left: 5vw;
-}
-
-        /*celular*/
-
-@media (max-width: 600px) {
-#carousel img{
-    margin-left: 3rem;
-    width: 20%;
-}
-}
-        /*pc*/
-@media (min-width: 601px) {
-#carousel img{
-    margin-left: 3rem;
-    width: 5%;
 }
 }
 
