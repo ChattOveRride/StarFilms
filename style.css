@@ -112,7 +112,7 @@ nav ul li a{
 #preview{
 background: rgb(105,16,16);
 background: linear-gradient(180deg, rgba(105,16,16,1) 0%, rgba(224,49,49,1) 40%, rgba(224,49,49,1) 100%);
-height: 35rem;
+height: auto;
 }
 
 #carousel {
@@ -126,13 +126,14 @@ height: 35rem;
         /*contenedor / lista */
 #carousel ul {
   width: 100%;
-  height: 20%;
-  padding: 20px;
+  height: auto;
+  padding: 0;
   display: flex;
-  gap: 4vw;
+  gap: 0;
+    list-style: none;
   scrollbar-width: none;
   scroll-behavior: smooth;
-    overflow-x: scroll;
+    overflow-x: hidden;
   scroll-snap-type: x mandatory;
     anchor-name: --my-carousel;
     scroll-marker-group: after;
@@ -150,7 +151,8 @@ height: 35rem;
     background-size: cover;
     background-position: center;
     scroll-snap-align: center;
-    height: 30%;
+    height: auto;
+aspect-ratio: 16/6;
 }
 
 #carousel li:nth-child(even) {
@@ -196,13 +198,13 @@ height: 35rem;
   width: 16px;
   height: 16px;
   background-color: transparent;
-  border: 2px solid rgb(255, 255, 255);
+  border: 2px solid transparent;
   border-radius: 50%;
   overflow: hidden;
   text-indent: 16px;
 }
 #carousel li::scroll-marker:target-current {
-  background-color: rgb(255, 255, 255);
+  background-color: transparent;
 }
 
 #carousel li{
@@ -212,6 +214,9 @@ height: 35rem;
         /*celular*/
 
 @media (max-width: 600px) {
+#carousel ul {
+  overflow-x: scroll;
+}
 #carousel img{
     margin-left: 3rem;
     width: 20%;
