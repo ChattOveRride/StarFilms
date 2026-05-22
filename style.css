@@ -65,8 +65,6 @@ padding: 3% 3% 2% 2%;
   border: 0px;
   background: transparent;
   cursor: pointer;
-  width: 20rem;
-  height: 30rem;
   margin-top: 2%;
   display: flex;
   border-radius: 15px;
@@ -79,6 +77,22 @@ padding: 3% 3% 2% 2%;
 
 .imgcont button:hover img{
   filter: brightness(.5);
+}
+
+        /*celular*/
+
+@media (max-width: 600px) {
+    .imgcont button{
+  width: 20%;
+  height: 30%;}
+}
+
+        /*pc*/
+
+@media (min-width: 601px) {
+    .imgcont button{
+  width: 20%;
+  height: 30%;}
 }
 
 /*Navegacion*/
