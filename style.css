@@ -139,12 +139,13 @@ nav ul li a{
   background-color: rgba(210, 15, 15, 0.5);
   border: 0px solid #dddddd;
   border-radius: 15px;
-  padding: 20px;
+  padding: 0px;
   flex: 0 0 100%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     scroll-snap-align: center;
+    height: 30%;
 }
 
 #carousel li:nth-child(even) {
