@@ -38,6 +38,8 @@ padding: 3% 3% 2% 2%;
 }
 
 .imgcont ul{
+    padding-top: 1vw;
+    padding-bottom: 1vw;
     flex-direction: row;
     display: flex;
       scrollbar-width: none;
