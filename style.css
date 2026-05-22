@@ -31,11 +31,6 @@ flex-direction: column;
 padding: 3% 3% 2% 2%;
 }
 
-img {
-  max-width: 100%;
-  display: block;
-}
-
 .imgcont{
   display: flex;
   gap: 2%;
@@ -216,16 +211,16 @@ nav ul li a{
 
 #carousel h2{
   color: #dee7e7;  
-  font-size: 6rem;
-  margin-top: 5rem;
-  margin-left: 5rem;
+  font-size: 6vw;
+  margin-top: 5vw;
+  margin-left: 5vw;
 }
 
 #carousel p{
   color: #dee7e7;  
-  font-size: 3rem;
-  margin-top: 5rem;
-  margin-left: 5rem;
+  font-size: 3vw;
+  margin-top: 5vw;
+  margin-left: 5vw;
 }
 
         /*celular*/
