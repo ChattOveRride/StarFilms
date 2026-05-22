@@ -227,8 +227,8 @@ nav ul li a{
         /*pc*/
 @media (min-width: 601px) {
 #carousel img{
-    margin-left: 5vw;
-    width: 30%;
+    margin-left: 2vw;
+    width: 50%;
 }
     #carousel h2{
   color: #dee7e7;  
