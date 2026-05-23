@@ -23,34 +23,47 @@ header{
     height: 6rem;
 }
 main{
-height: 50%;
+height: auto;
 font-weight: bold;
-font-size: 3rem;
+font-size: 4rem;
 display: flex;
 flex-direction: column;
 padding: 3% 3% 2% 2%;
 }
 
-.imgcont{
+.cont-dest{
     display: flex;
     flex-flow: row wrap;
     gap: 2%;
     justify-content: space-around;
     width: 100%;
+    height: 30vw;
 }
 
-.imgcont ul{
+.cont-all{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2%;
+    justify-content: space-around;
+    width: 100%;
+    height: 30vw;
+}
+
+.cont-dest ul{
     padding-top: 1vw;
     padding-bottom: 1vw;
     flex-direction: row;
     display: flex;
-      scrollbar-width: none;
-  scroll-behavior: smooth;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
     overflow-x: scroll;
     gap: 4vw;
 }
 
-.imgcont img{
+main img{
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -58,35 +71,34 @@ padding: 3% 3% 2% 2%;
   border-radius: 15px;
 }
 
-.imgcont li{
+.cont-dest li{
+    height: auto;
     list-style-type: none;
     transform: scale(1.03);
 }
 
-.imgcont button{
-  border: 0px;
-  background: transparent;
+main button{
+  border: 1px;
   cursor: pointer;
-  width: 20rem;
-  height: 30rem;
   margin-top: 2%;
   display: flex;
   border-radius: 15px;
   transition: transform 0.3s;
+  background-image: url(cartel/mario.jpg);
 }
 
-.imgcont button:hover{
+main button:hover{
   transform: scale(1.03);
 }
 
-.imgcont button:hover img{
+main button:hover img{
   filter: brightness(.5);
 }
 
         /*celular*/
 
 @media (max-width: 600px) {
-    .imgcont button{
+    main button{
   width: 50%;
   height: 60%;}
 }
@@ -94,9 +106,9 @@ padding: 3% 3% 2% 2%;
         /*pc*/
 
 @media (min-width: 601px) {
-    .imgcont button{
-  width: 50%;
-  height: 60%;}
+    main button{
+  width: auto;
+  height: 90%;}
 }
 
 /*Navegacion*/
