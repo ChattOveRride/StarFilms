@@ -251,7 +251,7 @@ background: linear-gradient(180deg, rgba(105,16,16,1) 0%, rgba(224,49,49,1) 40%,
 
 @media (max-width: 600px) {
     #preview{
-        height: 15rem;
+        width: 100%;
         aspect-ratio: 1/1;
     }
 
@@ -280,7 +280,7 @@ background: linear-gradient(180deg, rgba(105,16,16,1) 0%, rgba(224,49,49,1) 40%,
         /*pc*/
 @media (min-width: 601px) {
     #preview{
-        height: 35rem;
+        width: 100%;
         aspect-ratio: 16/6;
     }
 
