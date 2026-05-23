@@ -252,10 +252,9 @@ background: linear-gradient(180deg, rgba(105,16,16,1) 0%, rgba(224,49,49,1) 40%,
 @media (max-width: 600px) {
     #preview{
         height: 15rem;
-    }
-    #carousel li{
         aspect-ratio: 1/1;
     }
+
     
 #carousel ul {
   overflow-x: scroll;
@@ -282,10 +281,9 @@ background: linear-gradient(180deg, rgba(105,16,16,1) 0%, rgba(224,49,49,1) 40%,
 @media (min-width: 601px) {
     #preview{
         height: 35rem;
-    }
-        #carousel li{
         aspect-ratio: 16/6;
     }
+
 #carousel img{
     margin-left: 2vw;
     width: 20%;
