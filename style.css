@@ -67,6 +67,8 @@ padding: 3% 3% 2% 2%;
   border: 0px;
   background: transparent;
   cursor: pointer;
+  width: 20rem;
+  height: 30rem;
   margin-top: 2%;
   display: flex;
   border-radius: 15px;
@@ -135,12 +137,12 @@ nav ul li a{
 #preview{
 background: rgb(105,16,16);
 background: linear-gradient(180deg, rgba(105,16,16,1) 0%, rgba(224,49,49,1) 40%, rgba(224,49,49,1) 100%);
-height: auto;
+height: 35rem;
 }
 
 #carousel {
   box-sizing: border-box;
-  height: 40%;
+  height: 100%;
 }
 
 #carousel body {
@@ -149,11 +151,10 @@ height: auto;
         /*contenedor / lista */
 #carousel ul {
   width: 100%;
-  height: auto;
-  padding: 0;
+  height: 34rem;
+  padding: 20px;
   display: flex;
-  gap: 0;
-    list-style: none;
+  gap: 4vw;
   scrollbar-width: none;
   scroll-behavior: smooth;
     overflow-x: hidden;
@@ -164,15 +165,18 @@ height: auto;
 
 /*pelicula indivudual*/
 #carousel li {
+    scroll-snap-align: center;
   list-style-type: none;
   background-color: rgba(210, 15, 15, 0.5);
   border: 0px solid #dddddd;
   padding: 0px;
   flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    scroll-snap-align: center;
     height: auto;
 }
 
@@ -219,7 +223,7 @@ height: auto;
   width: 16px;
   height: 16px;
   background-color: transparent;
-  border: 2px solid transparent;
+  border: 2px solid white;
   border-radius: 50%;
   overflow: hidden;
   text-indent: 16px;
