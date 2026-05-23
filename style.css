@@ -99,7 +99,7 @@ main button:hover img{
 
 @media (max-width: 600px) {
     main button{
-  width: 50%;
+  width: auto;
   height: 60%;}
 }
 
