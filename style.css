@@ -162,8 +162,8 @@ background: linear-gradient(180deg, rgba(105,16,16,1) 0%, rgba(224,49,49,1) 40%,
         /*contenedor / lista */
 #carousel ul {
   width: 100%;
-  height: 34rem;
-  padding: 20px;
+  height: 100%;
+  padding: 0px;
   display: flex;
   gap: 4vw;
   scrollbar-width: none;
@@ -180,7 +180,7 @@ background: linear-gradient(180deg, rgba(105,16,16,1) 0%, rgba(224,49,49,1) 40%,
   list-style-type: none;
   background-color: rgba(210, 15, 15, 0.5);
   border: 0px solid #dddddd;
-  padding: 0px;
+  padding: 3%;
   flex: 0 0 100%;
     display: flex;
     justify-content: center;
@@ -240,7 +240,7 @@ background: linear-gradient(180deg, rgba(105,16,16,1) 0%, rgba(224,49,49,1) 40%,
   text-indent: 16px;
 }
 #carousel li::scroll-marker:target-current {
-  background-color: transparent;
+  background-color: rgb(255, 255, 255);
 }
 
 #carousel li{
