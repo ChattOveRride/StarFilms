@@ -1,6 +1,7 @@
 # POR HACER
 
 ## Principal
+- Arreglar TODO el layout
 - Hacer el logo (li)
 - Agregar la informacion del footer (san)
 - Agregar peliculas a seccion "Todas las peliculas" (ys)
