@@ -463,6 +463,32 @@ footer a{
 		/*celular*/
 @media (max-width: 600px) {
     .conteniditof{
+		gap: 10px;
         display: flex;
 		flex-direction: column;
+		align-content:center;
+		align-items: center;
+		font-size: 2vw !important;
     }
+	footer{
+		padding: 5px;
+	}
+}
+
+	/*About Us Page*/
+
+	.nosotros{
+font-family: general;
+height: auto;
+font-weight: bold;
+font-size: 1rem;
+display: flex;
+flex-direction: column;
+padding: 3% 3% 2% 2%;
+	}
+.nosotros h1{
+font-family: title;
+}
+.nosotros h2{
+font-family: title;
+}
