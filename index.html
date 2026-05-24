@@ -12,15 +12,67 @@
         position: relative;
         margin-top: 10px;
     }
+    .titulitoosi{ 
+	<!-- Este comentario es para irrumpir la fuente de mi footer, jaló de pura casualidad y suerte jaja, no le muevan plis :'v -->
+	}
+	.refawitada{
+		color: inherit;
+		text-decoration: none;
+	}
+	.refawitada:hover{
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+    opacity: 0.8;
+    transition: opacity 0.2s, text-shadow 0.2s;
+	}
+	.conteniditof{
+		display: flex;
+		gap: 50px;
+		align-items: flex-end;
+	}
+	.columnitaf{
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
+		flex: 1;
+	}
+	.redesf{
+    display: flex;
+    gap: 16px;
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid #ffffff44;
+	}
+	.redesf a{
+    color: inherit;
+    font-size: 22px;
+    text-decoration: none;
+    transition: opacity 0.2s;
+	}
+
+	.redesf a:hover{
+    opacity: 0.7;
+	}
     body{
         font-family: gen;
     }
+    footer{
+        font-size: 15px !important;
+        letter-spacing: 1px;
+        padding: 20px;
+		font-family: "Times New Roman", Times, serif;
+		border-top: 2px solid #ffffff44;
+    }
+	footer h1{
+    margin-top: 15px;
+	margin-bottom: 20px;
+	}
 </style>
 
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>STARFILMS</title>
             <link rel="stylesheet" href="style.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
         </head>
         <body>
             <header>
@@ -94,9 +146,42 @@
 </main>
 
       <footer>
-                <br>
-                Texto de prueba
-            </footer>
+        <div class = "conteniditof">
+			<div class = "columnitaf">
+			<div style = "display:flex; align-items: center; gap:10px">
+				<img id="logo" src="logo.png" alt="logo">  <h1><span class = "titulitoosi">STARFILMS</span></h1>
+			</div>
+				<a href = "z1abus.html" class = "refawitada" target = "_blank">Sobre Nosotros</a>
+				<a href = "z2contri.html" class = "refawitada" target = "_blank">Contribuidores</a>
+				<a href = "mailto:qyastarfilms@gmail.com" class = "refawitada">Soporte</a>
+			</div>
+			
+			<div class="columnitaf">
+			  <a href="z4polipriv.html" class="refawitada" target = "_blank">Políticas de Privacidad</a>
+			  <a href="z5terycon.html" class="refawitada" target = "_blank">Términos y Condiciones</a>
+			  <a href="" class="refawitada">Inicio</a>
+			</div>
+			
+			<div class="columnitaf">
+			  <a href="https://www.youtube.com/watch?v=KbuGWgYLqWk" target = "_blank" class="refawitada">Canción Genial</a>
+			  <a href="z8mencre.html" class="refawitada" target = "_blank">Mensaje de los Creadores</a>
+			  <a href="z9agrad.html" class="refawitada" target = "_blank">Agradecimientos</a>
+			</div>
+			
+			<div class="columnitaf">
+			  <a href="mailto:qyastarfilms@gmail.com" class="refawitada">Contáctanos</a>
+			  <a href="mailto:qyastarfilms@gmail.com?subject=Duda" class="refawitada">Dudas</a>
+			  <a href="mailto:qyastarfilms@gmail.com?subject=Sugerencia" class="refawitada">Sugerencias</a>
+			</div>
+		</div>
+		<div class="redesf">
+				<span style="align-self: center;">Nuestras redes:</span>
+			  <a href="https://facebook.com" target = "_blank"><i class="fab fa-facebook"></i></a>
+			  <a href="https://instagram.com" target = "_blank"><i class="fab fa-instagram"></i></a>
+			  <a href="https://twitter.com" target = "_blank"><i class="fab fa-x-twitter"></i></a>
+			  <a href="https://youtube.com" target = "_blank"><i class="fab fa-youtube"></i></a>
+		</div>
+      </footer>
 
 <!-- side bar -->
             <section id="mySidebar" class="sidebar">
