@@ -4,18 +4,25 @@
     box-sizing: border-box;
 }
 @font-face {
-  font-family: gen;
+  font-family: title;
   src: url(fonts/Philosopher-Bold.ttf);
   font-weight: bold;
 }
 
+@font-face {
+  font-family: general;
+  src: url(fonts/Philosopher-Regular.ttf);
+  font-weight: bold;
+}
+
 body{
-    font-family: gen;
+    font-family: general;
     background-color: #dee7e7;
     overflow-x: hidden;
     width: 100%;
 }
 header{
+    font-family: title;
     background: #a92727;
     width: 100%;
     clear: both;
@@ -24,6 +31,7 @@ header{
     height: 6rem;
 }
 main{
+font-family: title;
 height: auto;
 font-weight: bold;
 font-size: 3rem;
@@ -324,6 +332,7 @@ background: linear-gradient(180deg, rgba(105,16,16,1) 0%, rgba(224,49,49,1) 40%,
 }
 
 .sidebar h1{
+font-family: title;
   padding: 20px 20px 0 5rem;
   text-decoration: none;
   color: #000000;
