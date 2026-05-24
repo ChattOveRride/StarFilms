@@ -405,7 +405,53 @@ footer{
   height: 15%;
   color: #dee7e7;
   font-weight: bold;
-  font-size: 3rem;
   padding-left: 10%;
     overflow-x: hidden;
+    font-size: 2vw !important;
+    letter-spacing: 1px;
+    padding: 20px;
+	border-top: 2px solid #ffffff44;
 }
+
+.refawitada{
+		color: inherit;
+		text-decoration: none;
+	}
+	.refawitada:hover{
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+    opacity: 0.8;
+    transition: opacity 0.2s, text-shadow 0.2s;
+	}
+	.conteniditof{
+		display: flex;
+		gap: 50px;
+		align-items: flex-end;
+	}
+	.columnitaf{
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
+		flex: 1;
+	}
+	.redesf{
+    display: flex;
+    gap: 16px;
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid #ffffff44;
+	}
+	.redesf a{
+    color: inherit;
+    font-size: 3vw;
+    text-decoration: none;
+    transition: opacity 0.2s;
+	}
+
+	.redesf a:hover{
+    opacity: 0.7;
+	}
+
+	footer h1{
+    margin-top: 15px;
+	margin-bottom: 20px;
+	}
