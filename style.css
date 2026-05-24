@@ -414,6 +414,10 @@ footer{
 	border-top: 2px solid #ffffff44;
 }
 
+footer a{
+	text-decoration: none;
+}
+
 .refawitada{
 		color: inherit;
 		text-decoration: none;
