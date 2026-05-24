@@ -481,6 +481,7 @@ footer a{
     margin-top: 20px;
     padding-top: 16px;
     border-top: 1px solid #ffffff44;
+	visibility: hidden;
 	}	
 	.redesf a{
     color: inherit;
@@ -488,10 +489,7 @@ footer a{
     text-decoration: none;
     transition: opacity 0.2s;
 	align-self: center;
-	}
-
-	.refesf span{
-		visibility: hidden;
+	visibility: visible;
 	}
 	
 }
