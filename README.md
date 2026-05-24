@@ -3,8 +3,9 @@
 ## Principal
 - Arreglar TODO el layout, optimizar para celular
 - Agregar peliculas a seccion "Todas las peliculas" (ys)
-- Agregar pagina de informacion de la empresa (combinar información de los links del footer)
 - Agregar pagina de cartelera
+- Arreglar la disposición del Footer (santes el más crack)
+- Completar y Corregir la info del Footer (santes el más crack)
 
 ## Extra
 - Cambiar design y colores
