@@ -468,7 +468,8 @@ footer a{
 		flex-direction: column;
 		align-content:center;
 		align-items: center;
-		font-size: 2vw !important;
+		font-size: 3vw !important;
+		text-align: center;
     }
 	footer{
 		padding: 5px;
@@ -478,7 +479,7 @@ footer a{
 	/*About Us Page*/
 
 	.nosotros{
-width: 90%;
+width: 80%;
 justify-self: center;
 font-family: general;
 height: auto;
