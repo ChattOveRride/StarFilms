@@ -22,8 +22,21 @@
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
         </head>
 		<body>
-			<div><h3>CARTELERA</h3></div>
-			<div class="cont-dest">
+			<header>
+                <div class="menu">
+                    <nav>
+                        <ul>
+                            <li><img id="logo" src="logo.png" alt="logo"></li>
+                            <li><h1 class="titl">STARFILMS</h1></li>
+                            <li class="liel"><a href="index.html">Inicio</a></li>
+                            <li class="liel"><a href="cartelera.html">Cartelera</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+			<main>
+			<h1>CARTELERA</h1>
+			<div class="cont-all">
 			<ul>
 				<li><button popovertarget="mypopover" onclick="updateSidebar('mario')"><img src="cartel/mario.jpg"></button></li>
 				<li><button popovertarget="mypopover" onclick="updateSidebar('minecraft')"><img src="cartel/minecraft.jpg"></button></li>
@@ -31,6 +44,6 @@
 				<li><button popovertarget="mypopover" onclick="updateSidebar('mib')"><img src="cartel/MIB.jpg"></button></li>
 			</ul>
 			</div>
-			
+			</main>
 		</body>
 	</html>
