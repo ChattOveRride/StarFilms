@@ -474,6 +474,20 @@ footer a{
 	footer{
 		padding: 5px;
 	}
+		.redesf{
+	align-self: center;
+    display: flex;
+    gap: 5px;
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid #ffffff44;
+	}	.redesf a{
+    color: inherit;
+    font-size: 3vw;
+    text-decoration: none;
+    transition: opacity 0.2s;
+	}
+	
 }
 
 	/*About Us Page*/
