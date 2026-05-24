@@ -17,7 +17,7 @@
 			</style>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>STARFILMS - Cartelera</title>
+            <title>CARTELERA</title>
             <link rel="stylesheet" href="style.css">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
         </head>
@@ -27,7 +27,7 @@
                     <nav>
                         <ul>
                             <li><img id="logo" src="logo.png" alt="logo"></li>
-                            <li><h1 class="titl">STARFILMS</h1></li>
+                            <li><h2 class="titl">STARFILMS</h2></li>
                             <li class="liel"><a href="index.html">Inicio</a></li>
                             <li class="liel"><a href="cartelera.html">Cartelera</a></li>
                         </ul>
@@ -43,5 +43,161 @@
 				<button popovertarget="mypopover" onclick="updateSidebar('mib')"><img src="cartel/MIB.jpg"></button>
 			</div>
 			</main>
-		</body>
-	</html>
+			
+		<footer>
+        <div class = "conteniditof">
+			<div class = "columnitaf">
+			<div style = "display:flex; align-items: center; gap:10px">
+				<img id="logo" src="logo.png" alt="logo">  <h1><span class = "titulitoosi">STARFILMS</span></h1>
+			</div>
+				<a href = "z1abus.html" class = "refawitada" target = "_blank">Sobre Nosotros</a>
+				<a href = "z2contri.html" class = "refawitada" target = "_blank">Contribuidores</a>
+				<a href = "mailto:qyastarfilms@gmail.com" class = "refawitada">Soporte</a>
+			</div>
+			
+			<div class="columnitaf">
+			  <a href="z4polipriv.html" class="refawitada" target = "_blank">Políticas de Privacidad</a>
+			  <a href="z5terycon.html" class="refawitada" target = "_blank">Términos y Condiciones</a>
+			  <a href="" class="refawitada">Inicio</a>
+			</div>
+			
+			<div class="columnitaf">
+			  <a href="https://www.youtube.com/watch?v=KbuGWgYLqWk" target = "_blank" class="refawitada">Canción Genial</a>
+			  <a href="z8mencre.html" class="refawitada" target = "_blank">Mensaje de los Creadores</a>
+			  <a href="z9agrad.html" class="refawitada" target = "_blank">Agradecimientos</a>
+			</div>
+			
+			<div class="columnitaf">
+			  <a href="mailto:qyastarfilms@gmail.com" class="refawitada">Contáctanos</a>
+			  <a href="mailto:qyastarfilms@gmail.com?subject=Duda" class="refawitada">Dudas</a>
+			  <a href="mailto:qyastarfilms@gmail.com?subject=Sugerencia" class="refawitada">Sugerencias</a>
+			</div>
+		</div>
+		<div class="redesf">
+				<span style="align-self: center;">Nuestras redes:</span>
+			  <a href="https://facebook.com" target = "_blank"><i class="fab fa-facebook"></i></a>
+			  <a href="https://instagram.com" target = "_blank"><i class="fab fa-instagram"></i></a>
+			  <a href="https://twitter.com" target = "_blank"><i class="fab fa-x-twitter"></i></a>
+			  <a href="https://youtube.com" target = "_blank"><i class="fab fa-youtube"></i></a>
+		</div>
+      </footer>
+
+<!-- side bar -->
+            <section id="mySidebar" class="sidebar">
+              <br>
+<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&larr;</a>
+<br>
+
+<iframe id="sideImg" title="Video" src="supercoolinvitationohyeah.mp4"></iframe>
+<h1 id="sideTitle">Titulo</h1>
+<br>
+<hr>
+<div id="infotg"><p>Info pelicula</p><button type="button" id="infotggbtn" onclick="textshow()">⌄</button></div>
+<div id="infodiv"></div>
+<hr>
+<p>Grupo</p>
+  </section>
+
+<!-- java script -->
+            
+ <script>
+    const popover = document.getElementById("mypopover");
+
+popover.addEventListener("toggle", (event) => {
+  if (event.newState === "open") {
+    document.getElementById("mySidebar").style.width = "45rem";
+  }
+  else {
+    document.getElementById("mySidebar").style.width = "0";
+  }
+});
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+
+/*sidebar dinámica*/
+
+const movieData = {
+  'mario': { title: 'The super Mario galaxy movie', img: 'https://www.youtube.com/embed/ipzEY7c7it8'},
+  'minecraft': { title: 'A minecraft movie', img: 'https://www.youtube.com/embed/wJO_vIDZn-I'},
+  'pixels': { title: 'Pixels', img: 'https://www.youtube.com/embed/XAHprLW48no'},
+  'mib': { title: 'Men in black', img: 'https://www.youtube.com/embed/UxUTTrU6PA4'}
+};
+
+function updateSidebar(movieKey) {
+  const data = movieData[movieKey];
+  document.getElementById("sideTitle").innerText = data.title;
+  document.getElementById("sideImg").src = data.img;
+  document.getElementById("infodiv").innerHTML = "";
+  document.getElementById("infotggbtn").innerHTML= "⌄";
+}
+
+function textshow() {
+  var desc = 'Default';
+    if (document.getElementById("sideTitle").innerText === "The super Mario galaxy movie"){
+      desc = 'una descripcion de mario';
+    }
+    else if (document.getElementById("sideTitle").innerText === "A minecraft movie"){
+      desc = 'una descripcion de Minecraft';
+    }
+    else if (document.getElementById("sideTitle").innerText === "Pixels"){
+      desc = 'una descripcion de Pixeles';
+    }
+    else if (document.getElementById("sideTitle").innerText === "Men in black"){
+      desc = 'una descripcion de Men in Black';
+    }
+  var x = document.getElementById("infodiv");
+  if (x.innerHTML === "") {
+    x.innerHTML = desc;
+    document.getElementById("infotggbtn").innerHTML= "⌃";
+    document.getElementById("infotggbtn").style.transform= "translate(0px, 20px)";
+  } else {
+    x.innerHTML = "";
+     document.getElementById("infotggbtn").innerHTML= "⌄";
+     document.getElementById("infotggbtn").style.transform= "translate(0px, 0px)";
+  }
+}
+
+/* desplazamiento automático */
+
+const carousel = document.getElementById("carouselList");
+let isAutoScrolling = true;
+let isLooping = false;
+
+function autoScroll() {
+  if (!isAutoScrolling) return;
+  
+  if (carousel.scrollLeft + carousel.offsetWidth >= carousel.scrollWidth - 10) {
+    carousel.scrollTo({ left: 0, behavior: 'smooth' });
+  } else {
+    carousel.scrollBy({ left: carousel.offsetWidth, behavior: 'smooth' });
+  }
+}
+
+let scrollInterval = setInterval(autoScroll, 3000);
+
+function resetTimer() {
+  clearInterval(scrollInterval);
+  scrollInterval = setInterval(autoScroll, 3000);
+}
+
+carousel.addEventListener('mouseenter', () => isAutoScrolling = false);
+carousel.addEventListener('mouseleave', () => isAutoScrolling = true);
+
+carousel.addEventListener('scroll', () => {
+  if (isLooping) return;
+  resetTimer();
+  if (carousel.scrollLeft + carousel.offsetWidth >= carousel.scrollWidth - 10) {
+    isLooping = true;
+    setTimeout(() => {
+      carousel.scrollTo({ left: 0, behavior: 'smooth' });
+      setTimeout(() => { isLooping = false; }, 600);
+    }, 300);
+  }
+});
+
+</script>
+        </body>
+</html>
