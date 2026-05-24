@@ -273,8 +273,9 @@ background: linear-gradient(180deg, rgba(105,16,16,1) 0%, rgba(224,49,49,1) 40%,
     width: 30%;
 }
     #carousel h2{
+	font-family: title;
   color: #dee7e7;  
-  font-size: 2vw;
+  font-size: 3vw;
   margin-top: 2vw;
   margin-left: 2vw;
 }
