@@ -174,7 +174,7 @@ background: linear-gradient(180deg, rgba(105,16,16,1) 0%, rgba(224,49,49,1) 40%,
   height: 100%;
   padding: 0px;
   display: flex;
-  gap: 4vw;
+  gap: 0vw;
   scrollbar-width: none;
   scroll-behavior: smooth;
     overflow-x: hidden;
