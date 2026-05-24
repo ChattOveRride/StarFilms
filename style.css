@@ -478,13 +478,17 @@ footer a{
 	/*About Us Page*/
 
 	.nosotros{
+width: 90%;
+justify-self: center;
 font-family: general;
 height: auto;
 font-weight: bold;
-font-size: 1rem;
+font-size: 1.5rem;
 display: flex;
 flex-direction: column;
 padding: 3% 3% 2% 2%;
+text-align: justify;
+gap: 5% 0;
 	}
 .nosotros h1{
 font-family: title;
