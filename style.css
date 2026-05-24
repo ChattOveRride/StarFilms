@@ -460,3 +460,10 @@ footer a{
     margin-top: 15px;
 	margin-bottom: 20px;
 	}
+		/*celular*/
+@media (max-width: 600px) {
+    footer{
+        display: flex;
+		flex-direction: column;
+		justify-content: center;
+    }
