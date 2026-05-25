@@ -123,7 +123,7 @@ main button:hover img{
 /*Navegacion*/
 
 .menu{
-position: fixed;
+position: flex;
 height: 6rem;
 background: #a92727;
 width: 100%;
@@ -134,9 +134,10 @@ z-index: 3;
     width: auto;
     height: 60px;
     float: left;
+    gap: 10px;
 }
 
-nav{
+/*nav{
     float: left;
     align-items: center;
 }
@@ -151,7 +152,39 @@ nav ul li a{
     text-decoration: none;
     color: #dee7e7;
     font-weight: bold;
+}*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    
 }
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    padding-left: 2rem; 
+}
+
+.nav-right {
+  display: flex; 
+  flex-direction: row; 
+  align-items: center;
+  justify-content: flex-end;
+  gap: 3vw;
+  list-style: none;
+  margin: 0;
+  padding: 0 3vw; 
+}
+
+.nav-right li a {
+    text-decoration: none;
+    color: #dee7e7;
+    font-size: 1.5vw; 
+    font-weight: bold;
+}
+
 
 /*Carousel*/
 
