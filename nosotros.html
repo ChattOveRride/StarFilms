@@ -7,22 +7,66 @@
 		<title>Nosotros</title>
 		<link rel= "stylesheet" href="style.css">
 		<style>
+
+.terms ul, ol{
+margin-left: 6vw;
+}
+
+.terms li{
+  margin: 1vw 0 1vw 0;
+}
+
+cite{
+  font-size: smaller;
+  color: #98838e;
+}
+
+blockquote {
+  text-align: center;
+  padding-inline: 1.5rem;
+  border-inline-start: 2px solid #98838e;
+  border-inline-end: 2px solid #98838e;
+}
+
+body{
+  line-height: 1.5;;
+}     
+
+hr{
+  margin: 5vw 0 5vw 0;
+}
+
 			section{
 			text-align: center;
 			}
+
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin: 8px;
-	max-width: 30%;
-	text-align: justify;
+	text-align: center;
+  background-color: #ecf1f1;
+  padding: 2vw;
 }
-			.holder{
-				display: flex;
-				flex-direction: row;
-				gap: 1vw;
-			}
+
+.card-full {
+  align-self: center;
+  width: 90%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+	text-align: center;
+  background-color: #ecf1f1;
+  padding: 2vw;
+}
+
+h1, h2{
+  color: #a92727;
+}
 			
+      /*cel*/
 @media (max-width: 600px) {
+  .card{
+    	width: 90%;
+  }
     #preview{
         aspect-ratio: 3/2;
 		background-image: url(poster-cel.png);
@@ -36,9 +80,16 @@
   margin-top: 2vw;
   margin-left: 2vw;
 }
-
+			.holder{
+        width: 100%;
+				display: flex;
+				flex-direction: column;
+			}
 }
         /*pc*/
+          .card{
+    	max-width: 30%;
+  }
 @media (min-width: 601px) {
     #preview{
         aspect-ratio: 16/4.5;
@@ -53,6 +104,14 @@
   margin-top: 2vw;
   margin-left: 2vw;
 }
+			.holder{
+				display: flex;
+				flex-direction: row;
+				gap: 1vw;
+        justify-items: center;
+        justify-self: center;
+        align-self: center;
+			}
 }
 			
 				.titl{
@@ -84,28 +143,33 @@
             </header>
 
 	<div id=preview></div>
-		<section>
 		<div class="nosotros">
+      <section>
 		<h1>Sobre Nosotros</h1>
+    <br>
 		<h2>¿Qué es Starfilms?</h2>
 		<p>Starfilms nació del amor, del amor al cine. Creemos que el cine es una de las experiencias más envolventes que existen, pues activa todos los sentidos y merece vivirse de la mejor forma posible. Nos comprometemos a ofrecer una gran variedad de películas que te aseguramos que serán de alta calidad, justo como las cómodas instalaciones y tranquilo ambiente que proporcionamos, convirtiendo cada sueño en bellos recuerdos.</p>
 		<div class="holder">
 			<div class= "card">
 		<h2>Nuestra Misión</h2>
+    <br>
 		<p>Nuestra misión es acercar el arte del cine a la comunidad, con una selección de películas que abarca desde los largometrajes taquilleros de Hollywood hasta las pequeñas obras maestras que ofrece el cine independiente, brindando siempre una experiencia accesible y de alta calidad.</p>
 		</div>
 		<div class= "card">
 		<h2>Nuestra Visión</h2>
+    <br>
 		<p>Nuestra visión es ser el punto encuentro cultural de referencia de la comunidad, reconocido por calidez, variedad y compromiso con el público y arte cinematográfico</p>
 		</div>
 		<div class= "card">
 		<h2>Nuestros Valores</h2>
+    <br>
 		<p>Nuestros valores son varios, destacamos accesibilidad, diversidad, calidez humana y pasión por el arte, guiando estos a cada decisión que tomamos, desde elegir una película para proyectar hasta el diseño y ambientación del espacio que ofrecemos.</p>
 		</div>
 		</div>
 		</section>
 		<hr>
 		
+    <div class="card-full">
 	<h1>Contribuidores</h1>
 		<p>La página de Starfilms no hubiera sido posible sin el conjunto de varios sueños, así como no hubiera sido posible sin nuestros contribuidores y elementos estrella:</p>
 		<ul>
@@ -117,8 +181,10 @@
 			<li>Santes - Involucrado en Desarrollo de Software y Soporte Técnico</li>
 			<li>Erik - Involucrado en Desarrollo de Software y Armado de Prototipos</li>
 		</ul>
+    </div>
 		<hr>
 		
+    <div class="terms">
 	<h1>Políticas de Privacidad</h1>
 		<p><i>Vigente desde el 27 de Abril del 2023 </i>La página de Starfilms únicamente es utilizada para promocionar nuestros cines, por lo que:</p>
 		<ul>
@@ -130,9 +196,10 @@
 			<li>No representamos a ninguna distribuidora, productora ni celebridad.</li>
 			<li>No realizamos pruebas en animales.</li>
 			</ul>
+      </div>
 		<hr>
 		
-		
+		<div class="terms">
 	<h1>Términos y Condiciones</h1>
 	<p><i>Vigente desde el 27 de Abril del 2023 </i>La página de Starfilms es de uso plenamente gratuito y simple, mas contamos con ciertas reglas que deben ser seguidas y tomadas en cuenta:</p>
 	<ol>
@@ -143,20 +210,25 @@
 	<li><b>Modificaciones:</b> Starfilms se reserva el derecho de modificar estos términos en cualquier momento. Los cambios serán notificados en el mismo sitio con al menos <b>7 días</b> de anticipación.</li>
 	<li><b>Te queremos mucho:</b> Eres genial.</li>
 	</ol>
+  </div>
 	<hr>
 	
 	
-	<h1>Mensaje de los Creadores</h1>
-		<p>Si estás leyendo esto, gracias. Gracias por darle una oportunidad a nuestros cines, originalmente un pequeño proyecto que nació del puro amor por el arte. Seguimos y seguiremos aquí siempre para ti: en los días más vacíos y en las noches más oscuras esperamos que siempre puedas ver al cine como a un segundo hogar, como un lugar para refugiarte, como un espacio para compartir y amar de la misma forma que nosotros amamos la actuación y animación.</p>
-		<cite>-El equipo de Starfilms</cite>
+  <blockquote>
+  <h1>Mensaje de los Creadores</h1>
+  <p>Si estás leyendo esto, gracias. Gracias por darle una oportunidad a nuestros cines, originalmente un pequeño proyecto que nació del puro amor por el arte. Seguimos y seguiremos aquí siempre para ti: en los días más vacíos y en las noches más oscuras esperamos que siempre puedas ver al cine como a un segundo hogar, como un lugar para refugiarte, como un espacio para compartir y amar de la misma forma que nosotros amamos la actuación y animación.</p>
+	<cite>-El equipo de Starfilms</cite>
+</blockquote>
+	
 		<hr>
-		
+		<div class="card-full">
 		<h1>Agradecimientos</h1>
 		<p>Es gracias al apoyo de varias personas que Starfilms es posible, por lo que...</p>
 		<p>Agradecemos a nuestros padres y amigos, que siempre nos brindaron soporte. Agradecemos a los directores, actores y equipos creativos detrás de cada película de la que hemos hablado. Agradecemos a Sergio Luján Mora y a Elías Alcalá Pérez por inventar HTML. Agradecemos a Maximiliano de Habsburgo por ser el único político bueno de nuestro país. Agrademos al gobierno de Dinamarca por financiar nuestr proyecto. Y por sobre todo, <b>te agradecemos a ti, querido lector, por estar aquí y motivarnos a seguir con este proyecto.</b></p>
 		<p>La vida es hermosa. Gracias por ser parte de Starfilms</p>
+    </div>
 		</div>
-
+<br><br>
 	     <footer>
         <div class = "conteniditof">
 			<div class = "columnitaf">
