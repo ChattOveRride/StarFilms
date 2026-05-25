@@ -145,6 +145,7 @@
 <div id="infodiv"></div>
 <hr>
 <p>Grupo</p>
+				
   </section>
 
 <!-- java script -->
@@ -186,7 +187,48 @@ function updateSidebar(movieKey) {
 function textshow() {
   var desc = 'Default';
     if (document.getElementById("sideTitle").innerText === "The super Mario galaxy movie"){
-      desc = 'una descripcion de mario';
+      desc = '<table style="border-spacing: 60px 0px;">
+		<tr align="center">
+			<td><b>Titulo<br> Original</b></td>
+			<td>The amazing digital Circus
+			<hr></td>
+		</tr>
+		<tr align="center">
+			<td><b>Clasificación</b></td>
+			<td>TBC
+			<hr></td>
+		</tr>
+		<tr align="center">
+			<td><b>Genero</b></td>
+			<td>Drama
+			<hr></td>
+		</tr>
+		<tr align="center">
+			<td><b>Director</b></td>
+			<td>Gooseworx
+			<hr></td>
+		</tr>
+		
+		<tr align="center">
+			<td><b>Actores</b></td>
+			<td>Lizzie Freeman – Pomni Michael Kovach –<br> Jax Marissa Lenti – Gangle Ashley Nichols –<br> Zooble Alex Rochon – Caine Sean Chiplock<br> – Kinger Amanda Hufford – Ragatha
+			<hr></td>
+		</tr>
+		<tr align="center">
+			<td><b>País</b></td>
+			<td>Australia, Estados Unidos
+			<hr></td>
+		</tr>
+		<tr align="center">
+			<td><b>Duración</b></td>
+			<td>1h 40m
+			<hr></td>
+		</tr>
+		<tr align="center">
+			<td><b>Distribuidor</b></td>
+			<td>Cinemex Distribución
+			<hr></td>
+		</tr>';
     }
     else if (document.getElementById("sideTitle").innerText === "A minecraft movie"){
       desc = 'una descripcion de Minecraft';
