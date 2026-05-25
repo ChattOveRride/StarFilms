@@ -531,6 +531,7 @@ footer a{
 	/*About Us Page*/
 
 	.nosotros{
+    margin: auto;
 width: 80%;
 justify-self: center;
 font-family: general;
