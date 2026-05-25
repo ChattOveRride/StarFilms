@@ -131,7 +131,7 @@ z-index: 3;
 }
 
 #logo{
-    width: 60px;
+    width: auto;
     height: 60px;
     float: left;
 }
