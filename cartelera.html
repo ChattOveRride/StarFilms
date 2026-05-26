@@ -5,6 +5,46 @@
             <link rel="icon" type="image/x-icon" href="logo.png">
 			<style>
 
+       /*celular*/
+
+@media (max-width: 600px) {
+.cont-all{
+  gap: 2% !important;
+}
+
+ .cont-all button{
+  width: 35vw !important;
+  height: 55vw !important;}
+
+}
+
+        /*pc*/
+
+@media (min-width: 601px) {
+
+main{
+padding: 0% 3% 0% 2% !important;
+}
+
+h3{
+  margin: 0vw 0vw 0vw 0vw ;
+  width: 100% !important;
+}
+
+.cont-all{
+  gap: 3% !important;
+  padding: 5% 12% 5% 12%;
+}
+ .cont-all button{
+  width: 15vw !important;
+  height: 25vw !important;}
+
+}
+
+.cont-all{
+  gap: 4%;
+}
+
 /*super toggle*/
 #navtgg {
   margin: 3px 0;
@@ -168,13 +208,13 @@ width: auto;
 </div>
             </header>
 			<main>
-			<h3>CARTELERA</h3>
 			<div class="cont-all">
-				<button popovertarget="mypopover" onclick="updateSidebar('mario')"><img src="cartel/mario.jpg"></button>
-				<button popovertarget="mypopover" onclick="updateSidebar('minecraft')"><img src="cartel/minecraft.jpg"></button>
-				<button popovertarget="mypopover" onclick="updateSidebar('pixels')"><img src="cartel/pixels.jpg"></button>
-				<button popovertarget="mypopover" onclick="updateSidebar('mib')"><img src="cartel/Spiderman.jpg"></button>
-			</div>
+        <h3>CARTELERA</h3>
+<button popovertarget="mypopover" onclick="updateSidebar('mario')"><img src="cartel/mario.jpg"></button>
+<button popovertarget="mypopover" onclick="updateSidebar('minecraft')"><img src="cartel/minecraft.jpg"></button>
+<button popovertarget="mypopover" onclick="updateSidebar('pixels')"><img src="cartel/pixels.jpg"></button>
+<button popovertarget="mypopover" onclick="updateSidebar('spiderman')"><img src="cartel/Spiderman.jpg"></button>
+</div>
 			</main>
 
 		<div id="mypopover" popover="manual" style="border: 0px;"></div>
