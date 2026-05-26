@@ -21,13 +21,13 @@
 }
 
 .change .bar1 {
-  transform: translate(0, 8px) rotate(-45deg);
+  transform: translate(0, 11px) rotate(-45deg);
 }
 
 .change .bar2 {opacity: 0;}
 
 .change .bar3 {
-  transform: translate(0, -8px) rotate(45deg);
+  transform: translate(0, -11px) rotate(45deg);
 }
 
 
@@ -132,7 +132,7 @@ width: auto;
 					margin-top: 10px;
 				}
 				.titulitoosi{ 
-				<!-- Este comentario es para irrumpir la fuente de mi footer, jaló de pura casualidad y suerte jaja, no le muevan plis :'v -->
+				/* Este comentario es para irrumpir la fuente de mi footer, jaló de pura casualidad y suerte jaja, no le muevan plis :'v */
 				}
 			</style>
             <meta charset="UTF-8">
@@ -173,7 +173,7 @@ width: auto;
 				<button popovertarget="mypopover" onclick="updateSidebar('mario')"><img src="cartel/mario.jpg"></button>
 				<button popovertarget="mypopover" onclick="updateSidebar('minecraft')"><img src="cartel/minecraft.jpg"></button>
 				<button popovertarget="mypopover" onclick="updateSidebar('pixels')"><img src="cartel/pixels.jpg"></button>
-				<button popovertarget="mypopover" onclick="updateSidebar('mib')"><img src="cartel/MIB.jpg"></button>
+				<button popovertarget="mypopover" onclick="updateSidebar('mib')"><img src="cartel/Spiderman.jpg"></button>
 			</div>
 			</main>
 
@@ -257,7 +257,7 @@ const movieData = {
   'mario': { title: 'The Super Mario Galaxy movie', img: 'https://www.youtube.com/embed/ipzEY7c7it8'},
   'minecraft': { title: 'A Minecraft movie', img: 'https://www.youtube.com/embed/wJO_vIDZn-I'},
   'pixels': { title: 'Pixels', img: 'https://www.youtube.com/embed/XAHprLW48no'},
-  'mib': { title: 'Men in black', img: 'https://www.youtube.com/embed/UxUTTrU6PA4'}
+  'mib': { title: 'Spiderman: Across the SpiderVerse', img: 'https://www.youtube.com/watch?v=shW9i6k8cB0'}
 };
 
 function updateSidebar(movieKey) {
@@ -279,8 +279,8 @@ function textshow() {
     else if (document.getElementById("sideTitle").innerText === "Pixels"){
       desc = 'Extraterrestres interpretan videojuegos clásicos como una declaración de guerra y atacan la Tierra usando personajes arcade gigantes. Un grupo de jugadores expertos deberá detener la invasión.';
     }
-    else if (document.getElementById("sideTitle").innerText === "Men in black"){
-      desc = 'Un policía de Nueva York descubre una organización secreta encargada de vigilar la actividad extraterrestre en la Tierra y se convierte en uno de sus agentes.';
+    else if (document.getElementById("sideTitle").innerText === "Spiderman: Across the SpiderVerse"){
+      desc = 'Miles Morales se reúne nuevamente con Gwen Stacy y viaja a través del multiverso, donde conoce a un grupo de Spider-Personas encargadas de proteger la realidad. Sin embargo, un conflicto surge cuando Miles descubre que no todos comparten la misma visión sobre cómo salvar los distintos universos.';
     }
   var x = document.getElementById("infodiv");
   if (x.innerHTML === "") {
