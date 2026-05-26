@@ -254,8 +254,8 @@ function closeNav() {
 /*sidebar dinámica*/
 
 const movieData = {
-  'mario': { title: 'The super Mario galaxy movie', img: 'https://www.youtube.com/embed/ipzEY7c7it8'},
-  'minecraft': { title: 'A minecraft movie', img: 'https://www.youtube.com/embed/wJO_vIDZn-I'},
+  'mario': { title: 'The Super Mario Galaxy movie', img: 'https://www.youtube.com/embed/ipzEY7c7it8'},
+  'minecraft': { title: 'A Minecraft movie', img: 'https://www.youtube.com/embed/wJO_vIDZn-I'},
   'pixels': { title: 'Pixels', img: 'https://www.youtube.com/embed/XAHprLW48no'},
   'mib': { title: 'Men in black', img: 'https://www.youtube.com/embed/UxUTTrU6PA4'}
 };
@@ -270,17 +270,17 @@ function updateSidebar(movieKey) {
 
 function textshow() {
   var desc = 'Default';
-    if (document.getElementById("sideTitle").innerText === "The super Mario galaxy movie"){
-      desc = 'una descripcion de mario';
+    if (document.getElementById("sideTitle").innerText === "The Super Mario Galaxy movie"){
+      desc = 'Luego de vencer a Bowser y salvar Brooklyn, Mario y sus amigos enfrentan una nueva amenaza: Bowser Jr. secuestra a la Princesa Rosalina. Los hermanos Mario se lanzan al espacio junto a Yoshi para rescatarla y salvar a toda la galaxia.';
     }
-    else if (document.getElementById("sideTitle").innerText === "A minecraft movie"){
-      desc = 'una descripcion de Minecraft';
+    else if (document.getElementById("sideTitle").innerText === "A Minecraft movie"){
+      desc = 'Cuatro jóvenes son transportados al mundo cúbico de Minecraft mediante un portal misterioso. Con la ayuda de Steve, deberán sobrevivir a criaturas peligrosas y encontrar la manera de regresar a casa.';
     }
     else if (document.getElementById("sideTitle").innerText === "Pixels"){
-      desc = 'una descripcion de Pixeles';
+      desc = 'Extraterrestres interpretan videojuegos clásicos como una declaración de guerra y atacan la Tierra usando personajes arcade gigantes. Un grupo de jugadores expertos deberá detener la invasión.';
     }
     else if (document.getElementById("sideTitle").innerText === "Men in black"){
-      desc = 'una descripcion de Men in Black';
+      desc = 'Un policía de Nueva York descubre una organización secreta encargada de vigilar la actividad extraterrestre en la Tierra y se convierte en uno de sus agentes.';
     }
   var x = document.getElementById("infodiv");
   if (x.innerHTML === "") {
