@@ -126,6 +126,7 @@ main button:hover img{
 position: fixed;
 height: 6rem;
 background: #a92727;
+overflow-x: hidden;
 width: 100%;
 z-index: 3;
 }
@@ -159,6 +160,8 @@ nav ul li a{
 #preview{
 background: rgb(105,16,16);
 background: linear-gradient(180deg, rgba(105,16,16,1) 0%, rgba(224,49,49,1) 40%, rgba(224,49,49,1) 100%);
+overflow-x: hidden;
+width: 100%;
 }
 
 #carousel {
