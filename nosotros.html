@@ -17,8 +17,8 @@
 }
 
 .bar1, .bar2, .bar3 {
-  width: 36px;
-  height: 4px;
+  width: 30px;
+  height: 3px;
   background-color: #dee7e7;
   margin: 7px 0;
   transition: 0.4s;
@@ -45,6 +45,7 @@
     position: sticky;
     top: 100px;
     width: 100%;
+    overflow-x: hidden;
 }
 
 
@@ -63,8 +64,8 @@ display: none;
 }
 
 #tnav img{
-width: auto;
-    height: 45px;
+	width: auto;
+    height: 40px;
     float: left;
 }
 
@@ -183,6 +184,8 @@ h1, h2{
     max-width: 100%;
   }
     #preview{
+		width: 100%;
+    	overflow-x: hidden;
         aspect-ratio: 3/2;
 		background-image: url(poster-cel.png);
 		background-size: cover;
@@ -207,6 +210,8 @@ h1, h2{
     max-width: 30%;
   }
     #preview{
+		width: 100%;
+    	overflow-x: hidden;
         aspect-ratio: 16/4.5;
 		background-image: url(poster-pc.png);
 		background-size: cover;
