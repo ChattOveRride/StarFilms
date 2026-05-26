@@ -15,15 +15,28 @@
   font-weight: bold;
 }
 
+:root {
+    --main-back:#a92727;
+    --main-color:#dee7e7;
+    --grad1: rgba(105,16,16,1);
+    --grad2: rgba(224,49,49,1);
+
+    --caro-back: rgb(105,16,16);
+
+    --foothov: rgba(255, 255, 255, 0.6);
+    --footbord: #ffffff44;
+}
+
+
 body{
     font-family: general;
-    background-color: #dee7e7;
+    background-color: var(--main-color);
     overflow-x: hidden;
     width: 100%;
 }
 header{
     font-family: title;
-    background: #a92727;
+    background: var(--main-back);
     width: 100%;
     clear: both;
     content: '';
@@ -46,8 +59,8 @@ padding: 3% 3% 2% 2%;
     flex-flow: row wrap;
     gap: 2%;
     justify-content: flex-start;
-    width: 100%;
-    height: 30vw;
+    width: auto;
+    height: auto;
 }
 
 .cont-all{
@@ -56,7 +69,7 @@ padding: 3% 3% 2% 2%;
     gap: 2%;
     justify-content: space-around;
     width: 100%;
-    height: 30vw;
+    height: auto;
 }
 
 .cont-dest ul{
@@ -65,12 +78,11 @@ padding: 3% 3% 2% 2%;
     flex-direction: row;
     display: flex;
     justify-content: space-around;
-    width: 100%;
-    height: 100%;
+    width: auto;
+    height: auto;
     scrollbar-width: none;
     scroll-behavior: smooth;
     overflow-x: scroll;
-    gap: 4vw;
 }
 
 main img{
@@ -94,7 +106,6 @@ main button{
   display: flex;
   border-radius: 15px;
   transition: transform 0.3s;
-  background-image: url(cartel/mario.jpg);
 }
 
 main button:hover{
@@ -108,17 +119,37 @@ main button:hover img{
         /*celular*/
 
 @media (max-width: 600px) {
-    main button{
-  width: auto;
-  height: 60%;}
+
+  .cont-dest ul,li{
+      gap: 5vw;
+  }
+  .cont-dest button{
+  width: 23vw;
+  height: 35vw;}
+
+ .cont-all button{
+  width: 23vw;
+  height: 35vw;}
 }
 
         /*pc*/
 
 @media (min-width: 601px) {
-    main button{
+
+  .cont-dest ul{
+    width: 100%
+}
+
+   .cont-dest ul,li{
+      gap: 4vw;
+  }
+    .cont-dest button{
   width: auto;
-  height: 90%;}
+  height: 25vw;}
+
+    .cont-all button{
+  width: auto;
+  height: 25vw;}
 }
 
 /*Navegacion*/
@@ -126,7 +157,7 @@ main button:hover img{
 .menu{
 position: fixed;
 height: 6rem;
-background: #a92727;
+background: var(--main-back);
 overflow-x: hidden;
 width: 100%;
 z-index: 3;
@@ -151,7 +182,7 @@ nav ul li{
 }
 nav ul li a{
     text-decoration: none;
-    color: #dee7e7;
+    color: var(--main-color);
     font-weight: bold;
 }
 
@@ -159,8 +190,8 @@ nav ul li a{
 /*Carousel*/
 
 #preview{
-background: rgb(105,16,16);
-background: linear-gradient(180deg, rgba(105,16,16,1) 0%, rgba(224,49,49,1) 40%, rgba(224,49,49,1) 100%);
+background: var(--caro-back);
+background: linear-gradient(180deg, var(--grad1) 0%, var(--grad2) 40%, var(--grad2) 100%);
 overflow-x: hidden;
 width: 100%;
 }
@@ -193,7 +224,7 @@ width: 100%;
     scroll-snap-align: center;
   list-style-type: none;
   background-color: rgba(210, 15, 15, 0.5);
-  border: 0px solid #dddddd;
+  border: 0px solid var(--main-color);
   padding: 3%;
   flex: 0 0 100%;
     display: flex;
@@ -215,7 +246,7 @@ width: 100%;
   border: 0;
   font-size: 2.5rem;
   background: none;
-  color: rgb(255, 255, 255);
+  color: white;
   opacity: 1;
   cursor: pointer;
 }
@@ -254,7 +285,7 @@ width: 100%;
   text-indent: 16px;
 }
 #carousel li::scroll-marker:target-current {
-  background-color: rgb(255, 255, 255);
+  background-color: white;
 }
 
 #carousel li{
@@ -274,19 +305,19 @@ width: 100%;
   overflow-x: scroll;
 }
 #carousel img{
-    margin-left: 3rem;
-    width: 30%;
+    margin: 3rem 0rem 3rem 3rem;
+    width: 50%;
 }
     #carousel h2{
 	font-family: title;
-  color: #dee7e7;  
-  font-size: 3vw;
-  margin-top: 2vw;
+  color: var(--main-color);  
+  font-size: 6vw;
+  margin-top: 15vw;
   margin-left: 2vw;
 }
 
 #carousel p{
-  color: #dee7e7;  
+  color: var(--main-color);  
   font-size: 1vw;
   margin-top: 3vw;
   margin-left: 3vw;
@@ -304,14 +335,14 @@ width: 100%;
     width: 20%;
 }
     #carousel h2{
-  color: #dee7e7;  
+  color: var(--main-color);  
   font-size: 3vw;
   margin-top: 5vw;
   margin-left: 5vw;
 }
 
 #carousel p{
-  color: #dee7e7;  
+  color: var(--main-color);  
   font-size: 2vw;
   margin-top: 5vw;
   margin-left: 5vw;
@@ -326,7 +357,7 @@ width: 100%;
   z-index: 5;
   top: 0;
   right: 0;
-  background-color: #dee7e7;
+  background-color: var(--main-color);
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -341,7 +372,7 @@ width: 100%;
 font-family: title;
   padding: 20px 20px 0 5rem;
   text-decoration: none;
-  color: #000000;
+  color: black;
   display: block;
   font-size: 3rem;
 }
@@ -349,7 +380,7 @@ font-family: title;
 .sidebar p{
   padding: 20px 20px 0 5rem;
   text-decoration: none;
-  color: #000000;
+  color: black;
   display: block;
   font-size: 2rem;
 }
@@ -372,7 +403,7 @@ font-family: title;
 
 .sidebar .closebtn {
   padding: 20px 20px 0 5rem;
-  color: #000000;
+  color: black;
   position: absolute;
   top: 0;
   font-size: 5rem;
@@ -383,7 +414,7 @@ font-family: title;
 #infodiv {
   padding: 20px 20px 0 5rem;
   text-decoration: none;
-  color: #000000;
+  color: black;
   display: block;
   font-size: 2rem;
 }
@@ -406,17 +437,17 @@ font-family: title;
 /*Footer*/
 
 footer{
-  background: #a92727;
+  background: var(--main-back);
   width: 100%;
   height: 15%;
-  color: #dee7e7;
+  color: var(--main-color);
   font-weight: bold;
   padding-left: 10%;
     overflow-x: hidden;
     font-size: 1vw !important;
     letter-spacing: 1px;
     padding: 20px;
-	border-top: 2px solid #ffffff44;
+	border-top: 2px solid var(--footbord);
 }
 
 footer a{
@@ -428,7 +459,7 @@ footer a{
 		text-decoration: none;
 	}
 	.refawitada:hover{
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+    text-shadow: 0 0 8px var(--foothov);
     opacity: 0.8;
     transition: opacity 0.2s, text-shadow 0.2s;
 	}
@@ -448,7 +479,7 @@ footer a{
     gap: 16px;
     margin-top: 20px;
     padding-top: 16px;
-    border-top: 1px solid #ffffff44;
+    border-top: 1px solid var(--footbord);
 	}
 	.redesf a{
     color: inherit;
@@ -485,7 +516,7 @@ footer a{
     gap: 5px;
     margin-top: 20px;
     padding-top: 16px;
-    border-top: 1px solid #ffffff44;
+    border-top: 1px solid var(--footbord);
 	visibility: hidden;
 	width: auto;
 	}	
