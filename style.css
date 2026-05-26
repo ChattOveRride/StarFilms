@@ -29,6 +29,7 @@ header{
     content: '';
     display: table;
     height: 6rem;
+	overflow-x: hidden;
 }
 main{
 font-family: title;
@@ -146,7 +147,7 @@ nav ul li{
     list-style: none;
     margin-left: 30px;
     padding: 20px 0;
-    float: left;
+    float: right;
 }
 nav ul li a{
     text-decoration: none;
