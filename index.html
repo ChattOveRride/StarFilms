@@ -134,6 +134,30 @@ width: auto;
     .titulitoosi{ 
 	<!-- Este comentario es para irrumpir la fuente de mi footer, jaló de pura casualidad y suerte jaja, no le muevan plis :'v -->
 	}
+
+/* Tabla info pelicula */
+.movie-table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 1.4rem;
+  font-family: general, sans-serif;
+}
+.movie-table td {
+  padding: 10px 18px;
+  vertical-align: top;
+  border-bottom: 1px solid rgba(169,39,39,0.2);
+}
+.movie-table td:first-child {
+  font-weight: bold;
+  color: var(--main-back);
+  white-space: nowrap;
+  width: 35%;
+}
+.movie-table td:last-child {
+  color: #333;
+}
 </style>
 
             <meta charset="UTF-8">
@@ -265,12 +289,25 @@ width: auto;
 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&larr;</a>
 <br>
 
-<iframe id="sideImg" title="Video" src="supercoolinvitationohyeah.mp4"></iframe>
+<div class="video-wrap">
+  <iframe id="sideImg" title="Video" src="supercoolinvitationohyeah.mp4"></iframe>
+</div>
 <h1 id="sideTitle">Titulo</h1>
 <br>
 <hr>
 <div id="infotg"><p>Info pelicula</p><button type="button" id="infotggbtn" onclick="textshow()">⌄</button></div>
 <div id="infodiv"></div>
+<hr>
+<table class="movie-table" id="movieInfoTable">
+  <tr><td>Título Original</td><td id="infoTitulo">—</td></tr>
+  <tr><td>Clasificación</td><td id="infoClasificacion">—</td></tr>
+  <tr><td>Género</td><td id="infoGenero">—</td></tr>
+  <tr><td>Director</td><td id="infoDirector">—</td></tr>
+  <tr><td>Actores</td><td id="infoActores">—</td></tr>
+  <tr><td>País</td><td id="infoPais">—</td></tr>
+  <tr><td>Duración</td><td id="infoDuracion">—</td></tr>
+  <tr><td>Distribuidor</td><td id="infoDistribuidor">—</td></tr>
+</table>
 <hr>
 <p>Grupo</p>
 				
@@ -298,10 +335,62 @@ function closeNav() {
 /*sidebar dinámica*/
 
 const movieData = {
-  'mario': { title: 'The Super Mario Galaxy movie', img: 'https://www.youtube.com/embed/ipzEY7c7it8'},
-  'minecraft': { title: 'A Minecraft movie', img: 'https://www.youtube.com/embed/wJO_vIDZn-I'},
-  'pixels': { title: 'Pixels', img: 'https://www.youtube.com/embed/XAHprLW48no'},
-  'spiderman': { title: 'SpiderMan: Across the SpiderVerse', img: 'https://www.youtube.com/watch?v=shW9i6k8cB0'}
+  'mario': {
+    title: 'The Super Mario Galaxy movie',
+    img: 'https://www.youtube.com/embed/ipzEY7c7it8',
+    tabla: {
+      titulo: 'The Super Mario Galaxy Movie',
+      clasificacion: 'G',
+      genero: 'Animación, Aventura, Comedia',
+      director: 'Aaron Horvath, Michael Jelenic',
+      actores: 'Chris Pratt – Mario, Jack Black – Bowser, Anya Taylor-Joy – Peach',
+      pais: 'Estados Unidos, Japón',
+      duracion: '1h 32m',
+      distribuidor: 'Universal Pictures'
+    }
+  },
+  'minecraft': {
+    title: 'A Minecraft movie',
+    img: 'https://www.youtube.com/embed/wJO_vIDZn-I',
+    tabla: {
+      titulo: 'A Minecraft Movie',
+      clasificacion: 'PG',
+      genero: 'Aventura, Comedia, Fantasía',
+      director: 'Jared Hess',
+      actores: 'Jack Black – Steve, Jason Momoa, Jennifer Coolidge',
+      pais: 'Estados Unidos',
+      duracion: '1h 41m',
+      distribuidor: 'Warner Bros. Pictures'
+    }
+  },
+  'pixels': {
+    title: 'Pixels',
+    img: 'https://www.youtube.com/embed/XAHprLW48no',
+    tabla: {
+      titulo: 'Pixels',
+      clasificacion: 'PG-13',
+      genero: 'Acción, Comedia, Ciencia Ficción',
+      director: 'Chris Columbus',
+      actores: 'Adam Sandler, Kevin James, Michelle Monaghan, Peter Dinklage',
+      pais: 'Estados Unidos',
+      duracion: '1h 45m',
+      distribuidor: 'Sony Pictures'
+    }
+  },
+  'spiderman': {
+    title: 'SpiderMan: Across the SpiderVerse',
+    img: 'https://www.youtube.com/embed/shW9i6k8cB0',
+    tabla: {
+      titulo: 'Spider-Man: Across the Spider-Verse',
+      clasificacion: 'PG',
+      genero: 'Animación, Acción, Aventura',
+      director: 'Joaquim Dos Santos, Kemp Powers, Justin K. Thompson',
+      actores: 'Shameik Moore – Miles Morales, Hailee Steinfeld – Gwen Stacy',
+      pais: 'Estados Unidos',
+      duracion: '2h 20m',
+      distribuidor: 'Sony Pictures'
+    }
+  }
 };
 
 function updateSidebar(movieKey) {
@@ -310,6 +399,17 @@ function updateSidebar(movieKey) {
   document.getElementById("sideImg").src = data.img;
   document.getElementById("infodiv").innerHTML = "";
   document.getElementById("infotggbtn").innerHTML= "⌄";
+
+  // Poblar tabla
+  const t = data.tabla;
+  document.getElementById("infoTitulo").innerText       = t.titulo;
+  document.getElementById("infoClasificacion").innerText = t.clasificacion;
+  document.getElementById("infoGenero").innerText       = t.genero;
+  document.getElementById("infoDirector").innerText     = t.director;
+  document.getElementById("infoActores").innerText      = t.actores;
+  document.getElementById("infoPais").innerText         = t.pais;
+  document.getElementById("infoDuracion").innerText     = t.duracion;
+  document.getElementById("infoDistribuidor").innerText = t.distribuidor;
 }
 
 function textshow() {
