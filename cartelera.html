@@ -174,6 +174,29 @@ width: auto;
 				.titulitoosi{ 
 				/* Este comentario es para irrumpir la fuente de mi footer, jaló de pura casualidad y suerte jaja, no le muevan plis :'v */
 				}
+/* Tabla info pelicula */
+.movie-table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 1.4rem;
+  font-family: general, sans-serif;
+}
+.movie-table td {
+  padding: 10px 18px;
+  vertical-align: top;
+  border-bottom: 1px solid rgba(169,39,39,0.2);
+}
+.movie-table td:first-child {
+  font-weight: bold;
+  color: var(--main-back);
+  white-space: nowrap;
+  width: 35%;
+}
+.movie-table td:last-child {
+  color: #333;
+}
 			</style>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -257,20 +280,19 @@ width: auto;
       </footer>
 
 <!-- side bar -->
-            <section id="mySidebar" class="sidebar">
-              <br>
-<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&larr;</a>
-<br>
+<section id="mySidebar" class="sidebar">
+  <br>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&larr;</a>
 
-<iframe id="sideImg" title="Video" src="supercoolinvitationohyeah.mp4"></iframe>
-<h1 id="sideTitle">Titulo</h1>
-<br>
-<hr>
-<div id="infotg"><p>Info pelicula</p><button type="button" id="infotggbtn" onclick="textshow()">⌄</button></div>
-<div id="infodiv"></div>
-<hr>
-<p>Grupo</p>
-  </section>
+  <iframe id="sideImg" title="Video" src=""></iframe>
+  <h1 id="sideTitle">Titulo</h1>
+  <br>
+  <hr>
+  <div id="infotg"><p>Info película</p><button type="button" id="infotggbtn" onclick="textshow()">⌄</button></div>
+  <div id="infodiv"></div>
+  <hr>
+  <div id="movieTableContainer"></div>
+</section>
 
 <!-- java script -->
             
@@ -279,7 +301,8 @@ width: auto;
 
 popover.addEventListener("toggle", (event) => {
   if (event.newState === "open") {
-    document.getElementById("mySidebar").style.width = "45rem";
+    const isMobile = window.innerWidth <= 700;
+    document.getElementById("mySidebar").style.width = isMobile ? "100%" : "45rem";
   }
   else {
     document.getElementById("mySidebar").style.width = "0";
@@ -288,89 +311,126 @@ popover.addEventListener("toggle", (event) => {
 
 function closeNav() {
   document.getElementById("mySidebar").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
+  popover.hidePopover();
 }
 
 /*sidebar dinámica*/
 
 const movieData = {
-  'mario': { title: 'The Super Mario Galaxy movie', img: 'https://www.youtube.com/embed/ipzEY7c7it8'},
-  'minecraft': { title: 'A Minecraft movie', img: 'https://www.youtube.com/embed/wJO_vIDZn-I'},
-  'pixels': { title: 'Pixels', img: 'https://www.youtube.com/embed/XAHprLW48no'},
-  'mib': { title: 'Spiderman: Across the SpiderVerse', img: 'https://www.youtube.com/watch?v=shW9i6k8cB0'}
+  'mario': {
+    title: 'The Super Mario Galaxy movie',
+    img: 'https://www.youtube.com/embed/ipzEY7c7it8',
+    desc: 'Luego de vencer a Bowser y salvar Brooklyn, Mario y sus amigos enfrentan una nueva amenaza: Bowser Jr. secuestra a la Princesa Rosalina. Los hermanos Mario se lanzan al espacio junto a Yoshi para rescatarla y salvar a toda la galaxia.',
+    tabla: {
+      'Título Original': 'The Super Mario Galaxy Movie',
+      'Clasificación': 'A',
+      'Género': 'Animación, Aventura, Comedia',
+      'Director': 'Aaron Horvath, Michael Jelenic',
+      'Actores': 'Chris Pratt, Charlie Day, Anya Taylor-Joy',
+      'País': 'Estados Unidos',
+      'Duración': '1h 45m',
+      'Distribuidor': 'Universal Pictures'
+    }
+  },
+  'minecraft': {
+    title: 'A Minecraft movie',
+    img: 'https://www.youtube.com/embed/wJO_vIDZn-I',
+    desc: 'Cuatro jóvenes son transportados al mundo cúbico de Minecraft mediante un portal misterioso. Con la ayuda de Steve, deberán sobrevivir a criaturas peligrosas y encontrar la manera de regresar a casa.',
+    tabla: {
+      'Título Original': 'A Minecraft Movie',
+      'Clasificación': 'A',
+      'Género': 'Aventura, Comedia, Fantasía',
+      'Director': 'Jared Hess',
+      'Actores': 'Jack Black, Jason Momoa, Emma Myers',
+      'País': 'Estados Unidos',
+      'Duración': '1h 41m',
+      'Distribuidor': 'Warner Bros. Pictures'
+    }
+  },
+  'pixels': {
+    title: 'Pixels',
+    img: 'https://www.youtube.com/embed/XAHprLW48no',
+    desc: 'Extraterrestres interpretan videojuegos clásicos como una declaración de guerra y atacan la Tierra usando personajes arcade gigantes. Un grupo de jugadores expertos deberá detener la invasión.',
+    tabla: {
+      'Título Original': 'Pixels',
+      'Clasificación': 'B',
+      'Género': 'Acción, Comedia, Ciencia Ficción',
+      'Director': 'Chris Columbus',
+      'Actores': 'Adam Sandler, Kevin James, Michelle Monaghan',
+      'País': 'Estados Unidos',
+      'Duración': '1h 46m',
+      'Distribuidor': 'Columbia Pictures'
+    }
+  },
+  'spiderman': {
+    title: 'SpiderMan: Across the SpiderVerse',
+    img: 'https://www.youtube.com/embed/shW9i6k8cB0',
+    desc: 'Miles Morales se reúne nuevamente con Gwen Stacy y viaja a través del multiverso, donde conoce a un grupo de Spider-Personas encargadas de proteger la realidad. Sin embargo, un conflicto surge cuando Miles descubre que no todos comparten la misma visión sobre cómo salvar los distintos universos.',
+    tabla: {
+      'Título Original': 'Spider-Man: Across the Spider-Verse',
+      'Clasificación': 'A',
+      'Género': 'Animación, Acción, Aventura',
+      'Director': 'Joaquim Dos Santos, Kemp Powers, Justin K. Thompson',
+      'Actores': 'Shameik Moore, Hailee Steinfeld, Oscar Isaac',
+      'País': 'Estados Unidos',
+      'Duración': '2h 20m',
+      'Distribuidor': 'Sony Pictures'
+    }
+  }
+  /* Para agregar una nueva película, copiar el bloque de arriba y cambiar la clave y los datos:
+  'clave': {
+    title: 'Título de la película',
+    img: 'https://www.youtube.com/embed/VIDEO_ID',
+    desc: 'Descripción de la película.',
+    tabla: {
+      'Título Original': '...',
+      'Clasificación': '...',
+      'Género': '...',
+      'Director': '...',
+      'Actores': '...',
+      'País': '...',
+      'Duración': '...',
+      'Distribuidor': '...'
+    }
+  }
+  */
 };
+
+function buildTable(tablaData) {
+  let rows = '';
+  for (const [key, value] of Object.entries(tablaData)) {
+    rows += `<tr>
+      <td>${key}</td>
+      <td>${value}</td>
+    </tr>`;
+  }
+  return `<table class="movie-table">${rows}</table>`;
+}
 
 function updateSidebar(movieKey) {
   const data = movieData[movieKey];
   document.getElementById("sideTitle").innerText = data.title;
   document.getElementById("sideImg").src = data.img;
   document.getElementById("infodiv").innerHTML = "";
-  document.getElementById("infotggbtn").innerHTML= "⌄";
+  document.getElementById("infotggbtn").innerHTML = "⌄";
+  document.getElementById("movieTableContainer").innerHTML = buildTable(data.tabla);
 }
 
 function textshow() {
-  var desc = 'Default';
-    if (document.getElementById("sideTitle").innerText === "The Super Mario Galaxy movie"){
-      desc = 'Luego de vencer a Bowser y salvar Brooklyn, Mario y sus amigos enfrentan una nueva amenaza: Bowser Jr. secuestra a la Princesa Rosalina. Los hermanos Mario se lanzan al espacio junto a Yoshi para rescatarla y salvar a toda la galaxia.';
-    }
-    else if (document.getElementById("sideTitle").innerText === "A Minecraft movie"){
-      desc = 'Cuatro jóvenes son transportados al mundo cúbico de Minecraft mediante un portal misterioso. Con la ayuda de Steve, deberán sobrevivir a criaturas peligrosas y encontrar la manera de regresar a casa.';
-    }
-    else if (document.getElementById("sideTitle").innerText === "Pixels"){
-      desc = 'Extraterrestres interpretan videojuegos clásicos como una declaración de guerra y atacan la Tierra usando personajes arcade gigantes. Un grupo de jugadores expertos deberá detener la invasión.';
-    }
-    else if (document.getElementById("sideTitle").innerText === "Spiderman: Across the SpiderVerse"){
-      desc = 'Miles Morales se reúne nuevamente con Gwen Stacy y viaja a través del multiverso, donde conoce a un grupo de Spider-Personas encargadas de proteger la realidad. Sin embargo, un conflicto surge cuando Miles descubre que no todos comparten la misma visión sobre cómo salvar los distintos universos.';
-    }
+  const title = document.getElementById("sideTitle").innerText;
+  const data = Object.values(movieData).find(d => d.title === title);
+  const desc = data ? data.desc : 'Default';
   var x = document.getElementById("infodiv");
   if (x.innerHTML === "") {
     x.innerHTML = desc;
-    document.getElementById("infotggbtn").innerHTML= "⌃";
-    document.getElementById("infotggbtn").style.transform= "translate(0px, 20px)";
+    document.getElementById("infotggbtn").innerHTML = "⌃";
+    document.getElementById("infotggbtn").style.transform = "translate(0px, 20px)";
   } else {
     x.innerHTML = "";
-     document.getElementById("infotggbtn").innerHTML= "⌄";
-     document.getElementById("infotggbtn").style.transform= "translate(0px, 0px)";
+    document.getElementById("infotggbtn").innerHTML = "⌄";
+    document.getElementById("infotggbtn").style.transform = "translate(0px, 0px)";
   }
 }
-
-/* desplazamiento automático */
-
-const carousel = document.getElementById("carouselList");
-let isAutoScrolling = true;
-let isLooping = false;
-
-function autoScroll() {
-  if (!isAutoScrolling) return;
-  
-  if (carousel.scrollLeft + carousel.offsetWidth >= carousel.scrollWidth - 10) {
-    carousel.scrollTo({ left: 0, behavior: 'smooth' });
-  } else {
-    carousel.scrollBy({ left: carousel.offsetWidth, behavior: 'smooth' });
-  }
-}
-
-let scrollInterval = setInterval(autoScroll, 3000);
-
-function resetTimer() {
-  clearInterval(scrollInterval);
-  scrollInterval = setInterval(autoScroll, 3000);
-}
-
-carousel.addEventListener('mouseenter', () => isAutoScrolling = false);
-carousel.addEventListener('mouseleave', () => isAutoScrolling = true);
-
-carousel.addEventListener('scroll', () => {
-  if (isLooping) return;
-  resetTimer();
-  if (carousel.scrollLeft + carousel.offsetWidth >= carousel.scrollWidth - 10) {
-    isLooping = true;
-    setTimeout(() => {
-      carousel.scrollTo({ left: 0, behavior: 'smooth' });
-      setTimeout(() => { isLooping = false; }, 600);
-    }, 300);
-  }
-});
 
 	/*cel navigation bar*/
 function navbartogg(ic) {
