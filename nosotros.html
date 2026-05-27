@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" user-scalable=no>
-		<meta charset = "utf-8" />
 		<link rel="icon" type="image/x-icon" href="logo.png">
+		<meta charset = "utf-8" />
 		<title>Nosotros</title>
 		<link rel= "stylesheet" href="style.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+		<script type="text/javascript" src="darkmode.js" defer></script>
 		<style>
 
 /*super toggle*/
@@ -47,8 +47,9 @@
     width: 100%;
 }
 
-
+/*pc*/
 @media (min-width: 801px) {
+  
 
 #navtgg{
   display: none;
@@ -56,7 +57,40 @@
 
 }
 
+
+/*cel*/
 @media (max-width: 800px) {
+#theme-switch{
+width: auto;
+    height: 6vw;
+    margin-top: 0;
+    margin-bottom: 15%;
+    margin-left: 15%;
+}
+
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    align-self: center;
+}
+
+.nav-right {
+  display: flex; 
+  flex-direction: row; 
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  align-self: center;
+}
 
 .topnav li{
     margin-left: 0px;
@@ -164,7 +198,7 @@ hr{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin: 8px;
 	text-align: center;
-  background-color: #ecf1f1;
+  background: linear-gradient(135deg, var(--color-sidebar-from), var(--color-sidebar-to));
   padding: 2vw;
 }
 
@@ -174,7 +208,7 @@ hr{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin: 8px;
 	text-align: center;
-  background-color: #ecf1f1;
+  background: linear-gradient(135deg, var(--color-sidebar-from), var(--color-sidebar-to));
   padding: 2vw;
 }
 
@@ -241,7 +275,7 @@ footer{
         /*pc*/
 @media (min-width: 601px) {
   .card{
-    max-width: 30%;
+    max-width: 45%;
   }
     #preview{
 		width: 100%;
@@ -259,12 +293,13 @@ footer{
   margin-left: 2vw;
 }
 			.holder{
-				display: flex;
-				flex-direction: row;
-				gap: 1vw;
-        justify-items: center;
-        justify-self: center;
-        align-self: center;
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+  justify-content: center;
+  justify-items: center;
+  justify-self: center;
+  align-self: center;
 			}
 }
 			
@@ -286,9 +321,11 @@ footer{
 
                 <div class="menu">
                     <nav class="topnav" id="tnav">
-                        <ul>
-                            <li><img id="logo" src="logo.png" alt="logo" class="active"></li>
-                            <li><img id="logo" src="StarFilmsTexto.png" alt="logo" class="active"></li>
+                          <div class="nav-left">
+                            <img id="logo" src="logo.png" alt="logo" class="active">
+                            <img id="logo" src="StarFilmsTexto.png" alt="logo" class="active">
+                          </div>
+                            <ul class="nav-right">
                             <li class="liel"><a href="index.html">Inicio</a></li>
                             <li class="liel"><a href="cartelera.html">Cartelera</a></li>
 							<li class="liel"><a href="nosotros.html">Nosotros</a></li>
@@ -297,45 +334,50 @@ footer{
   <div class="bar2"></div>
   <div class="bar3"></div>
 </div></li>
+<li>    <button type="button" id="theme-switch">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" ><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" ><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+    </button></li>
                         </ul>
                     </nav>
                     <div id="navbar">
+                      <ul>
                   <li ><a href="index.html">Inicio</a></li>
                   <li ><a href="cartelera.html">Cartelera</a></li>
-							    <li ><a href="nosotros.html">Nosotros</a></li>
+							    <li ><a href="nosotros.html">Nosotros</a></li></ul>
   </div>
 
 </div>
             </header>
 
-	<div id=preview></div>
+	<div id="preview"></div>
 		<div class="nosotros">
-      <section>
+      <section data-luces="sobre-nosotros">
 		<h1>Sobre Nosotros</h1>
     <br>
-		<h2>¿Qué es Starfilms?</h2>
-		<p>Starfilms nació del amor, del amor al cine. Creemos que el cine es una de las experiencias más envolventes que existen, pues activa todos los sentidos y merece vivirse de la mejor forma posible. Nos comprometemos a ofrecer una gran variedad de películas que te aseguramos que serán de alta calidad, justo como las cómodas instalaciones y tranquilo ambiente que proporcionamos, convirtiendo cada sueño en bellos recuerdos.</p>
-		<div class="holder">
-			<div class= "card">
-		<h2>Nuestra Misión</h2>
+		<h3>¿Qué es Starfilms?</h3>
+		<p>Starfilms nació del amor, del amor al cine. Creemos que el cine es una de las experiencias más envolventes que existen, pues activa todos los sentidos y merece vivirse de la mejor forma posible. Nos comprometemos a ofrecer una gran variedad de películas que te aseguramos que serán de alta calidad, justo como las cómodas instalaciones y tranquilo ambiente que proporcionamos, convirtiendo cada sueño en bellos recuerdos.</p></br></br>
+		<div class="holder" data-luces="mision-vision">
+  <div class="card">
+    <h2>Nuestra Misión</h2>
     <br>
-		<p>Nuestra misión es acercar el arte del cine a la comunidad, con una selección de películas que abarca desde los largometrajes taquilleros de Hollywood hasta las pequeñas obras maestras que ofrece el cine independiente, brindando siempre una experiencia accesible y de alta calidad.</p>
-		</div>
-		<div class= "card">
-		<h2>Nuestra Visión</h2>
+    <p>Nuestra misión es acercar el arte del cine a la comunidad, con una selección de películas que abarca desde los largometrajes taquilleros de Hollywood hasta las pequeñas obras maestras que ofrece el cine independiente, brindando siempre una experiencia accesible y de alta calidad.</p>
+  </div>
+  <div class="card">
+    <h2>Nuestra Visión</h2>
     <br>
-		<p>Nuestra visión es ser el punto encuentro cultural de referencia de la comunidad, reconocido por calidez, variedad y compromiso con el público y arte cinematográfico</p>
-		</div>
-		<div class= "card">
-		<h2>Nuestros Valores</h2>
-    <br>
-		<p>Nuestros valores son varios, destacamos accesibilidad, diversidad, calidez humana y pasión por el arte, guiando estos a cada decisión que tomamos, desde elegir una película para proyectar hasta el diseño y ambientación del espacio que ofrecemos.</p>
-		</div>
-		</div>
-		</section>
+    <p>Nuestra visión es ser el punto encuentro cultural de referencia de la comunidad, reconocido por calidez, variedad y compromiso con el público y arte cinematográfico</p>
+  </div>
+</div>
+
+<br>
+<h2>Nuestros Valores</h2>
+<p>Nuestros valores son varios, destacamos accesibilidad, diversidad, calidez humana y pasión por el arte, guiando estos a cada decisión que tomamos, desde elegir una película para proyectar hasta el diseño y ambientación del espacio que ofrecemos.</p>
+
+</section>
 		<hr>
 		
-    <div class="card-full">
+    <div class="card-full" data-luces="contribuidores">
 	<h1>Contribuidores</h1>
 		<p>La página de Starfilms no hubiera sido posible sin el conjunto de varios sueños, así como no hubiera sido posible sin nuestros contribuidores y elementos estrella:</p>
 		<ul>
@@ -350,7 +392,7 @@ footer{
     </div>
 		<hr>
 		
-    <div class="terms">
+    <div class="terms" data-luces="privacidad">
 	<h1>Políticas de Privacidad</h1>
 		<p><i>Vigente desde el 27 de Abril del 2023 </i>La página de Starfilms únicamente es utilizada para promocionar nuestros cines, por lo que:</p>
 		<ul>
@@ -365,7 +407,7 @@ footer{
       </div>
 		<hr>
 		
-		<div class="terms">
+		<div class="terms" data-luces="terminos">
 	<h1>Términos y Condiciones</h1>
 	<p><i>Vigente desde el 27 de Abril del 2023 </i>La página de Starfilms es de uso plenamente gratuito y simple, mas contamos con ciertas reglas que deben ser seguidas y tomadas en cuenta:</p>
 	<ol>
@@ -387,7 +429,7 @@ footer{
 </blockquote>
 	
 		<hr>
-		<div class="card-full">
+		<div class="card-full" data-luces="agradecimientos">
 		<h1>Agradecimientos</h1>
 		<p>Es gracias al apoyo de varias personas que Starfilms es posible, por lo que...</p>
 		<p>Agradecemos a nuestros padres y amigos, que siempre nos brindaron soporte. Agradecemos a los directores, actores y equipos creativos detrás de cada película de la que hemos hablado. Agradecemos a Sergio Luján Mora y a Elías Alcalá Pérez por inventar HTML. Agradecemos a Maximiliano de Habsburgo por ser el único político bueno de nuestro país. Agrademos al gobierno de Dinamarca por financiar nuestr proyecto. Y por sobre todo, <b>te agradecemos a ti, querido lector, por estar aquí y motivarnos a seguir con este proyecto.</b></p>
@@ -399,7 +441,7 @@ footer{
         <div class = "conteniditof">
 			<div class = "columnitaf">
 			<div style = "display:flex; align-items: center; gap:10px">
-				<img id="logo" src="logo.png" alt="logo">  <h1><img id="logo" src="StarFilmsTexto.png" alt="logo">
+				<img id="logo" src="logo.png" alt="logo">  <h1><img id="logo" src="StarFilmsTexto.png" alt="logo"></h1>
 				</div>
 				<a href = "z1abus.html" class = "refawitada" target = "_blank">Sobre Nosotros</a>
 				<a href = "z2contri.html" class = "refawitada" target = "_blank">Contribuidores</a>
@@ -432,7 +474,8 @@ footer{
 			  <a href="https://youtube.com" target = "_blank"><i class="fab fa-youtube"></i></a>
 		</div>
       </footer>
-
+	  <canvas id="luces" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;"></canvas>
+<script src="luces.js"></script>
 <script>
 
 	/*cel navigation bar*/
@@ -449,7 +492,5 @@ function navbartogg(ic) {
   ic.classList.toggle("change");
 }
 </script>
-		
 		</body>
-	
 </html>
