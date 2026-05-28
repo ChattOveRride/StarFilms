@@ -1,510 +1,900 @@
 <!DOCTYPE html>
-    <html lang="es">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <head>
-			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-            <link rel="icon" type="image/x-icon" href="logo.png">
-<style>
-/*super toggle*/
-#navtgg {
-  margin: 3px 0;
-  display: inline-block;
-  cursor: pointer;
-}
+<html lang="es">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-.bar1, .bar2, .bar3 {
-  width: 25px;
-  height: 3px;
-  background-color: #dee7e7;
-  margin: 5px 0;
-  transition: 0.4s;
-}
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="logo.png">
+  <style>
+    /*super toggle*/
+    #navtgg {
+      margin: 3px 0;
+      display: inline-block;
+      cursor: pointer;
+    }
 
-.change .bar1 {
-  transform: translate(0, 8px) rotate(-45deg);
-}
+    .bar1,
+    .bar2,
+    .bar3 {
+      width: 25px;
+      height: 3px;
+      background-color: #dee7e7;
+      margin: 5px 0;
+      transition: 0.4s;
+    }
 
-.change .bar2 {opacity: 0;}
+    .change .bar1 {
+      transform: translate(0, 8px) rotate(-45deg);
+    }
 
-.change .bar3 {
-  transform: translate(0, -8px) rotate(45deg);
-}
+    .change .bar2 {
+      opacity: 0;
+    }
 
-
-@media (min-width: 600px) {
-
-}
-
-			.header{
-    background-color: var(--black);
-    box-shadow: 1px 1px 5px 0px var(--gray);
-    position: sticky;
-    top: 100px;
-    width: 100%;
-}
-
-/*pc*/
-@media (min-width: 801px) {
-  
-
-#navtgg{
-  display: none;
-}
-
-}
+    .change .bar3 {
+      transform: translate(0, -8px) rotate(45deg);
+    }
 
 
-/*cel*/
-@media (max-width: 800px) {
-#theme-switch{
-    width: auto; 
-    height: clamp(28px, 6vw, 1.7vw); 
-    margin: 0;
-    align-self: center;
-}
+    @media (min-width: 600px) {}
 
-  nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    
-}
+    .header {
+      background-color: var(--black);
+      box-shadow: 1px 1px 5px 0px var(--gray);
+      position: sticky;
+      top: 100px;
+      width: 100%;
+    }
 
-.nav-left {
-    display: flex;
-    align-items: center;
-    justify-self: center;
-    align-self: center;
-}
-
-.nav-right {
-  display: flex; 
-  flex-direction: row; 
-  align-items: center;
-  justify-content: center;
-  justify-self: center;
-  align-self: center;
-}
-
-.topnav li{
-    margin-left: 0px;
-}
-
-.topnav ul{
-justify-self: center;
-}
-
-.topnav{
-width: 100%;
-}
-
-.liel{
-display: none;
-}
-
-#tnav img{
-width: auto;
-    height: 35px;
-    float: left;
-}
-
-}
+    /*pc*/
+    @media (min-width: 801px) {
 
 
-#navbar{
-  height: 0%;
-  width: 30%;
-  position: fixed;
-  z-index: 1;
-  top: 6rem;
-  right: 0;
-  background-color: #dee7e7;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  transition: 0.5s;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  box-shadow: -5px 0 15px rgba(0,0,0,0.2);
-}
+      #navtgg {
+        display: none;
+      }
 
-#navbar a{
-  font-size: 1.5rem;
-  text-decoration: none;
-  color: black;
-}
-
-#navbar li{
-  font-size: 3rem;
-  list-style: none;
-}
+    }
 
 
-@media (min-width: 600px) {
+    /*cel*/
+    @media (max-width: 800px) {
+      #theme-switch {
+        width: auto;
+        height: clamp(28px, 6vw, 1.7vw);
+        margin: 0;
+        align-self: center;
+      }
 
-    .nav{
+      nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+      }
+
+      .nav-left {
+        display: flex;
+        align-items: center;
+        justify-self: center;
+        align-self: center;
+      }
+
+      .nav-right {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        justify-self: center;
+        align-self: center;
+      }
+
+      .topnav li {
+        margin-left: 0px;
+      }
+
+      .topnav ul {
+        justify-self: center;
+      }
+
+      .topnav {
+        width: 100%;
+      }
+
+      .liel {
+        display: none;
+      }
+
+      #tnav img {
+        width: auto;
+        height: 35px;
+        float: left;
+      }
+
+    }
+
+
+    #navbar {
+      height: 0%;
+      width: 30%;
+      position: fixed;
+      z-index: 1;
+      top: 6rem;
+      right: 0;
+      background-color: #dee7e7;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      transition: 0.5s;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #navbar a {
+      font-size: 1.5rem;
+      text-decoration: none;
+      color: black;
+    }
+
+    #navbar li {
+      font-size: 3rem;
+      list-style: none;
+    }
+
+
+    @media (min-width: 600px) {
+
+      .nav {
         max-height: none;
         top: 0;
         position: relative;
         float: right;
         width: fit-content;
         background-color: transparent;
-    }
-    .menu li{
+      }
+
+      .menu li {
         float: left;
-    }
-}
-/**/
-	
-    .titl{
-        color: #dee7e7;
+      }
     }
 
-    .liel{
-        position: relative;
-        margin-top: 10px;
+    /**/
+
+    .titl {
+      color: #dee7e7;
     }
-    .titulitoosi{ 
-	<!-- Este comentario es para irrumpir la fuente de mi footer, jaló de pura casualidad y suerte jaja, no le muevan plis :'v -->
-	}
-</style>
 
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>STARFILMS</title>
-            <link rel="stylesheet" href="style.css">
-            <script type="text/javascript" src="darkmode.js" defer></script>
-        </head>
-        <body>
-<header>
+    .liel {
+      position: relative;
+      margin-top: 10px;
+    }
 
-                <div class="menu">
-                    <nav class="topnav" id="tnav">
-                          <div class="nav-left">
-                            <img id="logo" src="logo.png" alt="logo" class="active">
-                            <img id="logo" src="StarFilmsTexto.png" alt="logo" class="active">
-                          </div>
-                            <ul class="nav-right">
-                            <li class="liel"><a href="index.html">Inicio</a></li>
-                            <li class="liel"><a href="cartelera.html">Cartelera</a></li>
-							<li class="liel"><a href="nosotros.html">Nosotros</a></li>
-              <li><div id="navtgg" onclick="navbartogg(this)">
-  <div class="bar1"></div>
-  <div class="bar2"></div>
-  <div class="bar3"></div>
-</div></li>
-<li>    <button type="button" id="theme-switch">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" ><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" ><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
-    </button></li>
-                        </ul>
-                    </nav>
-                    <div id="navbar">
-                      <ul>
-                  <li ><a href="index.html">Inicio</a></li>
-                  <li ><a href="cartelera.html">Cartelera</a></li>
-							    <li ><a href="nosotros.html">Nosotros</a></li></ul>
-  </div>
+    .titulitoosi {
+      /*< !-- Este comentario es para irrumpir la fuente de mi footer,
+      jaló de pura casualidad y suerte jaja,
+      no le muevan plis: 'v -->
+      */
+    }
+  </style>
 
-</div>
-            </header>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STARFILMS</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="darkmode.js" defer></script>
+</head>
 
-<!-- Previews -->
-            <div id="preview">
-                <div id="carousel">
-            <ul id="carouselList">
-  <li data-accname="1" style="background-image: url(previews/minecraft.gif);">
-    <img src="cartel/minecraft.jpg">
-    <h2>A MINECRAFT<br> MOVIE<br></h2>
-    <br>
-  </li>
-  <li data-accname="2" style="background-image: url(previews/mario.gif);">
-    <img src="cartel/mario.jpg">
-    <h2>THE SUPER MARIO<br>GALAXY MOVIE</h2>
-    <br>
-  </li>
-  <li data-accname="3" style="background-image: url(previews/pixels.gif);">
-<img src="cartel/pixels.jpg">
-    <h2>PIXELS</h2>
-    <br>
-  </li>
-<li data-accname="4" style="background-image: url(previews/SpidermanASP.gif);">
-<img src="cartel/Spiderman.jpg">
-    <h2>SPIDERMAN:<br>ACROSS THE SPIDERVERSE</h2>
-    <br>
-  </li>
-</ul>
-                </div>
+<body>
+  <header>
 
+    <div class="menu">
+      <nav class="topnav" id="tnav">
+        <div class="nav-left">
+          <img id="logo" src="logo.png" alt="logo" class="active">
+          <img id="logo" src="StarFilmsTexto.png" alt="logo" class="active">
+        </div>
+        <ul class="nav-right">
+          <li class="liel"><a href="index.html">Inicio</a></li>
+          <li class="liel"><a href="cartelera.html">Cartelera</a></li>
+          <li class="liel"><a href="nosotros.html">Nosotros</a></li>
+          <li>
+            <div id="navtgg" onclick="navbartogg(this)">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
             </div>
-            <div id="mypopover" popover="manual" style="border: 0px;"></div> <!-- NO BORRAR ESTO, DEJARA DE FUNCIONAR EL CODIGO -->
-<!-- Parte principal -->
-<main>
-<div><h3>Destacadas</h3></div>
-<div class="cont-dest">
-<ul>
-<li><button popovertarget="mypopover" onclick="updateSidebar('mario')"><img src="cartel/mario.jpg"></button></li>
-<li><button popovertarget="mypopover" onclick="updateSidebar('minecraft')"><img src="cartel/minecraft.jpg"></button></li>
-<li><button popovertarget="mypopover" onclick="updateSidebar('pixels')"><img src="cartel/pixels.jpg"></button></li>
-<li><button popovertarget="mypopover" onclick="updateSidebar('spiderman')"><img src="cartel/Spiderman.jpg"></button></li>
-</ul>
-</div>
-<br><hr><br>
+          </li>
+          <li> <button type="button" id="theme-switch">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                <path
+                  d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                <path
+                  d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z" />
+              </svg>
+            </button></li>
+        </ul>
+      </nav>
+      <div id="navbar">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="cartelera.html">Cartelera</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+        </ul>
+      </div>
 
-<div><h3>Todas las películas</h3></div>
-<div class="cont-all">
-  <button popovertarget="mypopover" onclick="updateSidebar('mario')"><img src="cartel/mario.jpg"></button>
-  <button popovertarget="mypopover" onclick="updateSidebar('mario')"><img src="cartel/mario.jpg"></button>
-  <button popovertarget="mypopover" onclick="updateSidebar('mario')"><img src="cartel/mario.jpg"></button>
-  <button popovertarget="mypopover" onclick="updateSidebar('mario')"><img src="cartel/mario.jpg"></button>
-</div>
-<br><br>
-</main>
+    </div>
+  </header>
 
-	     <footer>
-        <div class = "conteniditof">
-			<div class = "columnitaf">
-			<div style = "display:flex; align-items: center; gap:10px">
-				<img id="logo" src="logo.png" alt="logo">  <h1><img id="logo" src="StarFilmsTexto.png" alt="logo"></h1>
-				</div>
-				<a href = "nosotros.html#nosotros" class = "refawitada">Sobre Nosotros</a>
-				<a href = "nosotros.html#contribuidores" class = "refawitada">Contribuidores</a>
-				<a href = "mailto:qyastarfilms@gmail.com" class = "refawitada">Soporte</a>
-			</div>
-			
-			<div class="columnitaf">
-			  <a href="nosotros.html#privacidad" class="refawitada">Políticas de Privacidad</a>
-			  <a href="nosotros.html#terms" class="refawitada">Términos y Condiciones</a>
-			  <a href="" class="refawitada">Inicio</a>
-			</div>
-			
-			<div class="columnitaf">
-			  <a href="https://www.youtube.com/watch?v=KbuGWgYLqWk" target = "_blank" class="refawitada">Canción Genial</a>
-			  <a href="nosotros.html#mensajito" class="refawitada" >Mensaje de los Creadores</a>
-			  <a href="nosotros.html#agradecimientos" class="refawitada">Agradecimientos</a>
-			</div>
-			
-			<div class="columnitaf">
-			  <a href="mailto:qyastarfilms@gmail.com" class="refawitada">Contáctanos</a>
-			  <a href="mailto:qyastarfilms@gmail.com?subject=Duda" class="refawitada">Dudas</a>
-			  <a href="mailto:qyastarfilms@gmail.com?subject=Sugerencia" class="refawitada">Sugerencias</a>
-			</div>
-		</div>
-		<div class="redesf">
-				<span style="align-self: center;">Nuestras redes:</span>
-			  <a href="https://facebook.com" target = "_blank"><i class="fab fa-facebook"></i></a>
-			  <a href="https://instagram.com" target = "_blank"><i class="fab fa-instagram"></i></a>
-			  <a href="https://twitter.com" target = "_blank"><i class="fab fa-x-twitter"></i></a>
-			  <a href="https://youtube.com" target = "_blank"><i class="fab fa-youtube"></i></a>
-		</div>
-      </footer>
+  <!-- Previews -->
+  <div id="preview">
+    <div id="carousel">
+      <ul id="carouselList">
+        <li data-accname="1" style="background-image: url(previews/minecraft.gif);">
+          <img src="cartel/minecraft.jpg">
+          <h2>A MINECRAFT<br> MOVIE<br></h2>
+          <br>
+        </li>
+        <li data-accname="2" style="background-image: url(previews/mario.gif);">
+          <img src="cartel/mario.jpg">
+          <h2>THE SUPER MARIO<br>GALAXY MOVIE</h2>
+          <br>
+        </li>
+        <li data-accname="3" style="background-image: url(previews/pixels.gif);">
+          <img src="cartel/pixels.jpg">
+          <h2>PIXELS</h2>
+          <br>
+        </li>
+        <li data-accname="4" style="background-image: url(previews/SpidermanASP.gif);">
+          <img src="cartel/Spiderman.jpg">
+          <h2>SPIDERMAN:<br>ACROSS THE SPIDERVERSE</h2>
+          <br>
+        </li>
+      </ul>
+    </div>
 
-<!-- side bar -->
-            <section id="mySidebar" class="sidebar">
-              <br>
-<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&larr;</a>
-<br>
-
-<div class="video-wrap">
-  <iframe id="sideImg" title="Video" src="supercoolinvitationohyeah.mp4"></iframe>
-</div>
-<h1 id="sideTitle">Titulo</h1>
-<br>
-<hr>
-<div id="infotg"><p>Info pelicula</p><button type="button" id="infotggbtn" onclick="textshow()">⌄</button></div>
-<div id="infodiv" style="display:none;">
-  <p id="infodesc"></p>
-  <div id="movieTableContainer">
-    <table class="movie-table" id="movieInfoTable">
-      <tr><td>Título Original</td><td id="infoTitulo">—</td></tr>
-      <tr><td>Clasificación</td><td id="infoClasificacion">—</td></tr>
-      <tr><td>Género</td><td id="infoGenero">—</td></tr>
-      <tr><td>Director</td><td id="infoDirector">—</td></tr>
-      <tr><td>Actores</td><td id="infoActores">—</td></tr>
-      <tr><td>País</td><td id="infoPais">—</td></tr>
-      <tr><td>Duración</td><td id="infoDuracion">—</td></tr>
-      <tr><td>Distribuidor</td><td id="infoDistribuidor">—</td></tr>
-    </table>
   </div>
-</div>
-<hr>
-<p>Grupo</p>
-				
+  <div id="mypopover" popover="manual" style="border: 0px;"></div>
+  <!-- NO BORRAR ESTO, DEJARA DE FUNCIONAR EL CODIGO -->
+  <!-- Parte principal -->
+  <main>
+    <div>
+      <h3>Destacadas</h3>
+    </div>
+    <div class="cont-dest">
+      <ul>
+        <li><button popovertarget="mypopover" onclick="updateSidebar('mario')"><img src="cartel/mario.jpg"></button>
+        </li>
+        <li><button popovertarget="mypopover" onclick="updateSidebar('minecraft')"><img
+              src="cartel/minecraft.jpg"></button></li>
+        <li><button popovertarget="mypopover" onclick="updateSidebar('pixels')"><img src="cartel/pixels.jpg"></button>
+        </li>
+        <li><button popovertarget="mypopover" onclick="updateSidebar('spiderman')"><img
+              src="cartel/Spiderman.jpg"></button></li>
+      </ul>
+    </div>
+    <br>
+    <hr><br>
+
+    <div>
+      <h3>Todas las películas</h3>
+    </div>
+    <div class="cont-all">
+      <button popovertarget="mypopover" onclick="updateSidebar('mario')"><img src="cartel/mario.jpg"></button>
+      <button popovertarget="mypopover" onclick="updateSidebar('minecraft')"><img src="cartel/minecraft.jpg"></button>
+      <button popovertarget="mypopover" onclick="updateSidebar('pixels')"><img src="cartel/pixels.jpg"></button>
+      <button popovertarget="mypopover" onclick="updateSidebar('spiderman')"><img src="cartel/Spiderman.jpg"></button>
+    </div>
+    <br>
+    <div class="cont-all">
+      <button popovertarget="mypopover" onclick="updateSidebar('Men')"><img src="cartel/MIB.jpg"></button>
+      <button popovertarget="mypopover" onclick="updateSidebar('John')"><img src="cartel/John.jpg"></button>
+      <button popovertarget="mypopover" onclick="updateSidebar('Transformers')"><img src="cartel/Transformers.jpg"></button>
+      <button popovertarget="mypopover" onclick="updateSidebar('Happy')"><img src="cartel/Happy.jpg"></button>
+    </div>
+    <br>
+    <div class="cont-all">
+      <!-- Por alguna razón, los carteles de "Jurassic World" y "Backrooms" no se ajustan correctamente -->
+      <button popovertarget="mypopover" onclick="updateSidebar('Grown')"><img src="cartel/Grown.jpg"></button>
+      <button popovertarget="mypopover" onclick="updateSidebar('Dragon')"><img src="cartel/Dragon.jpg"></button>
+      <button popovertarget="mypopover" onclick="updateSidebar('Jurassic')"><img src="cartel/Jurassic.jpg"></button>
+      <!-- Tamaño desproporcionado -->
+      <button popovertarget="mypopover" onclick="updateSidebar('Backrooms')"><img src="cartel/Backrooms.jpg"></button>
+      <!-- Tamaño desproporcionado -->
+    </div>
+    <br>
+    <div class="cont-all">
+      <button popovertarget="mypopover" onclick="updateSidebar('Ready')"><img src="cartel/Ready.jpg"
+          alt="Ready"></button>
+      <button popovertarget="mypopover" onclick="updateSidebar('Avengers')"><img src="cartel/Avengers.jpg"
+          alt="Avengers"></button>
+      <button popovertarget="mypopover" onclick="updateSidebar('Back')"><img src="cartel/Back.jpg" alt="Back"></button>
+      <button popovertarget="mypopover" onclick="updateSidebar('Sonríe')"><img src="cartel/Sonríe.jpg"
+          alt="Smile"></button>
+    </div>
+    <br>
+    <div class="cont-all">
+      <button popovertarget="mypopover" onclick="updateSidebar('Diablo')"><img src="cartel/Diablo.jpg"
+          alt="Diablo"></button>
+      <button popovertarget="mypopover" onclick="updateSidebar('Michael')"><img src="cartel/Michael.jpg"
+          alt="Michael"></button>
+      <button popovertarget="mypopover" onclick="updateSidebar('Niños')"><img src="cartel/Solos.jpg"
+          alt="Children"></button>
+      <button popovertarget="mypopover" onclick="updateSidebar('Mortal')"><img src="cartel/MK2.jpg"
+          alt="Mortal"></button>
+    </div>
+    <br>
+    <div class="cont-all">
+      <button popovertarget="mypopover" onclick="updateSidebar('Mandalorian')"><img src="cartel/Mandalorian.jpg"
+          alt="Mandalorian"></button>
+      <button popovertarget="mypopover" onclick="updateSidebar('Obsesión')"><img src="cartel/Obsesión.jpg"
+          alt="Obsesión"></button>
+      <button popovertarget="mypopover" onclick="updateSidebar('Scary')"><img src="cartel/Scary.jpg"
+          alt="Scary"></button>
+    </div>
+    <br><br>
+  </main>
+
+  <footer>
+    <div class="conteniditof">
+      <div class="columnitaf">
+        <div style="display:flex; align-items: center; gap:10px">
+          <img id="logo" src="logo.png" alt="logo">
+          <h1><img id="logo" src="StarFilmsTexto.png" alt="logo"></h1>
+        </div>
+        <a href="nosotros.html#nosotros" class="refawitada">Sobre Nosotros</a>
+        <a href="nosotros.html#contribuidores" class="refawitada">Contribuidores</a>
+        <a href="mailto:qyastarfilms@gmail.com" class="refawitada">Soporte</a>
+      </div>
+
+      <div class="columnitaf">
+        <a href="nosotros.html#privacidad" class="refawitada">Políticas de Privacidad</a>
+        <a href="nosotros.html#terms" class="refawitada">Términos y Condiciones</a>
+        <a href="" class="refawitada">Inicio</a>
+      </div>
+
+      <div class="columnitaf">
+        <a href="https://www.youtube.com/watch?v=KbuGWgYLqWk" target="_blank" class="refawitada">Canción Genial</a>
+        <a href="nosotros.html#mensajito" class="refawitada">Mensaje de los Creadores</a>
+        <a href="nosotros.html#agradecimientos" class="refawitada">Agradecimientos</a>
+      </div>
+
+      <div class="columnitaf">
+        <a href="mailto:qyastarfilms@gmail.com" class="refawitada">Contáctanos</a>
+        <a href="mailto:qyastarfilms@gmail.com?subject=Duda" class="refawitada">Dudas</a>
+        <a href="mailto:qyastarfilms@gmail.com?subject=Sugerencia" class="refawitada">Sugerencias</a>
+      </div>
+    </div>
+    <div class="redesf">
+      <span style="align-self: center;">Nuestras redes:</span>
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com" target="_blank"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+  </footer>
+
+  <!-- side bar -->
+  <section id="mySidebar" class="sidebar">
+    <br>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&larr;</a>
+    <br>
+
+    <div class="video-wrap">
+      <iframe id="sideImg" title="Video" src="supercoolinvitationohyeah.mp4"></iframe>
+    </div>
+    <h1 id="sideTitle">Titulo</h1>
+    <br>
+    <hr>
+    <div id="infotg">
+      <p>Info pelicula</p><button type="button" id="infotggbtn" onclick="textshow()">⌄</button>
+    </div>
+    <div id="infodiv" style="display:none;">
+      <p id="infodesc"></p>
+      <div id="movieTableContainer">
+        <table class="movie-table" id="movieInfoTable">
+          <tr>
+            <td>Título Original</td>
+            <td id="infoTitulo">—</td>
+          </tr>
+          <tr>
+            <td>Clasificación</td>
+            <td id="infoClasificacion">—</td>
+          </tr>
+          <tr>
+            <td>Género</td>
+            <td id="infoGenero">—</td>
+          </tr>
+          <tr>
+            <td>Director</td>
+            <td id="infoDirector">—</td>
+          </tr>
+          <tr>
+            <td>Actores</td>
+            <td id="infoActores">—</td>
+          </tr>
+          <tr>
+            <td>País</td>
+            <td id="infoPais">—</td>
+          </tr>
+          <tr>
+            <td>Duración</td>
+            <td id="infoDuracion">—</td>
+          </tr>
+          <tr>
+            <td>Distribuidor</td>
+            <td id="infoDistribuidor">—</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <hr>
+    <p>Grupo</p>
+
   </section>
 
-<!-- java script -->
-            
- <script>
+  <!-- java script -->
+
+  <script>
     const popover = document.getElementById("mypopover");
 
-popover.addEventListener("toggle", (event) => {
-  if (event.newState === "open") {
-	  if (screen.width < 800) {document.getElementById("mySidebar").style.width = "100%";
-	  }
-	  else{
-    document.getElementById("mySidebar").style.width = "45rem";
-	  }
-  }
-  else {
-    document.getElementById("mySidebar").style.width = "0";
-  }
-});
+    popover.addEventListener("toggle", (event) => {
+      if (event.newState === "open") {
+        if (screen.width < 800) {
+          document.getElementById("mySidebar").style.width = "100%";
+        }
+        else {
+          document.getElementById("mySidebar").style.width = "45rem";
+        }
+      }
+      else {
+        document.getElementById("mySidebar").style.width = "0";
+      }
+    });
 
-function closeNav() {
-  document.getElementById("mySidebar").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
-}
-
-/*sidebar dinámica*/
-
-const movieData = {
-  'mario': {
-    title: 'The Super Mario Galaxy movie',
-    img: 'https://www.youtube.com/embed/ipzEY7c7it8',
-	desc: 'Luego de vencer a Bowser y salvar Brooklyn, Mario y sus amigos enfrentan una nueva amenaza: Bowser Jr. secuestra a la Princesa Rosalina. Los hermanos Mario se lanzan al espacio junto a Yoshi para rescatarla y salvar a toda la galaxia.',
-    tabla: {
-      titulo: 'The Super Mario Galaxy Movie',
-      clasificacion: 'G',
-      genero: 'Animación, Aventura, Comedia',
-      director: 'Aaron Horvath, Michael Jelenic',
-      actores: 'Chris Pratt – Mario, Jack Black – Bowser, Anya Taylor-Joy – Peach',
-      pais: 'Estados Unidos, Japón',
-      duracion: '1h 32m',
-      distribuidor: 'Universal Pictures'
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft = "0";
     }
-  },
-  'minecraft': {
-    title: 'A Minecraft movie',
-    img: 'https://www.youtube.com/embed/wJO_vIDZn-I',
-	desc: 'Cuatro jóvenes son transportados al mundo cúbico de Minecraft mediante un portal misterioso. Con la ayuda de Steve, deberán sobrevivir a criaturas peligrosas y encontrar la manera de regresar a casa.',
-    tabla: {
-      titulo: 'A Minecraft Movie',
-      clasificacion: 'PG',
-      genero: 'Aventura, Comedia, Fantasía',
-      director: 'Jared Hess',
-      actores: 'Jack Black – Steve, Jason Momoa, Jennifer Coolidge',
-      pais: 'Estados Unidos',
-      duracion: '1h 41m',
-      distribuidor: 'Warner Bros. Pictures'
+
+    /*sidebar dinámica*/
+
+    const movieData = {
+      'mario': {
+        title: 'The Super Mario Galaxy movie',
+        img: 'https://www.youtube.com/embed/ipzEY7c7it8',
+        desc: 'Luego de vencer a Bowser y salvar Brooklyn, Mario y sus amigos enfrentan una nueva amenaza: Bowser Jr. secuestra a la Princesa Rosalina. Los hermanos Mario se lanzan al espacio junto a Yoshi para rescatarla y salvar a toda la galaxia.',
+        tabla: {
+          titulo: 'The Super Mario Galaxy Movie',
+          clasificacion: 'G',
+          genero: 'Animación, Aventura, Comedia',
+          director: 'Aaron Horvath, Michael Jelenic',
+          actores: 'Chris Pratt – Mario, Jack Black – Bowser, Anya Taylor-Joy – Peach',
+          pais: 'Estados Unidos, Japón',
+          duracion: '1h 32m',
+          distribuidor: 'Universal Pictures'
+        }
+      },
+      'minecraft': {
+        title: 'A Minecraft movie',
+        img: 'https://www.youtube.com/embed/wJO_vIDZn-I',
+        desc: 'Cuatro jóvenes son transportados al mundo cúbico de Minecraft mediante un portal misterioso. Con la ayuda de Steve, deberán sobrevivir a criaturas peligrosas y encontrar la manera de regresar a casa.',
+        tabla: {
+          titulo: 'A Minecraft Movie',
+          clasificacion: 'PG',
+          genero: 'Aventura, Comedia, Fantasía',
+          director: 'Jared Hess',
+          actores: 'Jack Black – Steve, Jason Momoa, Jennifer Coolidge',
+          pais: 'Estados Unidos',
+          duracion: '1h 41m',
+          distribuidor: 'Warner Bros. Pictures'
+        }
+      },
+      'pixels': {
+        title: 'Pixels',
+        img: 'https://www.youtube.com/embed/XAHprLW48no',
+        desc: 'Extraterrestres interpretan videojuegos clásicos como una declaración de guerra y atacan la Tierra usando personajes arcade gigantes. Un grupo de jugadores expertos deberá detener la invasión.',
+        tabla: {
+          titulo: 'Pixels',
+          clasificacion: 'PG-13',
+          genero: 'Acción, Comedia, Ciencia Ficción',
+          director: 'Chris Columbus',
+          actores: 'Adam Sandler, Kevin James, Michelle Monaghan, Peter Dinklage',
+          pais: 'Estados Unidos',
+          duracion: '1h 45m',
+          distribuidor: 'Sony Pictures'
+        }
+      },
+      'spiderman': {
+        title: 'SpiderMan: Across the SpiderVerse',
+        img: 'https://www.youtube.com/embed/shW9i6k8cB0',
+        desc: 'Miles Morales se reúne nuevamente con Gwen Stacy y viaja a través del multiverso, donde conoce a un grupo de Spider-Personas encargadas de proteger la realidad. Sin embargo, un conflicto surge cuando Miles descubre que no todos comparten la misma visión sobre cómo salvar los distintos universos.',
+        tabla: {
+          titulo: 'Spider-Man: Across the Spider-Verse',
+          clasificacion: 'PG',
+          genero: 'Animación, Acción, Aventura',
+          director: 'Joaquim Dos Santos, Kemp Powers, Justin K. Thompson',
+          actores: 'Shameik Moore – Miles Morales, Hailee Steinfeld – Gwen Stacy',
+          pais: 'Estados Unidos',
+          duracion: '2h 20m',
+          distribuidor: 'Sony Pictures'
+        }
+      },
+      'Men': {
+        title: 'Men in Black',
+        img: 'https://www.youtube.com/embed/UxUTTrU6PA4',
+        desc: 'Un policía de Nueva York descubre una organización secreta encargada de vigilar la actividad extraterrestre en la Tierra y se convierte en uno de sus agentes.',
+        tabla: {
+          titulo: 'Men in Black',
+          clasificacion: 'PG-13',
+          genero: 'Ciencia ficción / Acción / Comedia',
+          director: 'Barry Sonnenfeld',
+          actores: 'Agente J - Will Smith, Agente K - Tommy Lee Jones, Laurel Weaver - Linda Fiorentino, Edgar - Vincent D’Onofrio',
+          pais: 'Estados Unidos',
+          duracion: '1h 38m',
+          distribuidor: 'Columbia Pictures'
+        }
+      },
+      'John': {
+        title: 'John Wick',
+        img: 'https://www.youtube.com/embed/2AUmvWm5ZDQ',
+        desc: 'Después de perder a su esposa, un exasesino profesional busca venganza contra los criminales que mataron a su perro y robaron su automóvil.',
+        tabla: {
+          titulo: 'John Wick',
+          clasificacion: 'R',
+          genero: 'Acción / Suspenso',
+          director: 'Chad Stahelski, David Leitch',
+          actores: 'John Wick - Keanu Reeves, Viggo Tarasov - Michael Nyqvist, Marcus - Willem Dafoe, Aurelio - John Leguizamo',
+          pais: 'Estados Unidos',
+          duracion: '1h 41m',
+          distribuidor: 'Lionsgate'
+        }
+      },
+      'Transformers': {
+        title: 'Transformers: Age of Extinction',
+        img: 'https://www.youtube.com/embed/T9bQCAWahLk',
+        desc: 'Tras la destrucción causada por los Transformers, un inventor descubre a Optimus Prime oculto.Mientras tanto, una nueva amenaza pone en peligro a la humanidad.',
+        tabla: {
+          titulo: 'Transformers: Age of Extinction',
+          clasificacion: 'PG-13',
+          genero: 'Acción / Ciencia ficción',
+          director: 'Michael Bay',
+          actores: 'Cade Yeager - Mark Wahlberg, Optimus Prime - Peter Cullen, Joshua Joyce - Stanley Tucci, Tessa Yeager - Nicola Peltz',
+          pais: 'Estados Unidos, China',
+          duracion: '2h 45m',
+          distribuidor: 'Paramount Pictures'
+        }
+      },
+      'Happy': {
+        title: 'Happy Gilmore',
+        img: 'https://www.youtube.com/embed/y1emDAYCfVQ',
+        desc: 'Un jugador de hockey con problemas de temperamento descubre un talento inesperado para el golf y participa en torneos para salvar la casa de su abuela.',
+        tabla: {
+          titulo: 'Happy Gilmore',
+          clasificacion: 'PG-13',
+          genero: 'Comedia / Deportes',
+          director: 'Dennis Dugan',
+          actores: 'Happy Gilmore - Adam Sandler, Shooter McGavin - Christopher McDonald, Virginia Venit - Julie Bowen',
+          pais: 'Estados Unidos',
+          duracion: '1h 32m',
+          distribuidor: 'Universal Pictures'
+        }
+      },
+      'Grown': {
+        title: 'Grown Ups',
+        img: 'https://www.youtube.com/embed/yMEDiKD7cyE',
+        desc: 'Cinco amigos de la infancia se reúnen años después de graduarse para pasar un fin de semana juntos junto a sus familias. A medida que intentan revivir su juventud, enfrentan situaciones cómicas y desafíos relacionados con la paternidad, la amistad y el envejecimiento.',
+        tabla: {
+          titulo: 'Grown Ups',
+          clasificacion: 'PG-13',
+          genero: 'Comedia',
+          director: 'Dennis Dugan',
+          actores: 'Lenny Feder - Adam Sandler, Eric Lamonsoff - Kevin James, Kurt McKenzie - Chris Rock, Marcus Higgins - David Spade, Rob Hilliard - Rob Schneider',
+          pais: 'Estados Unidos',
+          duracion: '1h 42m',
+          distribuidor: 'Sony Pictures Releasing'
+        }
+      },
+      'Dragon': {
+        title: 'Dragon Ball Super: Broly',
+        img: 'https://www.youtube.com/watch?v=sm72N3ukz7Y',
+        desc: 'Goku y Vegeta enfrentan a Broly, un poderoso saiyajin con una fuerza descomunal que amenaza con destruir todo a su paso.',
+        tabla: {
+          titulo: 'Dragon Ball Super: Broly',
+          clasificacion: 'PG-13',
+          genero: 'Anime / Acción / Fantasía',
+          director: 'Tatsuya Nagamine',
+          actores: 'Goku - Masako Nozawa, Vegeta - Ryō Horikawa, Broly - Bin Shimada, Freezer - Ryūsei Nakao',
+          pais: 'Japón',
+          duracion: '1h 40m',
+          distribuidor: 'Toei Company'
+        }
+      },
+      'Jurassic': {
+        title: 'Jurassic World Dominion',
+        img: 'https://www.youtube.com/embed/9m9yRauMJIQ',
+        desc: 'Los dinosaurios ahora viven junto a los humanos alrededor del mundo. Un nuevo conflicto amenaza el equilibrio entre ambas especies.',
+        tabla: {
+          titulo: 'Jurassic World Dominion',
+          clasificacion: 'PG-13',
+          genero: 'Ciencia ficción / Aventura / Acción',
+          director: 'Colin Trevorrow',
+          actores: 'Owen Grady - Chris Pratt, Claire Dearing - Bryce Dallas Howard, Alan Grant - Sam Neill, Ellie Sattler - Laura Dern, Ian Malcolm - Jeff Goldblum',
+          pais: 'Estados Unidos',
+          duracion: '2h 27m',
+          distribuidor: 'Universal Pictures'
+        }
+      },
+      'Backrooms': {
+        title: 'The Backrooms',
+        img: 'https://www.youtube.com/embed/0HjdiohVOik',
+        desc: 'Basada en el fenómeno de internet “The Backrooms”, la historia sigue a personas atrapadas en un laberinto infinito de habitaciones amarillas y espacios perturbadores donde criaturas desconocidas acechan.',
+        tabla: {
+          titulo: 'The Backrooms',
+          clasificacion: 'Pendiente',
+          genero: 'Terror / Misterio',
+          director: 'Kane Parsons',
+          actores: 'Información no confirmada oficialmente',
+          pais: 'Estados Unidos',
+          duracion: 'Pendiente',
+          distribuidor: 'A24'
+        }
+      },
+      'Ready': {
+        title: 'Ready Player One',
+        img: 'https://www.youtube.com/embed/cSp1dM2Vj48',
+        desc: 'En el año 2045, el mundo real es una distopía hostil y superpoblada. La humanidad encuentra refugio en Oasis, un universo de realidad virtual donde todo es posible. Cuando su creador fallece, deja su inmensa fortuna y el control del juego como premio en una elaborada búsqueda del tesoro.',
+        tabla: {
+          titulo: 'Ready Player One',
+          clasificacion: 'PG-13',
+          genero: 'Ciencia ficción / Aventura / Acción',
+          director: 'Steven Spielberg',
+          actores: 'Tye Sheridan, Olivia Cooke, Ben Mendelsohn, Mark Rylance.',
+          pais: 'Estados Unidos',
+          duracion: '2h 20m',
+          distribuidor: 'Warner Bros. Pictures'
+        }
+      },
+      'Avengers': {
+        title: 'Avengers: Endgame',
+        img: 'https://www.youtube.com/embed/TcMBFSGVi1c',
+        desc: 'Tras los eventos devastadores de Avengers: Infinity War, Thanos ha eliminado a la mitad de toda la vida en el universo con el chasquido del Guantelete del Infinito. Cinco años después, los Vengadores supervivientes se reúnen para idear un plan: viajar al pasado a través del Reino Cuántico, recuperar las Gemas del Infinito y revertir la catástrofe.',
+        tabla: {
+          titulo: 'Avengers: Endgame',
+          clasificacion: 'PG-13',
+          genero: 'Superhéroes / Acción / Ciencia ficción',
+          director: 'Anthony Russo, Joe Russo',
+          actores: 'Robert Downey Jr., Chris Evans, Chris Hemsworth, Mark Ruffalo, Scarlett Johansson, Jeremy Renner, Josh Brolin.',
+          pais: 'Estados Unidos',
+          duracion: '3h 1m',
+          distribuidor: 'Walt Disney Studios Motion Pictures'
+        }
+      },
+      'Back': {
+        title: 'Back to the Future',
+        img: 'https://www.youtube.com/embed/qvsgGtivCgs',
+        desc: 'Marty McFly, un típico adolescente de los años 80, viaja accidentalmente a 1955 en un automóvil DeLorean modificado como máquina del tiempo por su amigo, el excéntrico científico Doc Brown. Al interferir por error en el primer encuentro de sus futuros padres, Marty debe lograr que se enamoren para asegurar su propia existencia.',
+        tabla: {
+          titulo: 'Back to the Future',
+          clasificacion: 'PG',
+          genero: 'Ciencia ficción / Aventura / Comedia',
+          director: 'Robert Zemeckis',
+          actores: 'Michael J. Fox, Christopher Lloyd, Lea Thompson, Crispin Glover.',
+          pais: 'Estados Unidos',
+          duracion: '1h 56m',
+          distribuidor: 'Universal Pictures'
+        }
+      },
+      'Sonríe': {
+        title: 'Smile',
+        img: 'http://www.youtube.com/watch?v=BcDK7lkzzsU',
+        desc: 'Tras presenciar un extraño y traumático incidente con un paciente, la doctora Rose Cotter comienza a experimentar sucesos aterradores que no puede explicar. Mientras un terror abrumador empieza a apoderarse de su vida, Rose debe enfrentarse a su problemático pasado para poder sobrevivir y escapar de su horrible nueva realidad.',
+        tabla: {
+          titulo: 'Smile',
+          clasificacion: 'R',
+          genero: 'Horror/Suspenso/Misterio',
+          director: 'Parker Finn',
+          actores: 'Sosie Bacon - Rose Cotter, Kyle Gallner - Joel, Jessie T. Usher - Trevor, Robin Weigert - Dr. Madeline Northcott, Caitlin Stasey - Laura Weaver, Kal Penn - Dr. Morgan Desai, Rob Morgan - Robert Talley',
+          pais: 'Estados Unidos',
+          duracion: '1h 50m',
+          distribuidor: 'Paramount Pictures'
+        }
+      },
+      'Diablo': {
+        title: 'The Devil Wears Prada 2',
+        img: 'http://www.youtube.com/watch?v=e9HXmMnUEdE',
+        desc: 'Casi 20 años después, Miranda, Andy, Emily y Nigel, regresan a las elegantes calles de Nueva York y a las sofisticadas oficinas de la revista Runway en la esperada secuela del fenómeno de 2006 que definió a toda una generación.',
+        tabla: {
+          titulo: 'The Devil Wears Prada 2',
+          clasificacion: 'B',
+          genero: 'Drama/Romance',
+          director: 'David Frankel',
+          actores: 'Meryl Streep - Miranda, Anne Hathaway - Andy, Emily Blunt - Emily, Stanley Tucci - Nigel, Kenneth Branagh - Stuart, Justin Theroux - Benji, Lucy Liu - Sasha, Tracie Thoms - Lily, Tibor Feldman - Irv, B.J. Novak - Jay, Patrick Brammall - Peter',
+          pais: 'Estados Unidos',
+          duracion: '2h 00m',
+          distribuidor: '20th Century Studios'
+        }
+      },
+      'Michael': {
+        title: 'Michael',
+        img: 'http://www.youtube.com/watch?v=3zOLzsbOleM',
+        desc: 'Película biográfica sobre el rey del pop, Michael Jackson. Retratará al cantante desde sus inicios hasta su trágico fallecimiento en 2009.',
+        tabla: {
+          titulo: 'Michael',
+          clasificacion: 'A',
+          genero: 'Biografía',
+          director: 'Antoine Fuqua',
+          actores: 'Jaafar Jackson - Michael, Juliano Valdi - Young Michael, Colman Domingo - Joseph Jackson, Jayden Harville - Young Jermaine Jackson, Jaylen Lyndon Hunter - Young Marlon Jackson, Judah Edwards - Young Tito Jackson, Nathaniel Logan McIntyre - Young Jackie Jackson, Nia Long - Katherine Jackson, Amaya Mendoza - Young La Toya Jackson',
+          pais: 'Estados Unidos',
+          duracion: '2h 5m',
+          distribuidor: 'Universal Pictures'
+        }
+      },
+      'Niños': {
+        title: 'Don\'t Leave the Kids Alone',
+        img: 'http://www.youtube.com/watch?v=Pg3HFOLIjFE',
+        desc: 'Por una emergencia, CATALINA CAMACHO, una joven y reciente viuda, se ve obligada a dejar a sus hijos a solas por unas cuantas horas en la casa a la que se acaban de mudar. Esa noche, y con la casa para ellos solos, MATÍAS y EMILIANO (de 10 y 7 años) encuentran algo que desatara el terror y conforme la noche avanza se dan cuenta que nunca estuvieron solos.',
+        tabla: {
+          titulo: 'Don\'t Leave the Kids Alone',
+          clasificacion: 'B',
+          genero: 'Suspenso/Terror',
+          director: 'Emilio Portes',
+          actores: 'Ana Serradilla - Catalina Camacho, Jesús Zavala - Marco, Paloma Woolrich - Marcela, José Sefami - Licenciado, Juan Pablo Velasco - Matías Camacho, Ricardo Galina - Emiliano Camacho, Ayelen Bonacina - Invitada fiesta Beto que ríe y llora, Armando Silva - Mau el pizzero',
+          pais: 'México',
+          duracion: '1h 37m',
+          distribuidor: 'Videocine'
+        }
+      },
+      'Mortal': {
+        title: 'Mortal Kombat 2',
+        img: 'http://www.youtube.com/watch?v=b24oG7qCwp4',
+        desc: 'De New Line Cinema llega Mortal Kombat II, la más reciente entrega cargada de tensión de la exitosa franquicia de videojuegos, en toda su brutal grandeza. Esta vez, los campeones favoritos de los fans —ahora con la incorporación del mismísimo Johnny Cage— se enfrentan entre sí en la batalla definitiva, sin reglas y repleta de sangre, para derrotar el oscuro dominio de Shao Kahn, que amenaza con destruir el Reino de la Tierra y a sus defensores.',
+        tabla: {
+          titulo: 'Mortal Kombat 2',
+          clasificacion: 'B15',
+          genero: 'Acción/Aventura',
+          director: 'Simon McQuoid',
+          actores: 'Karl Urban - Johnny Cage, Ludi Lin - Liu Kang, Jessica McNamee - Sonya Blade, Adeline Rudolph - Kitana',
+          pais: 'Estados Unidos',
+          duracion: '1h 55m',
+          distribuidor: 'Warner Brothers Pictures'
+        }
+      },
+      'Mandalorian': {
+        title: 'The Mandalorian & Grogu',
+        img: 'http://www.youtube.com/watch?v=IHWlvwu8t1w',
+        desc: 'El cruel Imperio ha caído, pero los señores de la guerra imperiales siguen dispersos por toda la Galaxia. La incipiente Nueva República trabaja para proteger las conquistas de la Rebelión con la ayuda del legendario cazarrecompensas mandaloriano, Din Djarin, y su joven aprendiz, Grogu.',
+        tabla: {
+          titulo: 'The Mandalorian & Grogu',
+          clasificacion: 'B',
+          genero: 'Acción/Aventura',
+          director: 'Jon Favreau',
+          actores: 'Pedro Pascal - The Mandalorian, Brendan Wayne - The Mandalorian Suit Performer, Sigourney Weaver - Colonel Ward, Steve Blum - Zeb Orrelios(voz), Lateef Crowder - The Mandatorian Stunt Performer, Jeremy Allen White - Rotta the Hutt(voz)',
+          pais: 'Estados Unidos',
+          duracion: '2h 13m',
+          distribuidor: 'Lucasfilm'
+        }
+      },
+      'Obsesión': {
+        title: 'Obsession',
+        img: 'http://www.youtube.com/watch?v=gMC8kkwbIQQ',
+        desc: 'El anhelo romántico desesperado de un hombre por su amor platónico desencadena un hechizo siniestro en el perturbador debut de Curry Barker.',
+        tabla: {
+          titulo: 'Obsession',
+          clasificacion: 'C',
+          genero: 'Horror/Thriller/Comedia Negra',
+          director: 'Curry Barker',
+          actores: 'Michael Johnston - Bear, Inde Navarrette - Nikki, Cooper Tomlinson - Ian, Megan Lawless - Sarah, Andy Richter - Carter, Haley Fitzgerald - Viola, Darin Toonder - Harry, Anthony Pavone - Reggie, Justice - Joe, Anthony Casabianca - Chris, Chloe Breen - Ruthie, Malcolm Kelner - Bartender',
+          pais: 'Estados Unidos',
+          duracion: '1h 48m',
+          distribuidor: 'Universal Pictures'
+        }
+      },
+      'Scary': {
+        title: 'Scary Movie 6',
+        img: 'http://www.youtube.com/watch?v=ra1g0udaQxA',
+        desc: 'Una nueva entrega de la franquicia de parodias cómicas de películas de terror icónicas. Veintiséis años después de escapar del asesino enmascarado original, Cindy Campbell y su grupo se reúnen para enfrentar a un nuevo homicida que parodia el terror moderno. Con el regreso de la familia Wayans, la trama satiriza películas como Terrifier 3, M3GAN y Smile, cancelando la \"cultura de la cancelación\".',
+        tabla: {
+          titulo: 'Scary Movie 6',
+          clasificacion: 'TBC',
+          genero: 'Comedia',
+          director: 'Michael Tiddes',
+          actores: 'Anna Faris - Cindy Campbell, Regina Hall - Brenda Meeks, Marlon Wayans - Shorty Meeks, Shawn Wayans - Ray Wilkins',
+          pais: 'Estados Unidos',
+          duracion: '1h 37m',
+          distribuidor: 'Paramount Pictures'
+        }
+      }
+    };
+
+    function updateSidebar(movieKey) {
+      const data = movieData[movieKey];
+      document.getElementById("sideTitle").innerText = data.title;
+      document.getElementById("sideImg").src = data.img;
+      document.getElementById("infotggbtn").innerHTML = "⌄";
+      document.getElementById("infodesc").innerText = data.desc;
+      // Poblar tabla
+      const t = data.tabla;
+      document.getElementById("infoTitulo").innerText = t.titulo;
+      document.getElementById("infoClasificacion").innerText = t.clasificacion;
+      document.getElementById("infoGenero").innerText = t.genero;
+      document.getElementById("infoDirector").innerText = t.director;
+      document.getElementById("infoActores").innerText = t.actores;
+      document.getElementById("infoPais").innerText = t.pais;
+      document.getElementById("infoDuracion").innerText = t.duracion;
+      document.getElementById("infoDistribuidor").innerText = t.distribuidor;
+
+      document.getElementById("infodiv").style.display = "none";
     }
-  },
-  'pixels': {
-    title: 'Pixels',
-    img: 'https://www.youtube.com/embed/XAHprLW48no',
-	desc: 'Extraterrestres interpretan videojuegos clásicos como una declaración de guerra y atacan la Tierra usando personajes arcade gigantes. Un grupo de jugadores expertos deberá detener la invasión.',
-    tabla: {
-      titulo: 'Pixels',
-      clasificacion: 'PG-13',
-      genero: 'Acción, Comedia, Ciencia Ficción',
-      director: 'Chris Columbus',
-      actores: 'Adam Sandler, Kevin James, Michelle Monaghan, Peter Dinklage',
-      pais: 'Estados Unidos',
-      duracion: '1h 45m',
-      distribuidor: 'Sony Pictures'
+
+    function textshow() {
+      var x = document.getElementById("infodiv");
+      if (x.style.display === "none" || x.style.display === "") {
+        x.style.display = "block";
+        document.getElementById("infotggbtn").innerHTML = "⌃";
+      } else {
+        x.style.display = "none";
+        document.getElementById("infotggbtn").innerHTML = "⌄";
+      }
     }
-  },
-  'spiderman': {
-    title: 'SpiderMan: Across the SpiderVerse',
-    img: 'https://www.youtube.com/embed/shW9i6k8cB0',
-	desc: 'Miles Morales se reúne nuevamente con Gwen Stacy y viaja a través del multiverso, donde conoce a un grupo de Spider-Personas encargadas de proteger la realidad. Sin embargo, un conflicto surge cuando Miles descubre que no todos comparten la misma visión sobre cómo salvar los distintos universos.',
-    tabla: {
-      titulo: 'Spider-Man: Across the Spider-Verse',
-      clasificacion: 'PG',
-      genero: 'Animación, Acción, Aventura',
-      director: 'Joaquim Dos Santos, Kemp Powers, Justin K. Thompson',
-      actores: 'Shameik Moore – Miles Morales, Hailee Steinfeld – Gwen Stacy',
-      pais: 'Estados Unidos',
-      duracion: '2h 20m',
-      distribuidor: 'Sony Pictures'
+
+    /* desplazamiento automático */
+
+    const carousel = document.getElementById("carouselList");
+    let isAutoScrolling = true;
+    let isLooping = false;
+
+    function autoScroll() {
+      if (!isAutoScrolling) return;
+
+      if (carousel.scrollLeft + carousel.offsetWidth >= carousel.scrollWidth - 10) {
+        carousel.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        carousel.scrollBy({ left: carousel.offsetWidth, behavior: 'smooth' });
+      }
     }
-  }
-};
 
-function updateSidebar(movieKey) {
-  const data = movieData[movieKey];
-  document.getElementById("sideTitle").innerText = data.title;
-  document.getElementById("sideImg").src = data.img;
-  document.getElementById("infotggbtn").innerHTML = "⌄";
-  document.getElementById("infodesc").innerText = data.desc;
-  // Poblar tabla
-  const t = data.tabla;
-  document.getElementById("infoTitulo").innerText        = t.titulo;
-  document.getElementById("infoClasificacion").innerText = t.clasificacion;
-  document.getElementById("infoGenero").innerText        = t.genero;
-  document.getElementById("infoDirector").innerText      = t.director;
-  document.getElementById("infoActores").innerText       = t.actores;
-  document.getElementById("infoPais").innerText          = t.pais;
-  document.getElementById("infoDuracion").innerText      = t.duracion;
-  document.getElementById("infoDistribuidor").innerText  = t.distribuidor;
+    let scrollInterval = setInterval(autoScroll, 3000);
 
-  document.getElementById("infodiv").style.display = "none";
-}
+    function resetTimer() {
+      clearInterval(scrollInterval);
+      scrollInterval = setInterval(autoScroll, 3000);
+    }
 
-function textshow() {
-  var x = document.getElementById("infodiv");
-  if (x.style.display === "none" || x.style.display === "") {
-    x.style.display = "block";
-    document.getElementById("infotggbtn").innerHTML = "⌃";
-  } else {
-    x.style.display = "none";
-    document.getElementById("infotggbtn").innerHTML = "⌄";
-  }
-}
+    carousel.addEventListener('mouseenter', () => isAutoScrolling = false);
+    carousel.addEventListener('mouseleave', () => isAutoScrolling = true);
 
-/* desplazamiento automático */
+    carousel.addEventListener('scroll', () => {
+      if (isLooping) return;
+      resetTimer();
+      if (carousel.scrollLeft + carousel.offsetWidth >= carousel.scrollWidth - 10) {
+        isLooping = true;
+        setTimeout(() => {
+          carousel.scrollTo({ left: 0, behavior: 'smooth' });
+          setTimeout(() => { isLooping = false; }, 600);
+        }, 300);
+      }
+    });
 
-const carousel = document.getElementById("carouselList");
-let isAutoScrolling = true;
-let isLooping = false;
-
-function autoScroll() {
-  if (!isAutoScrolling) return;
-  
-  if (carousel.scrollLeft + carousel.offsetWidth >= carousel.scrollWidth - 10) {
-    carousel.scrollTo({ left: 0, behavior: 'smooth' });
-  } else {
-    carousel.scrollBy({ left: carousel.offsetWidth, behavior: 'smooth' });
-  }
-}
-
-let scrollInterval = setInterval(autoScroll, 3000);
-
-function resetTimer() {
-  clearInterval(scrollInterval);
-  scrollInterval = setInterval(autoScroll, 3000);
-}
-
-carousel.addEventListener('mouseenter', () => isAutoScrolling = false);
-carousel.addEventListener('mouseleave', () => isAutoScrolling = true);
-
-carousel.addEventListener('scroll', () => {
-  if (isLooping) return;
-  resetTimer();
-  if (carousel.scrollLeft + carousel.offsetWidth >= carousel.scrollWidth - 10) {
-    isLooping = true;
-    setTimeout(() => {
-      carousel.scrollTo({ left: 0, behavior: 'smooth' });
-      setTimeout(() => { isLooping = false; }, 600);
-    }, 300);
-  }
-});
-
-	/*cel navigation bar*/
-function navbartogg(ic) {
+    /*cel navigation bar*/
+    function navbartogg(ic) {
       var nav = document.getElementById("navbar");
-  if (nav.style.height === "35%") {
-    document.getElementById("navbar").style.height = "0%";
-    document.getElementById("navbar").style.padding = "0%";
-  } else {
-    document.getElementById("navbar").style.height = "35%";
-    document.getElementById("navbar").style.padding = "3%";
-  };
+      if (nav.style.height === "35%") {
+        document.getElementById("navbar").style.height = "0%";
+        document.getElementById("navbar").style.padding = "0%";
+      } else {
+        document.getElementById("navbar").style.height = "35%";
+        document.getElementById("navbar").style.padding = "3%";
+      };
 
-  ic.classList.toggle("change");
-}
-		 
-</script>
-<script src="halo.js"></script>
-        </body>
+      ic.classList.toggle("change");
+    }
+
+  </script>
+  <script src="halo.js"></script>
+</body>
+
 </html>
