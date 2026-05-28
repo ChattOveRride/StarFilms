@@ -314,6 +314,7 @@ width: auto;
 <hr>
 <div id="infotg"><p>Info pelicula</p><button type="button" id="infotggbtn" onclick="textshow()">⌄</button></div>
 <div id="infodiv" style="display:none;">
+  <p id="infodesc"></p>
   <div id="movieTableContainer">
     <table class="movie-table" id="movieInfoTable">
       <tr><td>Título Original</td><td id="infoTitulo">—</td></tr>
@@ -361,6 +362,7 @@ const movieData = {
   'mario': {
     title: 'The Super Mario Galaxy movie',
     img: 'https://www.youtube.com/embed/ipzEY7c7it8',
+	desc: 'Luego de vencer a Bowser y salvar Brooklyn, Mario y sus amigos enfrentan una nueva amenaza: Bowser Jr. secuestra a la Princesa Rosalina. Los hermanos Mario se lanzan al espacio junto a Yoshi para rescatarla y salvar a toda la galaxia.',
     tabla: {
       titulo: 'The Super Mario Galaxy Movie',
       clasificacion: 'G',
@@ -375,6 +377,7 @@ const movieData = {
   'minecraft': {
     title: 'A Minecraft movie',
     img: 'https://www.youtube.com/embed/wJO_vIDZn-I',
+	desc: 'Cuatro jóvenes son transportados al mundo cúbico de Minecraft mediante un portal misterioso. Con la ayuda de Steve, deberán sobrevivir a criaturas peligrosas y encontrar la manera de regresar a casa.',
     tabla: {
       titulo: 'A Minecraft Movie',
       clasificacion: 'PG',
@@ -389,6 +392,7 @@ const movieData = {
   'pixels': {
     title: 'Pixels',
     img: 'https://www.youtube.com/embed/XAHprLW48no',
+	desc: 'Extraterrestres interpretan videojuegos clásicos como una declaración de guerra y atacan la Tierra usando personajes arcade gigantes. Un grupo de jugadores expertos deberá detener la invasión.',
     tabla: {
       titulo: 'Pixels',
       clasificacion: 'PG-13',
@@ -403,6 +407,7 @@ const movieData = {
   'spiderman': {
     title: 'SpiderMan: Across the SpiderVerse',
     img: 'https://www.youtube.com/embed/shW9i6k8cB0',
+	desc: 'Miles Morales se reúne nuevamente con Gwen Stacy y viaja a través del multiverso, donde conoce a un grupo de Spider-Personas encargadas de proteger la realidad. Sin embargo, un conflicto surge cuando Miles descubre que no todos comparten la misma visión sobre cómo salvar los distintos universos.',
     tabla: {
       titulo: 'Spider-Man: Across the Spider-Verse',
       clasificacion: 'PG',
@@ -421,6 +426,7 @@ function updateSidebar(movieKey) {
   document.getElementById("sideTitle").innerText = data.title;
   document.getElementById("sideImg").src = data.img;
   document.getElementById("infotggbtn").innerHTML = "⌄";
+  document.getElementById("infodesc").innerText = data.desc;
   // Poblar tabla
   const t = data.tabla;
   document.getElementById("infoTitulo").innerText        = t.titulo;
@@ -436,19 +442,6 @@ function updateSidebar(movieKey) {
 }
 
 function textshow() {
-  var desc = 'Default';
-    if (document.getElementById("sideTitle").innerText === "The Super Mario Galaxy movie"){
-      desc = 'Luego de vencer a Bowser y salvar Brooklyn, Mario y sus amigos enfrentan una nueva amenaza: Bowser Jr. secuestra a la Princesa Rosalina. Los hermanos Mario se lanzan al espacio junto a Yoshi para rescatarla y salvar a toda la galaxia.';
-    }
-    else if (document.getElementById("sideTitle").innerText === "A Minecraft movie"){
-      desc = 'Cuatro jóvenes son transportados al mundo cúbico de Minecraft mediante un portal misterioso. Con la ayuda de Steve, deberán sobrevivir a criaturas peligrosas y encontrar la manera de regresar a casa.';
-    }
-    else if (document.getElementById("sideTitle").innerText === "Pixels"){
-      desc = 'Extraterrestres interpretan videojuegos clásicos como una declaración de guerra y atacan la Tierra usando personajes arcade gigantes. Un grupo de jugadores expertos deberá detener la invasión.';
-    }
-    else if (document.getElementById("sideTitle").innerText === "SpiderMan: Across the SpiderVerse"){
-      desc = 'Miles Morales se reúne nuevamente con Gwen Stacy y viaja a través del multiverso, donde conoce a un grupo de Spider-Personas encargadas de proteger la realidad. Sin embargo, un conflicto surge cuando Miles descubre que no todos comparten la misma visión sobre cómo salvar los distintos universos.';
-    }
   var x = document.getElementById("infodiv");
   if (x.style.display === "none" || x.style.display === "") {
     x.style.display = "block";
