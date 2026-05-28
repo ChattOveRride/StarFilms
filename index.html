@@ -2,6 +2,7 @@
     <html lang="es">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <head>
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
             <link rel="icon" type="image/x-icon" href="logo.png">
 <style>
 /*super toggle*/
@@ -56,11 +57,10 @@
 /*cel*/
 @media (max-width: 800px) {
 #theme-switch{
-width: auto;
-    height: 6vw;
-    margin-top: 0;
-    margin-bottom: 15%;
-    margin-left: 15%;
+    width: auto; 
+    height: clamp(28px, 6vw, 1.7vw); 
+    margin: 0;
+    align-self: center;
 }
 
   nav {
@@ -198,7 +198,6 @@ width: auto;
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>STARFILMS</title>
             <link rel="stylesheet" href="style.css">
-			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
             <script type="text/javascript" src="darkmode.js" defer></script>
         </head>
         <body>
@@ -293,21 +292,21 @@ width: auto;
 			<div style = "display:flex; align-items: center; gap:10px">
 				<img id="logo" src="logo.png" alt="logo">  <img id="logo" src="StarFilmsTexto.png" alt="logo">
 			</div>
-				<a href = "nosotros.html#nosotrosamigos" class = "refawitada">Sobre Nosotros</a>
-				<a href = "nosotros.html#contribuidores" class = "refawitada">Contribuidores</a>
-				<a href = "mailto:qyastarfilms@gmail.com" class = "refawitada">Soporte</a> 
+				<a href = "z1abus.html" class = "refawitada" target = "_blank">Sobre Nosotros</a>
+				<a href = "z2contri.html" class = "refawitada" target = "_blank">Contribuidores</a>
+				<a href = "mailto:qyastarfilms@gmail.com" class = "refawitada">Soporte</a>
 			</div>
 			
 			<div class="columnitaf">
-			  <a href="nosotros.html#privacidad" class="refawitada">Políticas de Privacidad</a>
-			  <a href="nosotros.html#terminos" class="refawitada">Términos y Condiciones</a>
-			  <a href="index.html" class="refawitada">Inicio</a>
+			  <a href="z4polipriv.html" class="refawitada" target = "_blank">Políticas de Privacidad</a>
+			  <a href="z5terycon.html" class="refawitada" target = "_blank">Términos y Condiciones</a>
+			  <a href="" class="refawitada">Inicio</a>
 			</div>
 			
 			<div class="columnitaf">
 			  <a href="https://www.youtube.com/watch?v=KbuGWgYLqWk" target = "_blank" class="refawitada">Canción Genial</a>
-			  <a href="nosotros.html#mensaje-creadores" class="refawitada">Mensaje de los Creadores</a>
-			  <a href="nosotros.html#agradecimientos" class="refawitada">Agradecimientos</a>
+			  <a href="z8mencre.html" class="refawitada" target = "_blank">Mensaje de los Creadores</a>
+			  <a href="z9agrad.html" class="refawitada" target = "_blank">Agradecimientos</a>
 			</div>
 			
 			<div class="columnitaf">
@@ -338,18 +337,20 @@ width: auto;
 <br>
 <hr>
 <div id="infotg"><p>Info pelicula</p><button type="button" id="infotggbtn" onclick="textshow()">⌄</button></div>
-<div id="infodiv"></div>
-<hr>
-<table class="movie-table" id="movieInfoTable">
-  <tr><td>Título Original</td><td id="infoTitulo">—</td></tr>
-  <tr><td>Clasificación</td><td id="infoClasificacion">—</td></tr>
-  <tr><td>Género</td><td id="infoGenero">—</td></tr>
-  <tr><td>Director</td><td id="infoDirector">—</td></tr>
-  <tr><td>Actores</td><td id="infoActores">—</td></tr>
-  <tr><td>País</td><td id="infoPais">—</td></tr>
-  <tr><td>Duración</td><td id="infoDuracion">—</td></tr>
-  <tr><td>Distribuidor</td><td id="infoDistribuidor">—</td></tr>
-</table>
+<div id="infodiv" style="display:none;">
+  <div id="movieTableContainer">
+    <table class="movie-table" id="movieInfoTable">
+      <tr><td>Título Original</td><td id="infoTitulo">—</td></tr>
+      <tr><td>Clasificación</td><td id="infoClasificacion">—</td></tr>
+      <tr><td>Género</td><td id="infoGenero">—</td></tr>
+      <tr><td>Director</td><td id="infoDirector">—</td></tr>
+      <tr><td>Actores</td><td id="infoActores">—</td></tr>
+      <tr><td>País</td><td id="infoPais">—</td></tr>
+      <tr><td>Duración</td><td id="infoDuracion">—</td></tr>
+      <tr><td>Distribuidor</td><td id="infoDistribuidor">—</td></tr>
+    </table>
+  </div>
+</div>
 <hr>
 <p>Grupo</p>
 				
@@ -436,180 +437,26 @@ const movieData = {
       duracion: '2h 20m',
       distribuidor: 'Sony Pictures'
     }
-  },
-  'Men': {
-    title: 'Men in Black',
-    img: 'https://www.youtube.com/embed/UxUTTrU6PA4',
-    tabla: {
-      titulo: 'Men in Black',
-      clasificacion: 'PG-13',
-      genero: 'Ciencia ficción / Acción / Comedia',
-      director: 'Barry Sonnenfeld',
-      actores: 'Agente J - Will Smith, Agente K - Tommy Lee Jones, Laurel Weaver - Linda Fiorentino, Edgar - Vincent D’Onofrio',
-      pais: 'Estados Unidos',
-      duracion: '1h 38m',
-      distribuidor: 'Columbia Pictures'
-    }
-  },
-  'John': {
-	title: 'John Wick',
-    img: 'https://www.youtube.com/embed/2AUmvWm5ZDQ',
-    tabla: {
-		titulo: 'John Wick',
-		clasificacion: 'R',
-		genero: 'Acción / Suspenso',
-		director: 'Chad Stahelski, David Leitch',
-		actores: 'John Wick - Keanu Reeves, Viggo Tarasov - Michael Nyqvist, Marcus - Willem Dafoe, Aurelio - John Leguizamo',
-		pais: 'Estados Unidos',
-		duracion: '1h 41m',
-		distribuidor: 'Lionsgate'
-		}
-	},
-	'Transformers': {
-	title: 'Transformers: Age of Extinction',
-    img: 'https://www.youtube.com/embed/T9bQCAWahLk',
-    tabla: {
-		titulo: 'Transformers: Age of Extinction',
-		clasificacion: 'PG-13',
-		genero: 'Acción / Ciencia ficción',
-		director: 'Michael Bay',
-		actores: 'Cade Yeager - Mark Wahlberg, Optimus Prime - Peter Cullen, Joshua Joyce - Stanley Tucci, Tessa Yeager - Nicola Peltz',
-		pais: 'Estados Unidos, China',
-		duracion: '2h 45m',
-		distribuidor: 'Paramount Pictures'
-		}
-	},
-	'Happy': {
-	title: 'Happy Gilmore',
-    img: 'https://www.youtube.com/embed/y1emDAYCfVQ',
-    tabla: {
-		titulo: 'Happy Gilmore',
-		clasificacion: 'PG-13',
-		genero: 'Comedia / Deportes',
-		director: 'Dennis Dugan',
-		actores: 'Happy Gilmore - Adam Sandler, Shooter McGavin - Christopher McDonald, Virginia Venit - Julie Bowen',
-		pais: 'Estados Unidos',
-		duracion: '1h 32m',
-		distribuidor: 'Universal Pictures'
-		}
-	},
-	'Grown': {
-	title: 'Grown Ups',
-    img: 'https://www.youtube.com/embed/yMEDiKD7cyE',
-    tabla: {
-		titulo: 'Grown Ups',
-		clasificacion: 'PG-13',
-		genero: 'Comedia',
-		director: 'Dennis Dugan',
-		actores: 'Lenny Feder - Adam Sandler, Eric Lamonsoff - Kevin James, Kurt McKenzie - Chris Rock, Marcus Higgins - David Spade, Rob Hilliard - Rob Schneider',
-		pais: 'Estados Unidos',
-		duracion: '1h 42m',
-		distribuidor: 'Sony Pictures Releasing'
-		}
-	},
-	'Dragon': {
-	title: 'Dragon Ball Super: Broly',
-    img: 'https://www.youtube.com/embed/dl3w10VVQj8',
-    tabla: {
-		titulo: 'Dragon Ball Super: Broly',
-		clasificacion: 'PG-13',
-		genero: 'Anime / Acción / Fantasía',
-		director: 'Tatsuya Nagamine',
-		actores: 'Goku - Masako Nozawa, Vegeta - Ryō Horikawa, Broly - Bin Shimada, Freezer - Ryūsei Nakao',
-		pais: 'Japón',
-		duracion: '1h 40m',
-		distribuidor: 'Toei Company'
-		}
-	},
-	'Jurassic': {
-	title: 'Jurassic World Dominion',
-    img: 'https://www.youtube.com/embed/9m9yRauMJIQ',
-    tabla: {
-		titulo: 'Jurassic World Dominion',
-		clasificacion: 'PG-13',
-		genero: 'Ciencia ficción / Aventura / Acción',
-		director: 'Colin Trevorrow',
-		actores: 'Owen Grady - Chris Pratt, Claire Dearing - Bryce Dallas Howard, Alan Grant - Sam Neill, Ellie Sattler - Laura Dern, Ian Malcolm - Jeff Goldblum',
-		pais: 'Estados Unidos',
-		duracion: '2h 27m',
-		distribuidor: 'Universal Pictures'
-		}
-	},
-	'Backrooms': {
-	title: 'The Backrooms',
-    img: 'https://www.youtube.com/embed/0HjdiohVOik',
-    tabla: {
-		titulo: 'The Backrooms',
-		clasificacion: 'Pendiente',
-		genero: 'Terror / Misterio',
-		director: 'Kane Parsons',
-		actores: 'Información no confirmada oficialmente',
-		pais: 'Estados Unidos',
-		duracion: 'Pendiente',
-		distribuidor: 'A24'
-		}
-	},
-	'Ready': {
-	title: 'Ready Player One',
-    img: 'https://www.youtube.com/embed/cSp1dM2Vj48',
-    tabla: {
-		titulo: 'Ready Player One',
-		clasificacion: 'PG-13',
-		genero: 'Ciencia ficción / Aventura / Acción',
-		director: 'Steven Spielberg',
-		actores: 'Tye Sheridan, Olivia Cooke, Ben Mendelsohn, Mark Rylance.',
-		pais: 'Estados Unidos',
-		duracion: '2h 20m',
-		distribuidor: 'Warner Bros. Pictures'
-		}
-	},
-	'Avengers': {
-	title: 'Avengers: Endgame',
-    img: 'https://www.youtube.com/embed/TcMBFSGVi1c',
-    tabla: {
-		titulo: 'Avengers: Endgame',
-		clasificacion: 'PG-13',
-		genero: 'Superhéroes / Acción / Ciencia ficción',
-		director: 'Anthony Russo, Joe Russo',
-		actores: 'Robert Downey Jr., Chris Evans, Chris Hemsworth, Mark Ruffalo, Scarlett Johansson, Jeremy Renner, Josh Brolin.',
-		pais: 'Estados Unidos',
-		duracion: '3h 1m',
-		distribuidor: 'Walt Disney Studios Motion Pictures'
-		}
-	},
-	'Back': {
-	title: 'Back to the Future',
-    img: 'https://www.youtube.com/embed/qvsgGtivCgs',
-    tabla: {
-		titulo: 'Back to the Future',
-		clasificacion: 'PG',
-		genero: 'Ciencia ficción / Aventura / Comedia',
-		director: 'Robert Zemeckis',
-		actores: 'Michael J. Fox, Christopher Lloyd, Lea Thompson, Crispin Glover.',
-		pais: 'Estados Unidos',
-		duracion: '1h 56m',
-		distribuidor: 'Universal Pictures'
-		}
-	},
+  }
 };
 
 function updateSidebar(movieKey) {
   const data = movieData[movieKey];
   document.getElementById("sideTitle").innerText = data.title;
   document.getElementById("sideImg").src = data.img;
-  document.getElementById("infodiv").innerHTML = "";
-  document.getElementById("infotggbtn").innerHTML= "⌄";
-
+  document.getElementById("infotggbtn").innerHTML = "⌄";
   // Poblar tabla
   const t = data.tabla;
-  document.getElementById("infoTitulo").innerText       = t.titulo;
+  document.getElementById("infoTitulo").innerText        = t.titulo;
   document.getElementById("infoClasificacion").innerText = t.clasificacion;
-  document.getElementById("infoGenero").innerText       = t.genero;
-  document.getElementById("infoDirector").innerText     = t.director;
-  document.getElementById("infoActores").innerText      = t.actores;
-  document.getElementById("infoPais").innerText         = t.pais;
-  document.getElementById("infoDuracion").innerText     = t.duracion;
-  document.getElementById("infoDistribuidor").innerText = t.distribuidor;
+  document.getElementById("infoGenero").innerText        = t.genero;
+  document.getElementById("infoDirector").innerText      = t.director;
+  document.getElementById("infoActores").innerText       = t.actores;
+  document.getElementById("infoPais").innerText          = t.pais;
+  document.getElementById("infoDuracion").innerText      = t.duracion;
+  document.getElementById("infoDistribuidor").innerText  = t.distribuidor;
+
+  document.getElementById("infodiv").style.display = "none";
 }
 
 function textshow() {
@@ -626,39 +473,14 @@ function textshow() {
     else if (document.getElementById("sideTitle").innerText === "SpiderMan: Across the SpiderVerse"){
       desc = 'Miles Morales se reúne nuevamente con Gwen Stacy y viaja a través del multiverso, donde conoce a un grupo de Spider-Personas encargadas de proteger la realidad. Sin embargo, un conflicto surge cuando Miles descubre que no todos comparten la misma visión sobre cómo salvar los distintos universos.';
     }
-	else if (document.getElementById("sideTitle").innerText === "Men in Black"){
-      desc = 'Un policía de Nueva York descubre una organización secreta encargada de vigilar la actividad extraterrestre en la Tierra y se convierte en uno de sus agentes.';
-    }
-	else if (document.getElementById("sideTitle").innerText === "Transformers: Age of Extinction"){
-      desc = 'Tras la destrucción causada por los Transformers, un inventor descubre a Optimus Prime oculto. Mientras tanto, una nueva amenaza pone en peligro a la humanidad.';
-    }
-	else if (document.getElementById("sideTitle").innerText === "Happy Gilmore"){
-      desc = 'Un jugador de hockey con problemas de temperamento descubre un talento inesperado para el golf y participa en torneos para salvar la casa de su abuela.';
-    }
-	else if (document.getElementById("sideTitle").innerText === "Grown Ups"){
-      desc = 'Cinco amigos de la infancia se reúnen años después de graduarse para pasar un fin de semana juntos junto a sus familias.';
-    }
-	else if (document.getElementById("sideTitle").innerText === "Dragon Ball Super: Broly"){
-      desc = 'Goku y Vegeta enfrentan a Broly, un poderoso saiyajin con una fuerza descomunal que amenaza con destruir todo a su paso.';
-    }
-	else if (document.getElementById("sideTitle").innerText === "John Wick"){
-      desc = 'Después de perder a su esposa, un exasesino profesional busca venganza contra los criminales que mataron a su perro y robaron su automóvil.';
-    }
-	else if (document.getElementById("sideTitle").innerText === "Jurassic World Dominion"){
-      desc = 'Los dinosaurios ahora viven junto a los humanos alrededor del mundo. Un nuevo conflicto amenaza el equilibrio entre ambas especies.';
-    }
-	else if (document.getElementById("sideTitle").innerText === "The Backrooms"){
-      desc = 'Basada en el fenómeno de internet “The Backrooms”, la historia sigue a personas atrapadas en un laberinto infinito de habitaciones amarillas y espacios perturbadores donde criaturas desconocidas acechan.';
-    }
-	else if (document.getElementById("sideTitle").innerText === "Ready Player One"){
-      desc = 'En un futuro dominado por la tecnología, un joven se adentra en OASIS, un enorme mundo de realidad virtual donde millones de personas pasan la mayor parte de su tiempo. Allí descubrirá secretos, desafíos y una competencia que podría cambiar el destino del sistema para siempre.';
-    }
-	else if (document.getElementById("sideTitle").innerText === "Avengers: Endgame"){
-      desc = 'Después de una devastadora derrota, los héroes más poderosos de la Tierra deberán reunirse una vez más para enfrentar las consecuencias y luchar por restaurar el equilibrio del universo.';
-    }
-	else if (document.getElementById("sideTitle").innerText === "Back to the Future"){
-      desc = 'Un adolescente viaja accidentalmente al pasado en una máquina del tiempo creada por un excéntrico científico. Mientras intenta regresar a su época, deberá evitar alterar el futuro de su propia familia.';
-    }
+  var x = document.getElementById("infodiv");
+  if (x.style.display === "none" || x.style.display === "") {
+    x.style.display = "block";
+    document.getElementById("infotggbtn").innerHTML = "⌃";
+  } else {
+    x.style.display = "none";
+    document.getElementById("infotggbtn").innerHTML = "⌄";
+  }
 }
 
 /* desplazamiento automático */

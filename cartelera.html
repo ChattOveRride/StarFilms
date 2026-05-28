@@ -2,6 +2,7 @@
 	<html lang="es">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<head>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
             <link rel="icon" type="image/x-icon" href="logo.png">
 			<style>
 
@@ -102,6 +103,7 @@ width: auto;
     margin-top: 0;
     margin-bottom: 15%;
     margin-left: 15%;
+    align-self: center;
 }
 
   nav {
@@ -328,11 +330,11 @@ width: auto;
   <iframe id="sideImg" title="Video" src=""></iframe>
   <h1 id="sideTitle">Titulo</h1>
   <br>
-  <hr>
   <div id="infotg"><p>Info película</p><button type="button" id="infotggbtn" onclick="textshow()">⌄</button></div>
-  <div id="infodiv"></div>
-  <hr>
+  <div id="infodiv">
+  <p id="infodesc"></p>
   <div id="movieTableContainer"></div>
+</div>
 </section>
 
 <!-- java script -->
@@ -452,24 +454,21 @@ function updateSidebar(movieKey) {
   const data = movieData[movieKey];
   document.getElementById("sideTitle").innerText = data.title;
   document.getElementById("sideImg").src = data.img;
-  document.getElementById("infodiv").innerHTML = "";
+  document.getElementById("infodiv").innerHTML = `<p id="infodesc">${data.desc}</p><div id="movieTableContainer">${buildTable(data.tabla)}</div>`;
+  document.getElementById("infodiv").style.display = "none";
   document.getElementById("infotggbtn").innerHTML = "⌄";
-  document.getElementById("movieTableContainer").innerHTML = buildTable(data.tabla);
 }
-
 function textshow() {
   const title = document.getElementById("sideTitle").innerText;
   const data = Object.values(movieData).find(d => d.title === title);
   const desc = data ? data.desc : 'Default';
   var x = document.getElementById("infodiv");
-  if (x.innerHTML === "") {
-    x.innerHTML = desc;
+  if (x.style.display === "none" || x.style.display === "") {
+    x.style.display = "block";
     document.getElementById("infotggbtn").innerHTML = "⌃";
-    document.getElementById("infotggbtn").style.transform = "translate(0px, 20px)";
   } else {
-    x.innerHTML = "";
+    x.style.display = "none";
     document.getElementById("infotggbtn").innerHTML = "⌄";
-    document.getElementById("infotggbtn").style.transform = "translate(0px, 0px)";
   }
 }
 
