@@ -568,6 +568,14 @@ footer a{
 		font-size: 3vw !important;
 		text-align: center;
     }
+	@media (max-width: 800px) {
+  #theme-switch {
+    height: 30px !important;
+    width: 30px !important;
+    margin: 0 !important;
+    align-self: center;
+  }
+}
 	footer{
 		padding: 5px;
 	}
