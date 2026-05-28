@@ -313,7 +313,16 @@ footer{
 				.titulitoosi{ 
 				<!-- Este comentario es para irrumpir la fuente de mi footer, jaló de pura casualidad y suerte jaja, no le muevan plis :'v -->
 				}
+	#nosotrosamigos,
+	#contribuidores,
+	#privacidad,
+	#terminos,
+	#mensaje-creadores,
+	#agradecimientos {
+    scroll-margin-top: 100px;
+	}
 		</style>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 	</head>
 	
 	<body>
@@ -352,7 +361,7 @@ footer{
 
 	<div id="preview"></div>
 		<div class="nosotros">
-      <section data-luces="sobre-nosotros">
+      <section id = "nosotrosamigos" data-luces="sobre-nosotros">
 		<h1>Sobre Nosotros</h1>
     <br>
 		<h3>¿Qué es Starfilms?</h3>
@@ -377,7 +386,7 @@ footer{
 </section>
 		<hr>
 		
-    <div class="card-full" data-luces="contribuidores">
+    <div class="card-full" id = "contribuidores" data-luces="contribuidores">
 	<h1>Contribuidores</h1>
 		<p>La página de Starfilms no hubiera sido posible sin el conjunto de varios sueños, así como no hubiera sido posible sin nuestros contribuidores y elementos estrella:</p>
 		<ul>
@@ -392,7 +401,7 @@ footer{
     </div>
 		<hr>
 		
-    <div class="terms" data-luces="privacidad">
+    <div class="terms" id = "privacidad" data-luces="privacidad">
 	<h1>Políticas de Privacidad</h1>
 		<p><i>Vigente desde el 27 de Abril del 2023 </i>La página de Starfilms únicamente es utilizada para promocionar nuestros cines, por lo que:</p>
 		<ul>
@@ -407,7 +416,7 @@ footer{
       </div>
 		<hr>
 		
-		<div class="terms" data-luces="terminos">
+		<div class="terms" id = "terminos" data-luces="terminos">
 	<h1>Términos y Condiciones</h1>
 	<p><i>Vigente desde el 27 de Abril del 2023 </i>La página de Starfilms es de uso plenamente gratuito y simple, mas contamos con ciertas reglas que deben ser seguidas y tomadas en cuenta:</p>
 	<ol>
@@ -422,14 +431,14 @@ footer{
 	<hr>
 	
 	
-  <blockquote>
+  <blockquote id = "mensaje-creadores">
   <h1>Mensaje de los Creadores</h1>
   <p>Si estás leyendo esto, gracias. Gracias por darle una oportunidad a nuestros cines, originalmente un pequeño proyecto que nació del puro amor por el arte. Seguimos y seguiremos aquí siempre para ti: en los días más vacíos y en las noches más oscuras esperamos que siempre puedas ver al cine como a un segundo hogar, como un lugar para refugiarte, como un espacio para compartir y amar de la misma forma que nosotros amamos la actuación y animación.</p>
 	<cite>-El equipo de Starfilms</cite>
 </blockquote>
 	
 		<hr>
-		<div class="card-full" data-luces="agradecimientos">
+		<div class="card-full" id = "agradecimientos" data-luces="agradecimientos">
 		<h1>Agradecimientos</h1>
 		<p>Es gracias al apoyo de varias personas que Starfilms es posible, por lo que...</p>
 		<p>Agradecemos a nuestros padres y amigos, que siempre nos brindaron soporte. Agradecemos a los directores, actores y equipos creativos detrás de cada película de la que hemos hablado. Agradecemos a Sergio Luján Mora y a Elías Alcalá Pérez por inventar HTML. Agradecemos a Maximiliano de Habsburgo por ser el único político bueno de nuestro país. Agrademos al gobierno de Dinamarca por financiar nuestr proyecto. Y por sobre todo, <b>te agradecemos a ti, querido lector, por estar aquí y motivarnos a seguir con este proyecto.</b></p>
@@ -441,23 +450,23 @@ footer{
         <div class = "conteniditof">
 			<div class = "columnitaf">
 			<div style = "display:flex; align-items: center; gap:10px">
-				<img id="logo" src="logo.png" alt="logo">  <h1><img id="logo" src="StarFilmsTexto.png" alt="logo"></h1>
-				</div>
-				<a href = "z1abus.html" class = "refawitada" target = "_blank">Sobre Nosotros</a>
-				<a href = "z2contri.html" class = "refawitada" target = "_blank">Contribuidores</a>
-				<a href = "mailto:qyastarfilms@gmail.com" class = "refawitada">Soporte</a>
+				<img id="logo" src="logo.png" alt="logo">  <img id="logo" src="StarFilmsTexto.png" alt="logo">
+			</div>
+				<a href = "nosotros.html#nosotrosamigos" class = "refawitada">Sobre Nosotros</a>
+				<a href = "nosotros.html#contribuidores" class = "refawitada">Contribuidores</a>
+				<a href = "mailto:qyastarfilms@gmail.com" class = "refawitada">Soporte</a> 
 			</div>
 			
 			<div class="columnitaf">
-			  <a href="z4polipriv.html" class="refawitada" target = "_blank">Políticas de Privacidad</a>
-			  <a href="z5terycon.html" class="refawitada" target = "_blank">Términos y Condiciones</a>
-			  <a href="" class="refawitada">Inicio</a>
+			  <a href="nosotros.html#privacidad" class="refawitada">Políticas de Privacidad</a>
+			  <a href="nosotros.html#terminos" class="refawitada">Términos y Condiciones</a>
+			  <a href="index.html" class="refawitada">Inicio</a>
 			</div>
 			
 			<div class="columnitaf">
 			  <a href="https://www.youtube.com/watch?v=KbuGWgYLqWk" target = "_blank" class="refawitada">Canción Genial</a>
-			  <a href="z8mencre.html" class="refawitada" target = "_blank">Mensaje de los Creadores</a>
-			  <a href="z9agrad.html" class="refawitada" target = "_blank">Agradecimientos</a>
+			  <a href="nosotros.html#mensaje-creadores" class="refawitada">Mensaje de los Creadores</a>
+			  <a href="nosotros.html#agradecimientos" class="refawitada">Agradecimientos</a>
 			</div>
 			
 			<div class="columnitaf">
@@ -493,4 +502,4 @@ function navbartogg(ic) {
 }
 </script>
 		</body>
-</html>
+</	html>
