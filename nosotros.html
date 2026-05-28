@@ -274,6 +274,7 @@ footer{
 }
         /*pc*/
 @media (min-width: 601px) {
+
   .card{
     max-width: 45%;
   }
@@ -321,6 +322,59 @@ footer{
 	#agradecimientos {
     scroll-margin-top: 100px;
 	}
+
+/*animation*/
+#preview{
+  opacity: 1;
+  animation: header-image-animation linear;
+  animation-timeline: view();
+}
+
+@keyframes header-image-animation {
+  60% { opacity: 1;}
+  70% { opacity: 1;}
+  80% { opacity: .7;}
+  100% { opacity: 0;}
+}
+
+.card, .card-full{
+  transition: transform .5s;
+}
+.card:hover, .card-full:hover{
+  transform: scale(1.05);
+}
+
+.valores{
+  align-self: center;
+    width: 30%;
+    height: auto;
+    margin: 3%;
+}
+
+.valores i{
+  font-size: 4rem;
+  color: var(--main-back);
+}
+
+/* codigo genial
+	#nosotrosamigos,
+	#contribuidores,
+	#privacidad,
+	#terminos,
+	#mensaje-creadores,
+	#agradecimientos {
+  opacity: .3;
+  scale: .2;
+  color: rgb(0, 17, 255);
+  background-color: rgb(242, 0, 255);
+  transform: rotatez(200deg) rotatey(200deg) translate(100%, -100%) skew(30deg,20deg);
+  animation: fade-in linear;
+  animation-timeline: view();
+}
+
+@keyframes fade-in {
+40% {opacity: 1; scale: 1; color: rgb(0, 0, 0); transform: rotatez(0deg) rotatey(0deg) translate(0%, -0%) skew(0deg,0deg); background-color: rgb(255, 255, 255);}
+}*/
 		</style>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 	</head>
@@ -379,9 +433,28 @@ footer{
   </div>
 </div>
 
-<br>
+<br><br>
+
 <h2>Nuestros Valores</h2>
-<p>Nuestros valores son varios, destacamos accesibilidad, diversidad, calidez humana y pasión por el arte, guiando estos a cada decisión que tomamos, desde elegir una película para proyectar hasta el diseño y ambientación del espacio que ofrecemos.</p>
+<div class="holder">
+<div class="valores">
+<i class="fa-solid fa-scale-balanced"></i>
+<h3>Integridad</h3>
+</div>
+<div class="valores">
+<i class="fa-solid fa-hand-fist"></i>
+<h3>Resiliencia</h3>
+</div>
+<div class="valores">
+<i class="fa-regular fa-lightbulb"></i>
+<h3>Innovación</h3>
+</div>
+<div class="valores">
+<i class="fa-solid fa-person-running"></i>
+<h3>Agilidad</h3>
+</div>
+</div>
+</div>
 
 </section>
 		<hr>
