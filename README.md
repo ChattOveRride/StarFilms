@@ -9,7 +9,7 @@ DESCARGARSE EL ARCHIVO PARA HACER PRUEBAS ANTES DE MODIFICAR LOS ARCHIVOS DE GIT
 - <del>Que la tabla de las side bars se oculte junto la descripción</del>
 - Modificar tamaño del texto en sidebar (ver celular)
 - Side bars personalizadas en la página de cartelera
--<del> Cambiar colores en modo oscuro</del>
+- <del>Cambiar colores en modo oscuro</del>
 - Más animaciones en "nosotros" y agregar iconos
 
 *Opcional: Boton "ver pelicula"*
