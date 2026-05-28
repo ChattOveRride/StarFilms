@@ -40,6 +40,10 @@
 
     --color-sidebar-from: #dee7e7;
     --color-sidebar-to: #dee7e7;
+
+    --sidebar-table-border: rgba(169,39,39,.2);
+    --sidebar-tdfirst: #a92727;
+    --sidebar-td: #333;
 }
 
 .darkmode{
@@ -65,6 +69,10 @@
 
     --color-sidebar-from: #202058;
     --color-sidebar-to: #bd2f2f;
+
+    --sidebar-table-border: rgba(255, 155, 155, 0.3);
+    --sidebar-tdfirst: white;
+    --sidebar-td: #b0b0b0;
 }
 
 
@@ -433,7 +441,7 @@ width: 100%;
 font-family: title;
   padding: 20px 20px 0 5rem;
   text-decoration: none;
-  color: black;
+  color: var(--main-text);
   display: block;
   font-size: 3rem;
 }
@@ -441,7 +449,7 @@ font-family: title;
 .sidebar p{
   padding: 20px 20px 0 5rem;
   text-decoration: none;
-  color: black;
+  color: var(--main-text);
   display: block;
   font-size: 2rem;
 }
@@ -464,7 +472,7 @@ font-family: title;
 
 .sidebar .closebtn {
   padding: 20px 20px 0 5rem;
-  color: black;
+  color: var(--main-text);
   position: absolute;
   top: 0;
   font-size: 5rem;
@@ -475,7 +483,7 @@ font-family: title;
 #infodiv {
   padding: 20px 20px 0 5rem;
   text-decoration: none;
-  color: black;
+  color: var(--main-text);
   display: block;
   font-size: 2rem;
 }
@@ -493,6 +501,31 @@ font-family: title;
   background: transparent;
   border: 0;
   cursor: pointer;
+  color: var(--main-text);
+}
+
+/* Tabla info pelicula */
+.movie-table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 1.4rem;
+  font-family: general, sans-serif;
+}
+.movie-table td {
+  padding: 10px 18px;
+  vertical-align: top;
+  border-bottom: 1px solid var(--sidebar-table-border);
+}
+.movie-table td:first-child {
+  font-weight: bold;
+  color: var(--sidebar-tdfirst);
+  white-space: nowrap;
+  width: 35%;
+}
+.movie-table td:last-child {
+  color: var(--sidebar-td);
 }
 
 /*Footer*/
