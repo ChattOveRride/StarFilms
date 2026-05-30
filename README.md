@@ -1,4 +1,4 @@
-DESCARGARSE EL ARCHIVO PARA HACER PRUEBAS ANTES DE MODIFICAR LOS ARCHIVOS DE GITHUB
+DESCARGARSE EL ARCHIVO PARA HACER PRUEBAS ANTES DE MODIFICAR LOS ARCHIVOS DE GITHUB (hola chicos, los quiero)
 
 # POR HACER
 - <del>Ajustar botón de modo oscuro en la versión de celular (sección principal y cartelera)</del>
