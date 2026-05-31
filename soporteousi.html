@@ -4,9 +4,242 @@
 	<head>
 		<meta charset = "utf-8" />
 		<title>Soporte</title>
-	</head>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="icon" type="image/x-icon" href="logo.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CARTELERA</title>
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="darkmode.js" defer></script>
+		<style>
+			/*super toggle*/
+#navtgg {
+  margin: 3px 0;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 25px;
+  height: 3px;
+  background-color: #dee7e7;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translate(0, 8px) rotate(-45deg);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  transform: translate(0, -8px) rotate(45deg);
+}
+
+
+@media (min-width: 600px) {
+
+}
+
+			.header{
+    background-color: var(--black);
+    box-shadow: 1px 1px 5px 0px var(--gray);
+    position: sticky;
+    top: 100px;
+    width: 100%;
+}
+
+/*pc*/
+@media (min-width: 801px) {
+  
+
+#navtgg{
+  display: none;
+}
+
+}
+
+
+/*cel*/
+@media (max-width: 800px) {
+#theme-switch{
+width: auto;
+    height: 6vw;
+    margin-top: 0;
+    margin-bottom: 15%;
+    margin-left: 15%;
+}
+
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    align-self: center;
+}
+
+.nav-right {
+  display: flex; 
+  flex-direction: row; 
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  align-self: center;
+}
+
+.topnav li{
+    margin-left: 0px;
+}
+
+.topnav ul{
+justify-self: center;
+}
+
+.topnav{
+width: 100%;
+}
+
+.liel{
+display: none;
+}
+
+#tnav img{
+width: auto;
+    height: 35px;
+    float: left;
+}
+
+}
+
+
+#navbar{
+  height: 0%;
+  width: 30%;
+  position: fixed;
+  z-index: 1;
+  top: 6rem;
+  right: 0;
+  background-color: #dee7e7;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  transition: 0.5s;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+}
+
+#navbar a{
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: black;
+}
+
+#navbar li{
+  font-size: 3rem;
+  list-style: none;
+}
+
+
+@media (min-width: 600px) {
+
+    .nav{
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+        background-color: transparent;
+    }
+    .menu li{
+        float: left;
+    }
+}
+/**/
+
+h1, h2, h3{
+  color: #a92727;
+}
+
+a{
+	color: gray;
+}
+
+.nosotros ul, ol{
+margin-left: 6vw;
+}
+
+.nosotros li{
+  margin: 1vw 0 1vw 0;
+}
+
+cite{
+  font-size: smaller;
+  color: #98838e;
+}
+
+blockquote {
+  text-align: center;
+  padding-inline: 1.5rem;
+  border-inline-start: 2px solid #98838e;
+  border-inline-end: 2px solid #98838e;
+}
+
+body{
+  line-height: 1.5;;
+}     
+
+hr{
+  margin: 3vw 0 3vw 0;
+}
+
+.nosotros li{
+	list-style-type: "★ ";
 	
+}
+		</style>
+	</head>
 	<body>
+<header>
+
+                <div class="menu">
+                    <nav class="topnav" id="tnav">
+                          <div class="nav-left">
+                            <img id="logo" src="logo.png" alt="logo" class="active">
+                            <img id="logo" src="StarFilmsTexto.png" alt="logo" class="active">
+                          </div>
+                            <ul class="nav-right">
+                            <li class="liel"><a href="index.html">Inicio</a></li>
+                            <li class="liel"><a href="cartelera.html">Cartelera</a></li>
+							<li class="liel"><a href="nosotros.html">Nosotros</a></li>
+              <li><div id="navtgg" onclick="navbartogg(this)">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div></li>
+<li>    <button type="button" id="theme-switch">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" ><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" ><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+    </button></li>
+                        </ul>
+                    </nav>
+                    <div id="navbar">
+                      <ul>
+                  <li ><a href="index.html">Inicio</a></li>
+                  <li ><a href="cartelera.html">Cartelera</a></li>
+							    <li ><a href="nosotros.html">Nosotros</a></li></ul>
+  </div>
+
+</div>
+            </header>
+			<div class="nosotros">
 		<h1>Soporte Técnico</h1>
 		<h3>¿Cómo podemos ayudarte?</h3>
 		<p>Estamos aquí para que tu experiencia en Starfilms sea siempre la mejor posible, por lo que te prestaremos información acerca de:</p>
@@ -39,7 +272,46 @@
 		<li><a href = "nosotros.html#terminos">Términos y Condiciones</a></li>
 		<li><a href = "nosotros.html#nosotrosamigos">Sobre Nosotros</a></li>
 		</ul>
-		<hr>
+		<br>
+</div>
+	    <footer>
+    <div class="conteniditof">
+      <div class="columnitaf">
+        <div style="display:flex; align-items: center; gap:10px">
+          <img id="logo" src="logo.png" alt="logo">
+          <h1><img id="logo" src="StarFilmsTexto.png" alt="logo"></h1>
+        </div>
+        <a href="nosotros.html#nosotrosamigos" class="refawitada">Sobre Nosotros</a>
+        <a href="nosotros.html#contribuidores" class="refawitada">Contribuidores</a>
+        <a href="soporteousi.html" class="refawitada">Soporte</a>
+      </div>
+
+      <div class="columnitaf">
+        <a href="nosotros.html#privacidad" class="refawitada">Políticas de Privacidad</a>
+        <a href="nosotros.html#terminos" class="refawitada">Términos y Condiciones</a>
+        <a href="index.html" class="refawitada">Inicio</a>
+      </div>
+
+      <div class="columnitaf">
+        <a href="https://www.youtube.com/watch?v=KbuGWgYLqWk" target="_blank" class="refawitada">Canción Genial</a>
+        <a href="nosotros.html#mensajito" class="refawitada">Mensaje de los Creadores</a>
+        <a href="nosotros.html#agradecimientos" class="refawitada">Agradecimientos</a>
+      </div>
+
+      <div class="columnitaf">
+        <a href="mailto:qyastarfilms@gmail.com" class="refawitada">Contáctanos</a>
+        <a href="mailto:qyastarfilms@gmail.com?subject=Duda" class="refawitada">Dudas</a>
+        <a href="mailto:qyastarfilms@gmail.com?subject=Sugerencia" class="refawitada">Sugerencias</a>
+      </div>
+    </div>
+    <div class="redesf">
+      <span style="align-self: center;">Nuestras redes:</span>
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com" target="_blank"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+  </footer>
 	</body>
 	
 </html>
