@@ -6,6 +6,39 @@
             <link rel="icon" type="image/x-icon" href="logo.png">
 			<style>
 
+@media (max-width: 600px) {
+        .grupo{
+          color: var(--main-color);
+          background-color: var(--main-back);
+          font-family: title;
+          font-size: 1rem;
+          margin-left: 4vw;
+          width: 25vw;
+          padding: 1vw;
+          margin: 20px 20px 0 5rem;
+          border-radius: .5rem;
+        }
+}
+
+@media (min-width: 601px) {
+        .grupo{
+          color: var(--main-color);
+          background-color: var(--main-back);
+          font-family: title;
+          font-size: 1.5rem;
+          margin-left: 4vw;
+          width: 9vw;
+          padding: .5vw;
+          border-radius: 1rem;
+        }
+}
+
+
+
+        .sidebar{
+          justify-content: center;
+        }
+
        /*celular*/
 
 @media (max-width: 600px) {
@@ -253,14 +286,17 @@ width: auto;
 			<main>
 			<div class="cont-all">
         <h3>CARTELERA</h3>
-<button popovertarget="mypopover" onclick="updateSidebar('mario')"><img src="cartel/mario.jpg"></button>
-<button popovertarget="mypopover" onclick="updateSidebar('minecraft')"><img src="cartel/minecraft.jpg"></button>
-<button popovertarget="mypopover" onclick="updateSidebar('pixels')"><img src="cartel/pixels.jpg"></button>
-<button popovertarget="mypopover" onclick="updateSidebar('spiderman')"><img src="cartel/Spiderman.jpg"></button>
+<button popovertarget="mypopoverA"><img src="cartel/mario.jpg"></button>
+<button popovertarget="mypopoverB"><img src="cartel/minecraft.jpg"></button>
+<button popovertarget="mypopoverC"><img src="cartel/pixels.jpg"></button>
+<button popovertarget="mypopoverD"><img src="cartel/Spiderman.jpg"></button>
 </div>
 			</main>
 
-		<div id="mypopover" popover="manual" style="border: 0px;"></div>
+		<div id="mypopoverA" popover="manual" style="border: 0px;"></div>
+    <div id="mypopoverB" popover="manual" style="border: 0px;"></div>
+    <div id="mypopoverC" popover="manual" style="border: 0px;"></div>
+    <div id="mypopoverD" popover="manual" style="border: 0px;"></div>
 	    <footer>
     <div class="conteniditof">
       <div class="columnitaf">
@@ -300,154 +336,139 @@ width: auto;
     </div>
   </footer>
 
-<!-- side bar -->
-<section id="mySidebar" class="sidebar">
+<!-- side bar 1-->
+<section id="mySidebarA" class="sidebar">
   <br>
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&larr;</a>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&larr;</a><br>
 
   <iframe id="sideImg" title="Video" src=""></iframe>
-  <h1 id="sideTitle">Titulo</h1>
   <br>
-  <div id="infotg"><p>Info película</p><button type="button" id="infotggbtn" onclick="textshow()">⌄</button></div>
-  <div id="infodiv">
-  <p id="infodesc"></p>
-  <div id="movieTableContainer"></div>
-</div>
+  <h1 id="sideTitle">MARIO</h1>
+  <br>
+  <div class="grupo">
+  <h3>Grupo:</h3></div>
+</section>
+
+<!-- side bar 2-->
+<section id="mySidebarB" class="sidebar">
+  <br>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&larr;</a><br>
+
+  <iframe id="sideImg" title="Video" src=""></iframe>
+  <br>
+  <h1 id="sideTitle">MINECRAFT</h1>
+  <div class="grupo">
+  <h3>Grupo:</h3></div>
+  <br>
+
+</section>
+
+<!-- side bar 3-->
+<section id="mySidebarC" class="sidebar">
+  <br>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&larr;</a><br>
+
+  <iframe id="sideImg" title="Video" src=""></iframe>
+  <br>
+  <h1 id="sideTitle">PIXELES</h1>
+  <div class="grupo">
+  <h3>Grupo:</h3></div>
+  <br>
+
+</section>
+
+<!-- side bar 4-->
+<section id="mySidebarD" class="sidebar">
+  <br>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&larr;</a><br>
+
+  <iframe id="sideImg" title="Video" src=""></iframe>
+  <br>
+  <h1 id="sideTitle">SPIDERMAN</h1>
+  <div class="grupo">
+  <h3>Grupo: 6AB</h3></div>
+  <br>
+
 </section>
 
 <!-- java script -->
             
  <script>
-    const popover = document.getElementById("mypopover");
+const popoverA = document.getElementById("mypopoverA");
+const popoverB = document.getElementById("mypopoverB");
+const popoverC = document.getElementById("mypopoverC");
+const popoverD = document.getElementById("mypopoverD");
 
-popover.addEventListener("toggle", (event) => {
+popoverA.addEventListener("toggle", (event) => {
   if (event.newState === "open") {
     const isMobile = window.innerWidth <= 700;
-    document.getElementById("mySidebar").style.width = isMobile ? "100%" : "45rem";
+  document.getElementById("mySidebarA").style.width = isMobile ? "100%" : "45rem";
+  document.getElementById("mySidebarB").style.width = "0";
+  document.getElementById("mySidebarC").style.width = "0";
+  document.getElementById("mySidebarD").style.width = "0";
   }
   else {
-    document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("mySidebarA").style.width = "0";
+  document.getElementById("mySidebarB").style.width = "0";
+  document.getElementById("mySidebarC").style.width = "0";
+  document.getElementById("mySidebarD").style.width = "0";
+  }
+});
+
+popoverB.addEventListener("toggle", (event) => {
+  if (event.newState === "open") {
+    const isMobile = window.innerWidth <= 700;
+  document.getElementById("mySidebarB").style.width = isMobile ? "100%" : "45rem";
+  document.getElementById("mySidebarA").style.width = "0";
+  document.getElementById("mySidebarC").style.width = "0";
+  document.getElementById("mySidebarD").style.width = "0";
+  }
+  else {
+     document.getElementById("mySidebarA").style.width = "0";
+  document.getElementById("mySidebarB").style.width = "0";
+  document.getElementById("mySidebarC").style.width = "0";
+  document.getElementById("mySidebarD").style.width = "0";
+  }
+});
+
+popoverC.addEventListener("toggle", (event) => {
+  if (event.newState === "open") {
+    const isMobile = window.innerWidth <= 700;
+  document.getElementById("mySidebarC").style.width = isMobile ? "100%" : "45rem";
+  document.getElementById("mySidebarA").style.width = "0";
+  document.getElementById("mySidebarB").style.width = "0";
+  document.getElementById("mySidebarD").style.width = "0";
+  }
+  else {
+  document.getElementById("mySidebarA").style.width = "0";
+  document.getElementById("mySidebarB").style.width = "0";
+  document.getElementById("mySidebarC").style.width = "0";
+  document.getElementById("mySidebarD").style.width = "0";
+  }
+});
+
+popoverD.addEventListener("toggle", (event) => {
+  if (event.newState === "open") {
+    const isMobile = window.innerWidth <= 700;
+  document.getElementById("mySidebarD").style.width = isMobile ? "100%" : "45rem";
+  document.getElementById("mySidebarB").style.width = "0";
+  document.getElementById("mySidebarC").style.width = "0";
+  document.getElementById("mySidebarA").style.width = "0";
+  }
+  else {
+  document.getElementById("mySidebarA").style.width = "0";
+  document.getElementById("mySidebarB").style.width = "0";
+  document.getElementById("mySidebarC").style.width = "0";
+  document.getElementById("mySidebarD").style.width = "0";
   }
 });
 
 function closeNav() {
-  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("mySidebarA").style.width = "0";
+  document.getElementById("mySidebarB").style.width = "0";
+  document.getElementById("mySidebarC").style.width = "0";
+  document.getElementById("mySidebarD").style.width = "0";
   popover.hidePopover();
-}
-
-/*sidebar dinámica*/
-
-const movieData = {
-  'mario': {
-    title: 'The Super Mario Galaxy movie',
-    img: 'https://www.youtube.com/embed/ipzEY7c7it8',
-    desc: 'Luego de vencer a Bowser y salvar Brooklyn, Mario y sus amigos enfrentan una nueva amenaza: Bowser Jr. secuestra a la Princesa Rosalina. Los hermanos Mario se lanzan al espacio junto a Yoshi para rescatarla y salvar a toda la galaxia.',
-    tabla: {
-      'Título Original': 'The Super Mario Galaxy Movie',
-      'Clasificación': 'A',
-      'Género': 'Animación, Aventura, Comedia',
-      'Director': 'Aaron Horvath, Michael Jelenic',
-      'Actores': 'Chris Pratt, Charlie Day, Anya Taylor-Joy',
-      'País': 'Estados Unidos',
-      'Duración': '1h 45m',
-      'Distribuidor': 'Universal Pictures'
-    }
-  },
-  'minecraft': {
-    title: 'A Minecraft movie',
-    img: 'https://www.youtube.com/embed/wJO_vIDZn-I',
-    desc: 'Cuatro jóvenes son transportados al mundo cúbico de Minecraft mediante un portal misterioso. Con la ayuda de Steve, deberán sobrevivir a criaturas peligrosas y encontrar la manera de regresar a casa.',
-    tabla: {
-      'Título Original': 'A Minecraft Movie',
-      'Clasificación': 'A',
-      'Género': 'Aventura, Comedia, Fantasía',
-      'Director': 'Jared Hess',
-      'Actores': 'Jack Black, Jason Momoa, Emma Myers',
-      'País': 'Estados Unidos',
-      'Duración': '1h 41m',
-      'Distribuidor': 'Warner Bros. Pictures'
-    }
-  },
-  'pixels': {
-    title: 'Pixels',
-    img: 'https://www.youtube.com/embed/XAHprLW48no',
-    desc: 'Extraterrestres interpretan videojuegos clásicos como una declaración de guerra y atacan la Tierra usando personajes arcade gigantes. Un grupo de jugadores expertos deberá detener la invasión.',
-    tabla: {
-      'Título Original': 'Pixels',
-      'Clasificación': 'B',
-      'Género': 'Acción, Comedia, Ciencia Ficción',
-      'Director': 'Chris Columbus',
-      'Actores': 'Adam Sandler, Kevin James, Michelle Monaghan',
-      'País': 'Estados Unidos',
-      'Duración': '1h 46m',
-      'Distribuidor': 'Columbia Pictures'
-    }
-  },
-  'spiderman': {
-    title: 'SpiderMan: Across the SpiderVerse',
-    img: 'https://www.youtube.com/embed/shW9i6k8cB0',
-    desc: 'Miles Morales se reúne nuevamente con Gwen Stacy y viaja a través del multiverso, donde conoce a un grupo de Spider-Personas encargadas de proteger la realidad. Sin embargo, un conflicto surge cuando Miles descubre que no todos comparten la misma visión sobre cómo salvar los distintos universos.',
-    tabla: {
-      'Título Original': 'Spider-Man: Across the Spider-Verse',
-      'Clasificación': 'A',
-      'Género': 'Animación, Acción, Aventura',
-      'Director': 'Joaquim Dos Santos, Kemp Powers, Justin K. Thompson',
-      'Actores': 'Shameik Moore, Hailee Steinfeld, Oscar Isaac',
-      'País': 'Estados Unidos',
-      'Duración': '2h 20m',
-      'Distribuidor': 'Sony Pictures'
-    }
-  }
-  /* Para agregar una nueva película, copiar el bloque de arriba y cambiar la clave y los datos:
-  'clave': {
-    title: 'Título de la película',
-    img: 'https://www.youtube.com/embed/VIDEO_ID',
-    desc: 'Descripción de la película.',
-    tabla: {
-      'Título Original': '...',
-      'Clasificación': '...',
-      'Género': '...',
-      'Director': '...',
-      'Actores': '...',
-      'País': '...',
-      'Duración': '...',
-      'Distribuidor': '...'
-    }
-  }
-  */
-};
-
-function buildTable(tablaData) {
-  let rows = '';
-  for (const [key, value] of Object.entries(tablaData)) {
-    rows += `<tr>
-      <td>${key}</td>
-      <td>${value}</td>
-    </tr>`;
-  }
-  return `<table class="movie-table">${rows}</table>`;
-}
-
-function updateSidebar(movieKey) {
-  const data = movieData[movieKey];
-  document.getElementById("sideTitle").innerText = data.title;
-  document.getElementById("sideImg").src = data.img;
-  document.getElementById("infodiv").innerHTML = `<p id="infodesc">${data.desc}</p><div id="movieTableContainer">${buildTable(data.tabla)}</div>`;
-  document.getElementById("infodiv").style.display = "none";
-  document.getElementById("infotggbtn").innerHTML = "⌄";
-}
-function textshow() {
-  const title = document.getElementById("sideTitle").innerText;
-  const data = Object.values(movieData).find(d => d.title === title);
-  const desc = data ? data.desc : 'Default';
-  var x = document.getElementById("infodiv");
-  if (x.style.display === "none" || x.style.display === "") {
-    x.style.display = "block";
-    document.getElementById("infotggbtn").innerHTML = "⌃";
-  } else {
-    x.style.display = "none";
-    document.getElementById("infotggbtn").innerHTML = "⌄";
-  }
 }
 
 	/*cel navigation bar*/
