@@ -312,6 +312,22 @@ hr{
       <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
     </div>
   </footer>
+		<script>
+
+	/*cel navigation bar*/
+function navbartogg(ic) {
+      var nav = document.getElementById("navbar");
+  if (nav.style.height === "35%") {
+    document.getElementById("navbar").style.height = "0%";
+    document.getElementById("navbar").style.padding = "0%";
+  } else {
+    document.getElementById("navbar").style.height = "35%";
+    document.getElementById("navbar").style.padding = "3%";
+  };
+
+  ic.classList.toggle("change");
+}
+</script>
 	</body>
 	
 </html>
