@@ -290,7 +290,7 @@
     </div>
     <div class="cont-all">
       <button popovertarget="mypopover" onclick="updateSidebar('mario')"><img src="cartel/mario.jpg"></button>
-      <button popovertarget="mypopover" onclick="updateSidebar('Mitchells')"><img src="cartel/mitchs.jpg">
+      <button popovertarget="mypopover" onclick="updateSidebar('Mitchells')"><img src="cartel/mitchs.jpg"></button>
       <button popovertarget="mypopover" onclick="updateSidebar('minecraft')"><img src="cartel/minecraft.jpg"></button>
       <button popovertarget="mypopover" onclick="updateSidebar('Men')"><img src="cartel/MIB.jpg"></button>
       <button popovertarget="mypopover" onclick="updateSidebar('spiderman')"><img src="cartel/Spiderman.jpg"></button>
@@ -436,23 +436,26 @@
   <script>
     const popover = document.getElementById("mypopover");
 
+    // FIX DOBLE CLIC: el toggle solo maneja el cierre.
+    // La apertura de la sidebar se hace directamente en updateSidebar().
     popover.addEventListener("toggle", (event) => {
-      if (event.newState === "open") {
-        if (screen.width < 800) {
-          document.getElementById("mySidebar").style.width = "100%";
-        }
-        else {
-          document.getElementById("mySidebar").style.width = "45rem";
-        }
-      }
-      else {
+      if (event.newState === "closed") {
         document.getElementById("mySidebar").style.width = "0";
+        // Detener video al cerrar
+        const iframe = document.getElementById("sideImg");
+        iframe.src = iframe.src;
       }
     });
 
     function closeNav() {
       document.getElementById("mySidebar").style.width = "0";
-      document.getElementById("main").style.marginLeft = "0";
+      // Detener video del iframe
+      const iframe = document.getElementById("sideImg");
+      iframe.src = iframe.src;
+      // Ocultar popover si está abierto
+      if (popover.matches(':popover-open')) {
+        popover.hidePopover();
+      }
     }
 
     /*sidebar dinámica*/
@@ -527,7 +530,7 @@
           clasificacion: 'PG-13',
           genero: 'Ciencia ficción / Acción / Comedia',
           director: 'Barry Sonnenfeld',
-          actores: 'Agente J - Will Smith, Agente K - Tommy Lee Jones, Laurel Weaver - Linda Fiorentino, Edgar - Vincent D’Onofrio',
+          actores: 'Agente J - Will Smith, Agente K - Tommy Lee Jones, Laurel Weaver - Linda Fiorentino, Edgar - Vincent D'Onofrio',
           pais: 'Estados Unidos',
           duracion: '1h 38m',
           distribuidor: 'Columbia Pictures'
@@ -626,7 +629,7 @@
       'Backrooms': {
         title: 'The Backrooms',
         img: 'https://www.youtube.com/embed/0HjdiohVOik',
-        desc: 'Basada en el fenómeno de internet “The Backrooms”, la historia sigue a personas atrapadas en un laberinto infinito de habitaciones amarillas y espacios perturbadores donde criaturas desconocidas acechan.',
+        desc: 'Basada en el fenómeno de internet "The Backrooms", la historia sigue a personas atrapadas en un laberinto infinito de habitaciones amarillas y espacios perturbadores donde criaturas desconocidas acechan.',
         tabla: {
           titulo: 'The Backrooms',
           clasificacion: 'Pendiente',
@@ -803,7 +806,7 @@
           distribuidor: 'Paramount Pictures'
         }
       },
-            'libro': {
+      'libro': {
         title: 'El libro de la vida',
         img: 'https://www.youtube.com/embed/JvIvF8ST8CY',
         desc: 'Inspirada en la celebración mexicana el Día de Muertos, cuenta la historia de Manolo, un conflictivo y soñador héroe que emprende una épica aventura a través de mundos mágicos, míticos y llenos de maravillas con el doble objetivo de reunirse con su único y verdadero amor y proteger a su pueblo.',
@@ -853,6 +856,15 @@
       document.getElementById("infoDistribuidor").innerText = t.distribuidor;
 
       document.getElementById("infodiv").style.display = "none";
+
+      // FIX DOBLE CLIC: abrir sidebar directamente sin depender del toggle del popover
+      const sidebar = document.getElementById("mySidebar");
+      sidebar.style.width = screen.width < 800 ? "100%" : "45rem";
+
+      // Mostrar popover solo si no está ya visible
+      if (!popover.matches(':popover-open')) {
+        popover.showPopover();
+      }
     }
 
     function textshow() {
@@ -872,11 +884,15 @@
     let isAutoScrolling = true;
     let isLooping = false;
 
+    // FIX ÚLTIMA PELÍCULA: el loop solo ocurre dentro de autoScroll,
+    // no desde el listener de scroll (que antes cortaba el tiempo de la última película).
     function autoScroll() {
       if (!isAutoScrolling) return;
 
       if (carousel.scrollLeft + carousel.offsetWidth >= carousel.scrollWidth - 10) {
+        isLooping = true;
         carousel.scrollTo({ left: 0, behavior: 'smooth' });
+        setTimeout(() => { isLooping = false; }, 1000);
       } else {
         carousel.scrollBy({ left: carousel.offsetWidth, behavior: 'smooth' });
       }
@@ -895,13 +911,6 @@
     carousel.addEventListener('scroll', () => {
       if (isLooping) return;
       resetTimer();
-      if (carousel.scrollLeft + carousel.offsetWidth >= carousel.scrollWidth - 10) {
-        isLooping = true;
-        setTimeout(() => {
-          carousel.scrollTo({ left: 0, behavior: 'smooth' });
-          setTimeout(() => { isLooping = false; }, 1000);
-        }, 500);
-      }
     });
 
     /*cel navigation bar*/
