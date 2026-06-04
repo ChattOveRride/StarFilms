@@ -811,7 +811,7 @@ font-family: title;
 /* OVERRIDE: ajuste fino margin-top sidebar Mitchells */
 @media (max-width: 800px) {
   #mySidebarB h1 {
-    margin-top: 7rem !important;
+    margin-top: 22rem !important;
   }
 }
 
