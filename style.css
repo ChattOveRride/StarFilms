@@ -769,3 +769,54 @@ font-family: title;
 .darkmode #theme-switch svg:last-child{
   display: flex;
 }
+
+/* Mitchells sidebar: dos imágenes requieren scroll y espacio bajo la flecha */
+#mySidebarB {
+  overflow-y: auto;
+  padding-top: 0;
+}
+
+#mySidebarB .closebtn {
+  position: relative !important;
+  top: auto !important;
+  display: block;
+  padding: 20px 20px 10px 5rem;
+}
+
+/* OVERRIDE: revertir closebtn a absoluto, solo aumentar padding-top de la sidebar B */
+#mySidebarB .closebtn {
+  position: absolute !important;
+  top: 0 !important;
+  display: block;
+  padding: 20px 20px 10px 5rem;
+}
+
+#mySidebarB h1 {
+  margin-top: 5rem;
+}
+
+/* OVERRIDE FINAL: separación correcta por breakpoint para sidebar Mitchells */
+@media (max-width: 800px) {
+  #mySidebarB h1 {
+    margin-top: 4rem !important;
+  }
+}
+
+@media (min-width: 801px) {
+  #mySidebarB h1 {
+    margin-top: 7rem !important;
+  }
+}
+
+/* OVERRIDE: ajuste fino margin-top sidebar Mitchells */
+@media (max-width: 800px) {
+  #mySidebarB h1 {
+    margin-top: 7rem !important;
+  }
+}
+
+@media (min-width: 801px) {
+  #mySidebarB h1 {
+    margin-top: 13rem !important;
+  }
+}
